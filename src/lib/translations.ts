@@ -225,30 +225,74 @@ export const translations = {
         },
         products: {
             title: "Catalog",
-            desc: "Choose from our ready-made apps so you can focus on selling and managing your growth.",
+            desc: "Choose from our ready-made apps so you can focus on selling and managing your growth at an affordable price.",
             items: [
                 {
                     name: "Smart Retail (POS)",
-                    price: "Starting 1.8M+",
-                    desc: "Perfect for retail or SMEs. Manage transactions, print receipts, and track profits easily."
+                    price: "Starting 1.49M+",
+                    originalPrice: "2.5M",
+                    discount: "40%",
+                    desc: "Full cashier system for shops. Manage stock, print receipts, and monitor profit-loss in real-time.",
+                    isPromo: true,
+                    features: [
+                        "Full Source Code & Database",
+                        "Stock & Inventory Management",
+                        "Automatic Profit/Loss Report",
+                        "Bluetooth Receipt Support",
+                        "Free Installation & Training",
+                        "Lifetime Feature Updates"
+                    ]
                 },
                 {
                     name: "Modern Company Profile",
-                    price: "Starting 1.2M+",
-                    desc: "Boost client trust with an elegant and SEO-friendly business website."
+                    price: "Starting 850k+",
+                    originalPrice: "1.8M",
+                    discount: "50%",
+                    desc: "Boost business credibility with an elegant, fast, and SEO-friendly profile website.",
+                    isPromo: true,
+                    features: [
+                        "Premium & Responsive Design",
+                        "WhatsApp Chat Integration",
+                        "Google SEO Optimization",
+                        "High Performance (Fast Load)",
+                        "1 Year Free Hosting",
+                        "Professional Business Email"
+                    ]
                 },
                 {
-                    name: "Online Booking System",
-                    price: "Starting 2.5M+",
-                    desc: "Ideal for barbershops, clinics, or service-based businesses needing organized scheduling."
+                    name: "Digital School System",
+                    price: "Starting 450k+",
+                    originalPrice: "1.5M",
+                    discount: "70%",
+                    desc: "Digitalize schools affordably. Manage attendance, grades, and admin in one system.",
+                    isPromo: true,
+                    features: [
+                        "Admin, Teacher & Student Panels",
+                        "Grades & Report Card Management",
+                        "Digital Attendance System",
+                        "Financial & Tuition Module",
+                        "Routine Data Backup",
+                        "School Administrator Training"
+                    ]
                 },
                 {
-                    name: "Online Exam (CBT)",
-                    price: "Starting 1.5M+",
-                    desc: "Practical & anti-cheat online exam system. Perfect for daily tests or semester exams."
+                    name: "Online Exam App (CBT)",
+                    price: "Starting 350k+",
+                    originalPrice: "1.2M",
+                    discount: "70%",
+                    desc: "Practical & anti-cheat online exam system. Perfect for tests or semester exams.",
+                    isPromo: true,
+                    features: [
+                        "Integrated Question Bank",
+                        "Shuffle Questions & Answers",
+                        "Browser Lock (Anti-Cheat)",
+                        "Real-time Grade Reports",
+                        "Item Analysis Feature",
+                        "Excel Import Support"
+                    ]
                 }
             ],
-            customCTA: "Want to build a unique system for your new business idea?",
+            customCTA: "Have a unique app idea for your business or school?",
             customBtn: "Start Project Discussion"
         },
         portfolio: {
