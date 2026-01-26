@@ -141,7 +141,7 @@ export default function SubmissionsDashboard() {
                         <img src="/images/logo.png" alt="Logo" style={{ width: '80%', height: '80%', objectFit: 'contain' }} />
                     </div>
                     <div className="logo-text">
-                        <h3>Schola Bintang</h3>
+                        <h3>Codifi</h3>
                         <span>Admin Console</span>
                     </div>
                 </div>
@@ -218,8 +218,8 @@ export default function SubmissionsDashboard() {
                         </div>
                         <div className="user-profile">
                             <div className="profile-info text-right">
-                                <p className="profile-name">Admin Schola</p>
-                                <p className="profile-role">Super Admin</p>
+                                <p className="profile-name">Codifi Admin</p>
+                                <p className="profile-role">System Director</p>
                             </div>
                             <div className="profile-avatar">
                                 <User size={20} />
@@ -476,11 +476,11 @@ export default function SubmissionsDashboard() {
 
                                     <div className="form-group">
                                         <label>Nama Lengkap</label>
-                                        <input type="text" defaultValue="Admin Schola Bintang" />
+                                        <input type="text" defaultValue="Codifi Administrator" />
                                     </div>
                                     <div className="form-group">
                                         <label>Alamat Email</label>
-                                        <input type="email" defaultValue="admin@scholabintang.id" />
+                                        <input type="email" defaultValue="admin@codifi.id" />
                                     </div>
                                     <div className="form-row">
                                         <div className="form-group">

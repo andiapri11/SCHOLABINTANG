@@ -15,14 +15,14 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://scholabintang.id'), // Ganti dengan domain Anda nanti
+  metadataBase: new URL('https://codifi.id'), // Ganti dengan domain Anda nanti
   title: {
-    default: "Schola Bintang Digital | Jasa Pembuatan Website & Aplikasi Web Premium",
-    template: "%s | Schola Bintang Digital"
+    default: "Codifi | Professional Website & Web App Development Services",
+    template: "%s | Codifi"
   },
-  description: "Schola Bintang Digital menghadirkan jasa pembuatan website profesional, landing page modern, dan aplikasi web custom yang cepat, mobile-friendly, dan SEO optimized.",
+  description: "Codifi delivers professional website development, modern landing pages, and custom web applications that are fast, mobile-friendly, and SEO optimized.",
   keywords: [
-    "Schola Bintang Digital",
+    "Codifi",
     "jasa pembuatan website",
     "jasa pembuatan aplikasi web",
     "web development agency indonesia",
@@ -31,9 +31,9 @@ export const metadata: Metadata = {
     "seo website",
     "pembuatan sistem informasi"
   ],
-  authors: [{ name: "Schola Bintang Digital Team" }],
-  creator: "Schola Bintang Digital",
-  publisher: "Schola Bintang Digital",
+  authors: [{ name: "Codifi Team" }],
+  creator: "Codifi",
+  publisher: "Codifi",
   robots: {
     index: true,
     follow: true,
@@ -49,17 +49,17 @@ export const metadata: Metadata = {
     canonical: '/',
   },
   openGraph: {
-    title: "Schola Bintang Digital | Jasa Pembuatan Website & Aplikasi Web Premium",
-    description: "Solusi digital modern untuk transformasi bisnis Andabersama Schola Bintang Digital. Cepat, Aman, dan SEO Friendly.",
-    url: 'https://scholabintang.id',
-    siteName: 'Schola Bintang Digital',
+    title: "Codifi | Professional Website & Web App Development Services",
+    description: "Modern digital solutions for your business transformation with Codifi. Fast, Secure, and SEO Friendly.",
+    url: 'https://codifi.id',
+    siteName: 'Codifi',
     locale: 'id_ID',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Schola Bintang Digital | Web Development Service',
-    description: 'Transformasi bisnis Anda ke ranah digital bersama Schola Bintang Digital.',
+    title: 'Codifi | Web Development Service',
+    description: 'Transform your business into the digital realm with Codifi.',
   },
   verification: {
     google: 'google-site-verification-id', // Ganti dengan ID dari Google Search Console

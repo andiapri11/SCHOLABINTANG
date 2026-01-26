@@ -3,17 +3,17 @@
   --background: #ffffff;
   --foreground: #0f172a;
   /* Slate 900 */
-  /* Brand Identity Palette - Derived from Logo */
-  --primary: #f5821f;
-  /* Vibrant Orange */
-  --primary-hover: #e07210;
-  --primary-glow: radial-gradient(circle, rgba(245, 130, 31, 0.1) 0%, rgba(255, 255, 255, 0) 70%);
-  --secondary: #1a1a63;
-  /* Deep Navy */
-  --accent: #00aba9;
-  /* Emerald Teal */
-  --muted: #f8fafc;
-  --foreground: #1a1a63;
+  /* Codifi Brand Identity - Professional Blue Palette */
+  --primary: #0052cc;
+  /* Codifi Blue */
+  --primary-hover: #0747a6;
+  --primary-glow: radial-gradient(circle, rgba(0, 82, 204, 0.1) 0%, rgba(255, 255, 255, 0) 70%);
+  --secondary: #091e42;
+  /* Deep Indigo */
+  --accent: #00b8d9;
+  /* Cyan Accent */
+  --muted: #f4f5f7;
+  --foreground: #091e42;
 
   /* Modern UI Elements */
   --card-bg: #ffffff;

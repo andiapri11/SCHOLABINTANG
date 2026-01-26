@@ -152,7 +152,7 @@ export default function Hero() {
                             <div style={{ width: '100%', height: '100%', borderRadius: '1.5rem', overflow: 'hidden' }}>
                                 <img
                                     src="/images/team.png"
-                                    alt="Schola Bintang Digital Team"
+                                    alt="Codifi Team"
                                     style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                                 />
                             </div>

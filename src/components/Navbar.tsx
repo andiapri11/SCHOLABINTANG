@@ -25,7 +25,7 @@ export default function Navbar() {
                     <div style={{ width: '42px', height: '42px', display: 'flex', alignItems: 'center', justifyContent: 'center', overflow: 'hidden' }}>
                         <img src="/images/logo.png" alt="Logo" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
                     </div>
-                    <span style={{ color: 'var(--foreground)', letterSpacing: '-0.02em' }}>Schola Bintang Digital</span>
+                    <span style={{ color: 'var(--foreground)', letterSpacing: '-0.02em' }}>Codifi</span>
                 </Link>
 
                 {/* Desktop Menu */}
@@ -83,7 +83,7 @@ export default function Navbar() {
                     <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '3rem' }}>
                         <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
                             <img src="/images/logo.png" alt="Logo" style={{ width: '36px', height: '36px' }} />
-                            <span style={{ fontWeight: 800, color: 'var(--secondary)' }}>Schola Bintang Digital</span>
+                            <span style={{ fontWeight: 800, color: 'var(--secondary)' }}>Codifi</span>
                         </div>
                         <div onClick={() => setIsMenuOpen(false)} style={{ color: '#64748b' }}>
                             <X size={28} />

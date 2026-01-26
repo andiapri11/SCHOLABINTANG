@@ -5,90 +5,90 @@ import { Rocket, Mail, Phone, Instagram, Linkedin, Globe, MapPin } from "lucide-
 import { useLanguage } from "@/lib/LanguageContext";
 
 export default function Footer() {
-    const { t } = useLanguage();
+  const { t } = useLanguage();
 
-    return (
-        <footer style={{ backgroundColor: '#ffffff', padding: '2rem 0 1rem', borderTop: '1px solid #f1f5f9' }}>
-            <div className="container">
-                <div style={{
-                    display: 'grid',
-                    gridTemplateColumns: '1.4fr 0.8fr 0.8fr 1fr',
-                    gap: '3rem',
-                    marginBottom: '1.5rem',
-                    maxWidth: '1000px',
-                    margin: '0 auto 1.5rem'
-                }} className="footer-grid">
+  return (
+    <footer style={{ backgroundColor: '#ffffff', padding: '2rem 0 1rem', borderTop: '1px solid #f1f5f9' }}>
+      <div className="container">
+        <div style={{
+          display: 'grid',
+          gridTemplateColumns: '1.4fr 0.8fr 0.8fr 1fr',
+          gap: '3rem',
+          marginBottom: '1.5rem',
+          maxWidth: '1000px',
+          margin: '0 auto 1.5rem'
+        }} className="footer-grid">
 
-                    <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
-                        <Link href="/" className="brand-link" style={{ display: 'flex', alignItems: 'center', gap: '0.85rem', fontWeight: 800, fontSize: '1.2rem' }}>
-                            <div style={{ width: '32px', height: '32px', display: 'flex', alignItems: 'center', justifyContent: 'center', overflow: 'hidden' }}>
-                                <img src="/images/logo.png" alt="Logo" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
-                            </div>
-                            <span style={{ color: '#0f172a', letterSpacing: '-0.02em' }}>Schola Bintang Digital</span>
-                        </Link>
-                        <p style={{ color: 'var(--secondary)', lineHeight: 1.7, fontSize: '0.925rem', maxWidth: '300px' }}>
-                            {t.footer.tagline}
-                        </p>
-                        <div style={{ display: 'flex', gap: '0.875rem' }}>
-                            <Link href="#" className="footer-social-link"><Instagram size={19} /></Link>
-                            <Link href="#" className="footer-social-link"><Linkedin size={19} /></Link>
-                            <Link href="#" className="footer-social-link"><Globe size={19} /></Link>
-                        </div>
-                    </div>
-
-                    <div>
-                        <h4 style={{ fontSize: '1rem', fontWeight: 700, marginBottom: '1.75rem', color: '#0f172a' }}>{t.footer.links}</h4>
-                        <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-                            <li><Link href="#services" className="footer-link">{t.nav.services}</Link></li>
-                            <li><Link href="#products" className="footer-link">{(t as any).products.title}</Link></li>
-                            <li><Link href="#process" className="footer-link">Cara Kerja</Link></li>
-                        </ul>
-                    </div>
-
-                    <div>
-                        <h4 style={{ fontSize: '1rem', fontWeight: 700, marginBottom: '1.75rem', color: '#0f172a' }}>Legal</h4>
-                        <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-                            <li><Link href="#" className="footer-link">Privacy Policy</Link></li>
-                            <li><Link href="#" className="footer-link">Terms</Link></li>
-                            <li><Link href="#" className="footer-link">FAQ</Link></li>
-                        </ul>
-                    </div>
-
-                    <div>
-                        <h4 style={{ fontSize: '1rem', fontWeight: 700, marginBottom: '1.75rem', color: '#0f172a' }}>{t.footer.contact}</h4>
-                        <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
-                            <li style={{ display: 'flex', alignItems: 'center', gap: '0.875rem', color: 'var(--secondary)', fontSize: '0.9rem' }}>
-                                <Mail size={17} style={{ color: 'var(--primary)', flexShrink: 0 }} />
-                                <span>hello@scholabintang.id</span>
-                            </li>
-                            <li style={{ display: 'flex', alignItems: 'center', gap: '0.875rem', color: 'var(--secondary)', fontSize: '0.9rem' }}>
-                                <Phone size={17} style={{ color: 'var(--primary)', flexShrink: 0 }} />
-                                <span>+62 812 3456 7890</span>
-                            </li>
-                            <li style={{ display: 'flex', alignItems: 'flex-start', gap: '0.875rem', color: 'var(--secondary)', fontSize: '0.9rem' }}>
-                                <MapPin size={17} style={{ color: 'var(--primary)', flexShrink: 0, marginTop: '2px' }} />
-                                <span>Palembang, Sumatera Selatan, Indonesia</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div style={{
-                    paddingTop: '1.25rem',
-                    borderTop: '1px solid #f1f5f9',
-                    display: 'flex',
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                    flexWrap: 'wrap',
-                    gap: '1.5rem'
-                }}>
-                    <p style={{ color: 'var(--secondary)', fontSize: '0.875rem', textAlign: 'center' }}>
-                        © {new Date().getFullYear()} Schola Bintang Digital. {t.footer.rights}
-                    </p>
-                </div>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
+            <Link href="/" className="brand-link" style={{ display: 'flex', alignItems: 'center', gap: '0.85rem', fontWeight: 800, fontSize: '1.2rem' }}>
+              <div style={{ width: '32px', height: '32px', display: 'flex', alignItems: 'center', justifyContent: 'center', overflow: 'hidden' }}>
+                <img src="/images/logo.png" alt="Logo" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+              </div>
+              <span style={{ color: '#0f172a', letterSpacing: '-0.02em' }}>Codifi</span>
+            </Link>
+            <p style={{ color: 'var(--secondary)', lineHeight: 1.7, fontSize: '0.925rem', maxWidth: '300px' }}>
+              {t.footer.tagline}
+            </p>
+            <div style={{ display: 'flex', gap: '0.875rem' }}>
+              <Link href="#" className="footer-social-link"><Instagram size={19} /></Link>
+              <Link href="#" className="footer-social-link"><Linkedin size={19} /></Link>
+              <Link href="#" className="footer-social-link"><Globe size={19} /></Link>
             </div>
+          </div>
 
-            <style jsx>{`
+          <div>
+            <h4 style={{ fontSize: '1rem', fontWeight: 700, marginBottom: '1.75rem', color: '#0f172a' }}>{t.footer.links}</h4>
+            <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+              <li><Link href="#services" className="footer-link">{t.nav.services}</Link></li>
+              <li><Link href="#products" className="footer-link">{(t as any).products.title}</Link></li>
+              <li><Link href="#process" className="footer-link">Cara Kerja</Link></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 style={{ fontSize: '1rem', fontWeight: 700, marginBottom: '1.75rem', color: '#0f172a' }}>Legal</h4>
+            <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+              <li><Link href="#" className="footer-link">Privacy Policy</Link></li>
+              <li><Link href="#" className="footer-link">Terms</Link></li>
+              <li><Link href="#" className="footer-link">FAQ</Link></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 style={{ fontSize: '1rem', fontWeight: 700, marginBottom: '1.75rem', color: '#0f172a' }}>{t.footer.contact}</h4>
+            <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
+              <li style={{ display: 'flex', alignItems: 'center', gap: '0.875rem', color: 'var(--secondary)', fontSize: '0.9rem' }}>
+                <Mail size={17} style={{ color: 'var(--primary)', flexShrink: 0 }} />
+                <span>hello@codifi.id</span>
+              </li>
+              <li style={{ display: 'flex', alignItems: 'center', gap: '0.875rem', color: 'var(--secondary)', fontSize: '0.9rem' }}>
+                <Phone size={17} style={{ color: 'var(--primary)', flexShrink: 0 }} />
+                <span>+62 812 3456 7890</span>
+              </li>
+              <li style={{ display: 'flex', alignItems: 'flex-start', gap: '0.875rem', color: 'var(--secondary)', fontSize: '0.9rem' }}>
+                <MapPin size={17} style={{ color: 'var(--primary)', flexShrink: 0, marginTop: '2px' }} />
+                <span>Palembang, Sumatera Selatan, Indonesia</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div style={{
+          paddingTop: '1.25rem',
+          borderTop: '1px solid #f1f5f9',
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          flexWrap: 'wrap',
+          gap: '1.5rem'
+        }}>
+          <p style={{ color: 'var(--secondary)', fontSize: '0.875rem', textAlign: 'center' }}>
+            © {new Date().getFullYear()} Codifi. {t.footer.rights}
+          </p>
+        </div>
+      </div>
+
+      <style jsx>{`
         .footer-link {
           color: var(--secondary);
           font-size: 0.95rem;
@@ -153,6 +153,6 @@ export default function Footer() {
           }
         }
       `}</style>
-        </footer>
-    );
+    </footer>
+  );
 }

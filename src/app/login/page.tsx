@@ -40,13 +40,13 @@ export default function LoginPage() {
                 transition={{ duration: 0.6, ease: "easeOut" }}
                 className="login-container"
             >
-                <div className="brand-logo">
-                    <ShieldCheck size={32} strokeWidth={2.5} />
+                <div className="brand-logo" style={{ overflow: 'hidden' }}>
+                    <img src="/images/logo.png" alt="Codifi" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
                 </div>
 
                 <div className="header-text">
                     <h1>Akses Terbatas</h1>
-                    <p>Masukkan kunci akses untuk masuk ke panel manajemen Schola Bintang Digital.</p>
+                    <p>Masukkan kunci akses untuk masuk ke panel manajemen Codifi.</p>
                 </div>
 
                 <form onSubmit={handleLogin} className="login-form">
