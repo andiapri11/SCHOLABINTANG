@@ -20,11 +20,14 @@ export default function Footer() {
         }} className="footer-grid">
 
           <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
-            <Link href="/" className="brand-link" style={{ display: 'flex', alignItems: 'center', gap: '0.85rem', fontWeight: 800, fontSize: '1.2rem' }}>
-              <div style={{ width: '32px', height: '32px', display: 'flex', alignItems: 'center', justifyContent: 'center', overflow: 'hidden' }}>
+            <Link href="/" className="brand-link" style={{ display: 'flex', alignItems: 'center', gap: '0.85rem' }}>
+              <div style={{ width: '38px', height: '38px', display: 'flex', alignItems: 'center', justifyContent: 'center', overflow: 'hidden' }}>
                 <img src="/images/logo.png" alt="Logo" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
               </div>
-              <span style={{ color: '#0f172a', letterSpacing: '-0.02em' }}>Codifi</span>
+              <div style={{ display: 'flex', flexDirection: 'column', lineHeight: 1.1 }}>
+                <span style={{ color: '#0f172a', letterSpacing: '-0.02em', fontWeight: 800, fontSize: '1.45rem' }}>Codifi</span>
+                <span style={{ color: '#64748b', fontSize: '0.6rem', fontWeight: 600, textTransform: 'uppercase' }}>Cipta Digital Indonesia</span>
+              </div>
             </Link>
             <p style={{ color: 'var(--secondary)', lineHeight: 1.7, fontSize: '0.925rem', maxWidth: '300px' }}>
               {t.footer.tagline}

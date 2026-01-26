@@ -17,10 +17,10 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL('https://codifi.id'), // Ganti dengan domain Anda nanti
   title: {
-    default: "Codifi | Professional Website & Web App Development Services",
+    default: "Codifi - Cipta Digital Indonesia | Professional Web Development",
     template: "%s | Codifi"
   },
-  description: "Codifi delivers professional website development, modern landing pages, and custom web applications that are fast, mobile-friendly, and SEO optimized.",
+  description: "Codifi (Cipta Digital Indonesia) delivers professional website development, modern landing pages, and custom web applications that are fast, mobile-friendly, and SEO optimized.",
   keywords: [
     "Codifi",
     "jasa pembuatan website",

@@ -21,11 +21,14 @@ export default function Navbar() {
     return (
         <nav className={isScrolled ? "scrolled" : ""} style={{ transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)' }}>
             <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '100%' }}>
-                <Link href="/" style={{ display: 'flex', alignItems: 'center', gap: '0.85rem', fontWeight: 800, fontSize: '1.35rem' }}>
-                    <div style={{ width: '42px', height: '42px', display: 'flex', alignItems: 'center', justifyContent: 'center', overflow: 'hidden' }}>
+                <Link href="/" style={{ display: 'flex', alignItems: 'center', gap: '0.85rem' }}>
+                    <div style={{ width: '45px', height: '45px', display: 'flex', alignItems: 'center', justifyContent: 'center', overflow: 'hidden' }}>
                         <img src="/images/logo.png" alt="Logo" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
                     </div>
-                    <span style={{ color: 'var(--foreground)', letterSpacing: '-0.02em' }}>Codifi</span>
+                    <div style={{ display: 'flex', flexDirection: 'column', lineHeight: 1.1 }}>
+                        <span style={{ color: 'var(--foreground)', letterSpacing: '-0.02em', fontWeight: 800, fontSize: '1.65rem' }}>Codifi</span>
+                        <span style={{ color: '#64748b', fontSize: '0.65rem', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em' }}>Cipta Digital Indonesia</span>
+                    </div>
                 </Link>
 
                 {/* Desktop Menu */}
@@ -82,8 +85,11 @@ export default function Navbar() {
                 }}>
                     <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '3rem' }}>
                         <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
-                            <img src="/images/logo.png" alt="Logo" style={{ width: '36px', height: '36px' }} />
-                            <span style={{ fontWeight: 800, color: 'var(--secondary)' }}>Codifi</span>
+                            <img src="/images/logo.png" alt="Logo" style={{ width: '38px', height: '38px' }} />
+                            <div style={{ display: 'flex', flexDirection: 'column', lineHeight: 1.1 }}>
+                                <span style={{ fontWeight: 800, color: 'var(--secondary)', fontSize: '1.4rem' }}>Codifi</span>
+                                <span style={{ color: '#94a3b8', fontSize: '0.6rem', fontWeight: 600 }}>Cipta Digital Indonesia</span>
+                            </div>
                         </div>
                         <div onClick={() => setIsMenuOpen(false)} style={{ color: '#64748b' }}>
                             <X size={28} />

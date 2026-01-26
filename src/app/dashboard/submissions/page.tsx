@@ -141,8 +141,8 @@ export default function SubmissionsDashboard() {
                         <img src="/images/logo.png" alt="Logo" style={{ width: '80%', height: '80%', objectFit: 'contain' }} />
                     </div>
                     <div className="logo-text">
-                        <h3>Codifi</h3>
-                        <span>Admin Console</span>
+                        <h3 style={{ fontSize: '1.4rem' }}>Codifi</h3>
+                        <span style={{ fontSize: '0.6rem', opacity: 0.8 }}>Cipta Digital Indonesia</span>
                     </div>
                 </div>
 
