@@ -47,12 +47,12 @@ export default function SubmissionsDashboard() {
     const fetchItems = async () => {
         setLoading(true);
         try {
-            const [subs, stats] = await Promise.all([
+            const [subs, tStats] = await Promise.all([
                 getSubmissions(),
                 getTrafficStats()
             ]);
             setSubmissions(subs || []);
-            setTrafficStats(stats);
+            setTrafficStats(tStats);
         } catch (error) {
             console.error("Error fetching dashboard data:", error);
         } finally {
@@ -357,7 +357,7 @@ export default function SubmissionsDashboard() {
                                                 </div>
                                                 <div className="time-pill">
                                                     <Clock size={12} />
-                                                    {new Date(item.createdAt).toLocaleDateString('id-ID', { day: 'numeric', month: 'short' })}
+                                                    {item.createdAt ? new Date(item.createdAt).toLocaleDateString('id-ID', { day: 'numeric', month: 'short' }) : '-'}
                                                 </div>
                                             </div>
 
