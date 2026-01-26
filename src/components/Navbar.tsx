@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { Menu, X, Rocket, Languages } from "lucide-react";
+import { Menu, X, Languages } from "lucide-react";
 import { useLanguage } from "@/lib/LanguageContext";
 
 export default function Navbar() {

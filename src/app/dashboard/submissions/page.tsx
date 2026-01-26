@@ -5,10 +5,8 @@ import { useRouter } from "next/navigation";
 import { getSubmissions } from "@/app/actions/fetch";
 import { getTrafficStats } from "@/app/actions/traffic";
 import {
-    LayoutDashboard,
     Users,
     Mail,
-    Calendar,
     LogOut,
     Search,
     RefreshCw,
@@ -17,7 +15,6 @@ import {
     ChevronRight,
     ExternalLink,
     Filter,
-    MessageSquare,
     Zap,
     TrendingUp,
     MoreVertical,
@@ -34,8 +31,17 @@ import {
 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
+interface Submission {
+    id: string | number;
+    name: string;
+    email: string;
+    service: string;
+    message: string;
+    createdAt: string;
+}
+
 export default function SubmissionsDashboard() {
-    const [submissions, setSubmissions] = useState<any[]>([]);
+    const [submissions, setSubmissions] = useState<Submission[]>([]);
     const [loading, setLoading] = useState(true);
     const [searchTerm, setSearchTerm] = useState("");
     const [filterService, setFilterService] = useState("All");
@@ -74,9 +80,9 @@ export default function SubmissionsDashboard() {
         router.push("/login");
     };
 
-    const uniqueServices = ["All", ...new Set(submissions.map(s => s.service))];
+    const uniqueServices = ["All", ...new Set(submissions.map((s: Submission) => s.service))];
 
-    const filteredSubmissions = submissions.filter(s => {
+    const filteredSubmissions = submissions.filter((s: Submission) => {
         const matchesSearch = s.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
             s.email.toLowerCase().includes(searchTerm.toLowerCase()) ||
             s.message.toLowerCase().includes(searchTerm.toLowerCase());
@@ -86,7 +92,7 @@ export default function SubmissionsDashboard() {
 
     const stats = {
         total: submissions.length,
-        today: submissions.filter(s => new Date(s.createdAt).toDateString() === new Date().toDateString()).length,
+        today: submissions.filter((s: Submission) => s.createdAt && new Date(s.createdAt).toDateString() === new Date().toDateString()).length,
         potential: Math.floor(submissions.length * 12.5) // Just a mock value for "value"
     };
 

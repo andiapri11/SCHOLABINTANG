@@ -9,7 +9,7 @@ import Portfolio from "@/components/Portfolio";
 import Footer from "@/components/Footer";
 import { motion, useScroll, useSpring } from "framer-motion";
 import { useLanguage } from "@/lib/LanguageContext";
-import { ArrowRight, Star } from "lucide-react";
+import { Star } from "lucide-react";
 
 export default function Home() {
   const { t } = useLanguage();
