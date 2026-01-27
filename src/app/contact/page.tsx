@@ -56,12 +56,7 @@ export default function Contact() {
             {/* Form Section */}
             <section style={{ padding: '60px 0 100px', backgroundColor: '#ffffff' }}>
                 <div className="container">
-                    <div style={{
-                        display: 'grid',
-                        gridTemplateColumns: '1fr 1.5fr',
-                        gap: '4rem',
-                        alignItems: 'start'
-                    }} className="contact-grid">
+                    <div className="contact-grid">
 
                         {/* Left: Info */}
                         <motion.div
@@ -69,6 +64,7 @@ export default function Contact() {
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.8 }}
+                            className="info-column"
                         >
                             <h2 style={{ fontSize: '2rem', marginBottom: '2rem' }}>{cp.info.title}</h2>
                             <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
@@ -102,13 +98,7 @@ export default function Contact() {
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.8 }}
-                            style={{
-                                background: '#ffffff',
-                                padding: '3rem',
-                                borderRadius: '2rem',
-                                boxShadow: '0 20px 50px rgba(0,0,0,0.05)',
-                                border: '1px solid #f1f5f9'
-                            }}
+                            className="form-card"
                         >
                             {message && (
                                 <div style={{
@@ -171,8 +161,19 @@ export default function Contact() {
 
             <style jsx>{`
                 .contact-grid {
+                    display: grid;
+                    grid-template-columns: 1fr 1.5fr;
+                    gap: 4rem;
+                    align-items: start;
                     max-width: 1100px;
                     margin: 0 auto;
+                }
+                .form-card {
+                    background: #ffffff;
+                    padding: 3rem;
+                    borderRadius: 2rem;
+                    box-shadow: 0 20px 50px rgba(0,0,0,0.05);
+                    border: 1px solid #f1f5f9;
                 }
                 .info-item {
                     display: flex;
@@ -198,6 +199,7 @@ export default function Contact() {
                 .info-item p {
                     color: var(--secondary);
                     font-size: 0.95rem;
+                    word-break: break-word;
                 }
                 .form-row {
                     display: grid;
@@ -224,6 +226,7 @@ export default function Contact() {
                     font-family: inherit;
                     font-size: 0.95rem;
                     transition: all 0.2s;
+                    width: 100%;
                 }
                 .form-group input:focus, 
                 .form-group select:focus, 
@@ -234,11 +237,38 @@ export default function Contact() {
                     box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.05);
                 }
                 @media (max-width: 992px) {
-                    .contact-grid { grid-template-columns: 1fr; gap: 4rem; }
+                    .contact-grid { 
+                        grid-template-columns: 1fr; 
+                        gap: 3rem; 
+                    }
+                    section {
+                        padding: 40px 0 80px !important;
+                    }
+                    .info-column {
+                        padding: 0 1rem;
+                    }
                 }
-                @media (max-width: 576px) {
-                    .form-row { grid-template-columns: 1fr; }
-                    section { padding: 60px 0 !important; }
+                @media (max-width: 640px) {
+                    .form-row { 
+                        grid-template-columns: 1fr; 
+                        gap: 1.25rem;
+                    }
+                    .form-card {
+                        padding: 1.5rem !important;
+                        margin: 0 1rem;
+                        border-radius: 1.5rem;
+                    }
+                    h1 {
+                        font-size: 2.25rem !important;
+                        padding: 0 1rem;
+                    }
+                    .info-column h2 {
+                        font-size: 1.75rem !important;
+                    }
+                    p {
+                        font-size: 1rem !important;
+                        padding: 0 1rem;
+                    }
                 }
             `}</style>
         </main>

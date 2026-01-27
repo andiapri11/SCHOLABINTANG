@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { useLanguage } from "@/lib/LanguageContext";
-import { ShoppingBag, ArrowRight, CheckCircle2 } from "lucide-react";
+import { ShoppingBag, ArrowRight, CheckCircle2, Zap, LayoutGrid, ShieldCheck, Globe, Code } from "lucide-react";
 
 export default function Products() {
     const { t } = useLanguage();
@@ -15,198 +15,426 @@ export default function Products() {
             minHeight: '100vh',
             display: 'flex',
             alignItems: 'center',
-            padding: '20px 0',
+            padding: '60px 0 20px 0',
             backgroundColor: '#ffffff',
             overflow: 'hidden'
         }}>
             <div className="container" style={{ width: '100%' }}>
-                <div style={{ textAlign: 'center', marginBottom: '1.5rem' }}>
-                    <motion.span
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true, margin: "-100px" }}
-                        transition={{ duration: 0.6 }}
-                        style={{
-                            color: 'var(--primary)',
-                            fontWeight: 800,
-                            fontSize: '0.75rem',
-                            textTransform: 'uppercase',
-                            letterSpacing: '0.2em',
-                            marginBottom: '0.5rem',
-                            display: 'block'
-                        }}
-                    >
-                        Katalog Produk
-                    </motion.span>
-                    <motion.h2
-                        initial={{ opacity: 0, y: 30 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true, margin: "-100px" }}
-                        transition={{ duration: 0.6, delay: 0.1 }}
-                        style={{ fontSize: 'clamp(1.5rem, 3vw, 2rem)', marginBottom: '0.5rem', color: '#0f172a', fontWeight: 800, letterSpacing: '-0.04em' }}
-                    >
-                        {products.title}
-                    </motion.h2>
-                    <motion.p
-                        initial={{ opacity: 0, y: 30 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true, margin: "-100px" }}
-                        transition={{ duration: 0.6, delay: 0.2 }}
-                        style={{ color: 'var(--secondary)', maxWidth: '640px', margin: '0 auto', fontSize: '0.9rem', lineHeight: 1.5 }}
-                    >
-                        {products.desc}
-                    </motion.p>
-                </div>
-
-                <motion.div
-                    className="grid-responsive"
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true, margin: "-100px" }}
-                    variants={{
-                        hidden: { opacity: 0 },
-                        visible: {
-                            opacity: 1,
-                            transition: { staggerChildren: 0.15 }
-                        }
-                    }}
-                    style={{
-                        gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
-                        gap: '1rem'
-                    }}
-                >
-                    {products.items.map((product: any, index: number) => (
-                        <motion.div
-                            key={index}
-                            variants={{
-                                hidden: { opacity: 0, y: 40 },
-                                visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: "easeOut" } }
-                            }}
-                            className="product-card"
+                {/* Our Products Section */}
+                <div style={{ marginBottom: '3rem' }}>
+                    <div style={{ textAlign: 'center', marginBottom: '2.5rem' }}>
+                        <motion.span
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true, margin: "-100px" }}
+                            transition={{ duration: 0.6 }}
                             style={{
-                                display: 'flex',
-                                flexDirection: 'column',
-                                height: 'auto',
-                                padding: '1.5rem 1.25rem',
-                                borderRadius: '1.5rem',
-                                backgroundColor: 'white',
-                                border: index === 1 ? '2px solid var(--primary)' : '1px solid #e2e8f0',
-                                position: 'relative',
-                                transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
-                                boxShadow: index === 1 ? '0 15px 20px -5px rgba(37, 99, 235, 0.1)' : '0 10px 15px -3px rgba(0, 0, 0, 0.04)',
-                                textAlign: 'center'
+                                color: 'var(--primary)',
+                                fontWeight: 800,
+                                fontSize: '0.75rem',
+                                textTransform: 'uppercase',
+                                letterSpacing: '0.2em',
+                                marginBottom: '0.25rem',
+                                display: 'block'
                             }}
                         >
-                            {index === 1 && (
-                                <div style={{
-                                    position: 'absolute',
-                                    top: '-10px',
-                                    left: '50%',
-                                    transform: 'translateX(-50%)',
-                                    background: 'var(--primary)',
-                                    color: 'white',
-                                    padding: '0.25rem 0.85rem',
-                                    borderRadius: '2rem',
-                                    fontSize: '0.65rem',
-                                    fontWeight: 800,
-                                    textTransform: 'uppercase',
-                                    letterSpacing: '0.05em',
-                                    boxShadow: '0 4px 12px rgba(37, 99, 235, 0.3)',
-                                    zIndex: 10
-                                }}>
-                                    Paling Populer
-                                </div>
-                            )}
+                            Katalog Produk
+                        </motion.span>
+                        <motion.h3
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            style={{ fontSize: '1.5rem', fontWeight: 800, color: '#1e293b', marginBottom: '0.5rem' }}
+                        >
+                            {products.readyTitle}
+                        </motion.h3>
+                        <motion.p
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            style={{ color: '#64748b', fontSize: '0.9rem', maxWidth: '600px', margin: '0 auto' }}
+                        >
+                            {products.readyDesc}
+                        </motion.p>
+                    </div>
 
-                            <div style={{ marginBottom: '0.75rem' }}>
-                                <span style={{
-                                    padding: '0.4rem 1rem',
-                                    borderRadius: '2rem',
-                                    background: product.isPromo ? '#fef2f2' : '#f1f5f9',
-                                    color: product.isPromo ? '#ef4444' : '#64748b',
-                                    fontSize: '0.65rem',
-                                    fontWeight: 900,
-                                    textTransform: 'uppercase',
-                                    letterSpacing: '0.1em',
-                                }}>
-                                    {product.isPromo ? 'Penawaran Spesial' : 'Standard Plan'}
-                                </span>
-                            </div>
+                    <motion.div
+                        className="products-grid"
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true, margin: "-100px" }}
+                        variants={{
+                            hidden: { opacity: 0 },
+                            visible: {
+                                opacity: 1,
+                                transition: { staggerChildren: 0.15 }
+                            }
+                        }}
+                        style={{
+                            display: 'flex',
+                            flexWrap: 'wrap',
+                            justifyContent: 'center',
+                            gap: '1.5rem',
+                            maxWidth: '1200px',
+                            margin: '0 auto'
+                        }}
+                    >
+                        {products.readyItems?.map((product: any, index: number) => (
+                            <motion.div
+                                key={index}
+                                variants={{
+                                    hidden: { opacity: 0, y: 40 },
+                                    visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: "easeOut" } }
+                                }}
+                                style={{
+                                    flex: '1 1 320px',
+                                    maxWidth: '380px',
+                                    display: 'flex'
+                                }}
+                            >
+                                <div
+                                    className="product-card"
+                                    style={{
+                                        display: 'flex',
+                                        flexDirection: 'column',
+                                        width: '100%',
+                                        flex: 1,
+                                        padding: '3rem 2rem',
+                                        borderRadius: '2.5rem',
+                                        backgroundColor: 'white',
+                                        border: index === 1 ? '2px solid var(--primary)' : '1px solid #e2e8f0',
+                                        position: 'relative',
+                                        transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
+                                        boxShadow: index === 1 ? '0 20px 40px -10px rgba(37, 99, 235, 0.15)' : '0 10px 30px -5px rgba(0, 0, 0, 0.04)',
+                                        textAlign: 'center'
+                                    }}
+                                >
+                                    {index === 1 && (
+                                        <div style={{
+                                            position: 'absolute',
+                                            top: '-14px',
+                                            left: '50%',
+                                            transform: 'translateX(-50%)',
+                                            background: 'var(--primary)',
+                                            color: 'white',
+                                            padding: '0.4rem 1.25rem',
+                                            borderRadius: '2rem',
+                                            fontSize: '0.7rem',
+                                            fontWeight: 800,
+                                            textTransform: 'uppercase',
+                                            letterSpacing: '0.1em',
+                                            boxShadow: '0 8px 20px rgba(37, 99, 235, 0.3)',
+                                            zIndex: 10,
+                                            whiteSpace: 'nowrap'
+                                        }}>
+                                            Paling Populer
+                                        </div>
+                                    )}
 
-                            <h3 style={{ marginBottom: '0.75rem', fontSize: '1.6rem', fontWeight: 800, color: '#0f172a', letterSpacing: '-0.03em' }}>
-                                {product.name}
-                            </h3>
-
-                            <p style={{ color: '#64748b', lineHeight: 1.5, marginBottom: '1.75rem', fontSize: '0.95rem' }}>
-                                {product.desc}
-                            </p>
-
-                            <div style={{
-                                display: 'flex',
-                                flexDirection: 'column',
-                                gap: '0.4rem',
-                                marginBottom: '1.25rem',
-                                alignItems: 'flex-start',
-                                marginInline: 'auto',
-                                width: 'fit-content'
-                            }}>
-                                {product.features?.map((feature: string, fIndex: number) => (
-                                    <div key={fIndex} style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', fontSize: '0.8rem', color: '#475569', fontWeight: 500 }}>
-                                        <CheckCircle2 size={13} color="var(--primary)" style={{ flexShrink: 0 }} />
-                                        <span>{feature}</span>
+                                    <div style={{ marginBottom: '0.75rem' }}>
+                                        <span style={{
+                                            padding: '0.4rem 1rem',
+                                            borderRadius: '2rem',
+                                            background: product.isPromo ? '#fef2f2' : '#f1f5f9',
+                                            color: product.isPromo ? '#ef4444' : '#64748b',
+                                            fontSize: '0.65rem',
+                                            fontWeight: 900,
+                                            textTransform: 'uppercase',
+                                            letterSpacing: '0.1em',
+                                        }}>
+                                            {product.isPromo ? 'Penawaran Spesial' : 'Standard Plan'}
+                                        </span>
                                     </div>
-                                ))}
-                            </div>
 
-                            <div style={{
-                                marginTop: 'auto',
-                                background: 'linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%)',
-                                padding: '0.75rem',
-                                borderRadius: '1rem',
-                                marginBottom: '0.75rem',
-                                position: 'relative'
-                            }}>
-                                {product.originalPrice && (
+                                    <h3 style={{ marginBottom: '0.75rem', fontSize: '1.6rem', fontWeight: 800, color: '#0f172a', letterSpacing: '-0.03em' }}>
+                                        {product.name}
+                                    </h3>
+
+                                    <p style={{ color: '#64748b', lineHeight: 1.5, marginBottom: '1.75rem', fontSize: '0.95rem' }}>
+                                        {product.desc}
+                                    </p>
+
                                     <div style={{
                                         display: 'flex',
-                                        justifyContent: 'center',
-                                        alignItems: 'center',
+                                        flexDirection: 'column',
                                         gap: '0.4rem',
-                                        marginBottom: '0.2rem'
+                                        marginBottom: '1.25rem',
+                                        alignItems: 'flex-start',
+                                        marginInline: 'auto',
+                                        width: 'fit-content'
                                     }}>
-                                        <span style={{ fontSize: '0.8rem', color: '#94a3b8', textDecoration: 'line-through' }}>
-                                            {product.originalPrice}
-                                        </span>
-                                        <span style={{
-                                            background: '#dcfce7',
-                                            color: '#15803d',
-                                            padding: '0.15rem 0.4rem',
-                                            borderRadius: '0.4rem',
-                                            fontSize: '0.6rem',
-                                            fontWeight: 800
-                                        }}>
-                                            Hemat {product.discount || '40%'}
-                                        </span>
+                                        {product.features?.map((feature: string, fIndex: number) => (
+                                            <div key={fIndex} style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', fontSize: '0.8rem', color: '#475569', fontWeight: 500 }}>
+                                                <CheckCircle2 size={13} color="var(--primary)" style={{ flexShrink: 0 }} />
+                                                <span>{feature}</span>
+                                            </div>
+                                        ))}
                                     </div>
-                                )}
-                                <div style={{ fontSize: '1.85rem', fontWeight: 900, color: '#0f172a', letterSpacing: '-0.04em' }}>
-                                    {product.price}
-                                </div>
-                            </div>
 
-                            <button className="btn btn-primary" style={{
-                                width: '100%',
-                                borderRadius: '1rem',
-                                padding: '0.9rem',
-                                fontWeight: 700,
-                                fontSize: '0.95rem',
-                                boxShadow: '0 8px 12px -3px rgba(37, 99, 235, 0.2)'
-                            }}>
-                                {product.isPromo ? 'Ambil Promo Sekarang' : 'Konsultasi Sekarang'} <ArrowRight size={16} />
-                            </button>
+                                    <div style={{
+                                        marginTop: 'auto',
+                                        background: 'linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%)',
+                                        padding: '0.75rem',
+                                        borderRadius: '1rem',
+                                        marginBottom: '0.75rem',
+                                        position: 'relative'
+                                    }}>
+                                        {product.originalPrice && (
+                                            <div style={{
+                                                display: 'flex',
+                                                justifyContent: 'center',
+                                                alignItems: 'center',
+                                                gap: '0.4rem',
+                                                marginBottom: '0.2rem'
+                                            }}>
+                                                <span style={{ fontSize: '0.8rem', color: '#94a3b8', textDecoration: 'line-through' }}>
+                                                    {product.originalPrice}
+                                                </span>
+                                                <span style={{
+                                                    background: '#dcfce7',
+                                                    color: '#15803d',
+                                                    padding: '0.15rem 0.4rem',
+                                                    borderRadius: '0.4rem',
+                                                    fontSize: '0.6rem',
+                                                    fontWeight: 800
+                                                }}>
+                                                    Hemat {product.discount || '40%'}
+                                                </span>
+                                            </div>
+                                        )}
+                                        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                                            {(product.price.startsWith('Mulai') || product.price.startsWith('Starting')) && (
+                                                <span style={{
+                                                    fontSize: '0.65rem',
+                                                    fontWeight: 800,
+                                                    color: '#94a3b8',
+                                                    textTransform: 'uppercase',
+                                                    letterSpacing: '0.05em',
+                                                    marginBottom: '-0.25rem'
+                                                }}>
+                                                    {product.price.split(' ')[0]} {product.price.includes('dari') ? 'dari' : product.price.includes('from') ? 'from' : ''}
+                                                </span>
+                                            )}
+                                            <div style={{ fontSize: '1.85rem', fontWeight: 900, color: '#0f172a', letterSpacing: '-0.04em' }}>
+                                                {product.price.replace(/^(Mulai dari|Starting from|Mulai|Starting)\s*/, '')}
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <button className="btn btn-primary" style={{
+                                        width: '100%',
+                                        borderRadius: '1rem',
+                                        padding: '0.9rem',
+                                        fontWeight: 700,
+                                        fontSize: '0.95rem',
+                                        boxShadow: '0 8px 12px -3px rgba(37, 99, 235, 0.2)'
+                                    }}>
+                                        {product.isPromo ? 'Ambil Promo Sekarang' : 'Konsultasi Sekarang'} <ArrowRight size={16} />
+                                    </button>
+                                </div>
+                            </motion.div>
+                        ))}
+                    </motion.div>
+                </div>
+
+                {/* Custom Products Section - Differentiated with Navy Theme */}
+                <div style={{
+                    marginTop: '-2.5rem',
+                    padding: '3.5rem 0',
+                    backgroundColor: '#f8fafc',
+                    width: '100vw',
+                    position: 'relative',
+                    left: '50%',
+                    right: '50%',
+                    marginLeft: '-50vw',
+                    marginRight: '-50vw'
+                }}>
+                    <div className="container">
+                        <div style={{ textAlign: 'center', marginBottom: '3.5rem' }}>
+                            <motion.h3
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                style={{ fontSize: '1.75rem', fontWeight: 800, color: '#0f172a', marginBottom: '0.75rem' }}
+                            >
+                                {products.customTitle}
+                            </motion.h3>
+                            <motion.p
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                style={{ color: '#64748b', fontSize: '1rem', maxWidth: '640px', margin: '0 auto' }}
+                            >
+                                {products.customDesc}
+                            </motion.p>
+                        </div>
+
+                        <motion.div
+                            className="products-grid"
+                            initial="hidden"
+                            whileInView="visible"
+                            viewport={{ once: true, margin: "-100px" }}
+                            variants={{
+                                hidden: { opacity: 0 },
+                                visible: {
+                                    opacity: 1,
+                                    transition: { staggerChildren: 0.15 }
+                                }
+                            }}
+                            style={{
+                                display: 'flex',
+                                flexWrap: 'wrap',
+                                justifyContent: 'center',
+                                gap: '1.5rem',
+                                maxWidth: '1200px',
+                                margin: '0 auto'
+                            }}
+                        >
+                            {products.customItems?.map((product: any, index: number) => {
+                                const sectionAccent = '#0f172a'; // Deep Navy for this section
+                                return (
+                                    <motion.div
+                                        key={index}
+                                        variants={{
+                                            hidden: { opacity: 0, y: 40 },
+                                            visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: "easeOut" } }
+                                        }}
+                                        style={{
+                                            flex: '1 1 320px',
+                                            maxWidth: '380px',
+                                            display: 'flex'
+                                        }}
+                                    >
+                                        <div
+                                            className="product-card"
+                                            style={{
+                                                display: 'flex',
+                                                flexDirection: 'column',
+                                                width: '100%',
+                                                flex: 1,
+                                                padding: '3.5rem 2rem',
+                                                borderRadius: '2.5rem',
+                                                backgroundColor: 'white',
+                                                border: index === 1 ? `2px solid ${sectionAccent}` : '1px solid #e2e8f0',
+                                                position: 'relative',
+                                                transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
+                                                boxShadow: index === 1 ? '0 25px 50px -12px rgba(15, 23, 42, 0.15)' : '0 10px 30px -5px rgba(0, 0, 0, 0.04)',
+                                                textAlign: 'center'
+                                            }}
+                                        >
+                                            {index === 1 && (
+                                                <div style={{
+                                                    position: 'absolute',
+                                                    top: '-14px',
+                                                    left: '50%',
+                                                    transform: 'translateX(-50%)',
+                                                    background: sectionAccent,
+                                                    color: 'white',
+                                                    padding: '0.4rem 1.25rem',
+                                                    borderRadius: '2rem',
+                                                    fontSize: '0.7rem',
+                                                    fontWeight: 800,
+                                                    textTransform: 'uppercase',
+                                                    letterSpacing: '0.1em',
+                                                    zIndex: 10,
+                                                    whiteSpace: 'nowrap'
+                                                }}>
+                                                    Layanan Populer
+                                                </div>
+                                            )}
+
+                                            <div style={{ marginBottom: '1rem' }}>
+                                                <span style={{
+                                                    padding: '0.5rem 1.25rem',
+                                                    borderRadius: '2rem',
+                                                    background: product.isPromo ? '#fef2f2' : '#f1f5f9',
+                                                    color: product.isPromo ? '#ef4444' : '#64748b',
+                                                    fontSize: '0.65rem',
+                                                    fontWeight: 900,
+                                                    textTransform: 'uppercase',
+                                                    letterSpacing: '0.1em',
+                                                    border: '1px solid #e2e8f0'
+                                                }}>
+                                                    {product.isPromo ? 'Penawaran Spesial' : 'Layanan Kustom'}
+                                                </span>
+                                            </div>
+
+                                            <h3 style={{ marginBottom: '0.75rem', fontSize: '1.75rem', fontWeight: 800, color: '#0f172a', letterSpacing: '-0.03em' }}>
+                                                {product.name}
+                                            </h3>
+
+                                            <p style={{ color: '#64748b', lineHeight: 1.6, marginBottom: '2rem', fontSize: '1rem' }}>
+                                                {product.desc}
+                                            </p>
+
+                                            <div style={{
+                                                display: 'flex',
+                                                flexDirection: 'column',
+                                                gap: '0.6rem',
+                                                marginBottom: '2.5rem',
+                                                alignItems: 'flex-start',
+                                                marginInline: 'auto',
+                                                width: 'fit-content'
+                                            }}>
+                                                {product.features?.map((feature: string, fIndex: number) => (
+                                                    <div key={fIndex} style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', fontSize: '0.85rem', color: '#475569', fontWeight: 500 }}>
+                                                        <CheckCircle2 size={15} color={sectionAccent} style={{ flexShrink: 0 }} />
+                                                        <span>{feature}</span>
+                                                    </div>
+                                                ))}
+                                            </div>
+
+                                            <div style={{
+                                                marginTop: 'auto',
+                                                background: 'linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%)',
+                                                padding: '1rem',
+                                                borderRadius: '1.25rem',
+                                                marginBottom: '1.5rem',
+                                                position: 'relative'
+                                            }}>
+                                                <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                                                    {(product.price.startsWith('Mulai') || product.price.startsWith('Starting')) && (
+                                                        <span style={{
+                                                            fontSize: '0.65rem',
+                                                            fontWeight: 800,
+                                                            color: '#94a3b8',
+                                                            textTransform: 'uppercase',
+                                                            letterSpacing: '0.05em',
+                                                            marginBottom: '-0.25rem'
+                                                        }}>
+                                                            {product.price.split(' ')[0]} {product.price.includes('dari') ? 'dari' : product.price.includes('from') ? 'from' : ''}
+                                                        </span>
+                                                    )}
+                                                    <div style={{ fontSize: '1.85rem', fontWeight: 900, color: '#0f172a', letterSpacing: '-0.04em' }}>
+                                                        {product.price.replace(/^(Mulai dari|Starting from|Mulai|Starting)\s*/, '')}
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <button className="btn" style={{
+                                                width: '100%',
+                                                borderRadius: '1.25rem',
+                                                padding: '1.1rem',
+                                                fontWeight: 800,
+                                                fontSize: '1rem',
+                                                background: index === 1 ? sectionAccent : 'white',
+                                                border: index === 1 ? 'none' : `2px solid #e2e8f0`,
+                                                color: index === 1 ? 'white' : '#0f172a',
+                                                display: 'flex',
+                                                alignItems: 'center',
+                                                justifyContent: 'center',
+                                                gap: '0.75rem',
+                                                transition: 'all 0.3s ease'
+                                            }}>
+                                                Konsultasi Sekarang <ArrowRight size={18} />
+                                            </button>
+                                        </div>
+                                    </motion.div>
+                                );
+                            })}
                         </motion.div>
-                    ))}
-                </motion.div>
+                    </div>
+                </div>
 
                 <motion.div
                     initial={{ opacity: 0, y: 40 }}
@@ -321,7 +549,7 @@ export default function Products() {
                             fontSize: '1.05rem',
                             lineHeight: 1.6
                         }}>
-                            {t.ctaSection.desc}
+                            {(t as any).ctaSection?.desc}
                         </p>
 
                         <motion.button

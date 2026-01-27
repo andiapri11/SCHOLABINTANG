@@ -17,19 +17,23 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL('https://codifi.id'), // Ganti dengan domain Anda nanti
   title: {
-    default: "Codifi - Cipta Inovasi Digital | Professional Web Development",
-    template: "%s | Codifi"
+    default: "Codifi - Jasa Pembuatan Website & Aplikasi Web Professional",
+    template: "%s | Codifi - Cipta Inovasi Digital"
   },
-  description: "Codifi (Cipta Inovasi Digital) delivers professional website development, modern landing pages, and custom web applications that are fast, mobile-friendly, and SEO optimized.",
+  description: "Jasa pembuatan website professional dan aplikasi web kustom di Indonesia. Solusi digital strategis untuk bisnis & instansi pendidikan dengan desain modern, cepat, dan SEO-friendly.",
   keywords: [
     "Codifi",
+    "Cipta Inovasi Digital",
     "jasa pembuatan website",
     "jasa pembuatan aplikasi web",
     "web development agency indonesia",
-    "nextjs developer",
-    "landing page murah berkualitas",
-    "seo website",
-    "pembuatan sistem informasi"
+    "jasa landing page",
+    "jasa pembuatan sistem informasi",
+    "jasa pembuatan website sekolah",
+    "software house palembang",
+    "website development palembang",
+    "pembuatan aplikasi mobile",
+    "jasa seo indonesia"
   ],
   authors: [{ name: "Codifi Team" }],
   creator: "Codifi",
@@ -49,20 +53,29 @@ export const metadata: Metadata = {
     canonical: '/',
   },
   openGraph: {
-    title: "Codifi | Professional Website & Web App Development Services",
-    description: "Modern digital solutions for your business transformation with Codifi. Fast, Secure, and SEO Friendly.",
+    title: "Codifi | Solusi Digital Strategis untuk Bisnis Anda",
+    description: "Transformasi bisnis Anda ke ranah digital dengan website dan aplikasi kustom yang cepat, aman, dan berorientasi hasil.",
     url: 'https://codifi.id',
     siteName: 'Codifi',
+    images: [
+      {
+        url: '/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'Codifi - Professional Web Development',
+      },
+    ],
     locale: 'id_ID',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Codifi | Web Development Service',
-    description: 'Transform your business into the digital realm with Codifi.',
+    title: 'Codifi | Jasa Pembuatan Website & App',
+    description: 'Bantu bisnis Anda tumbuh lebih cepat dengan solusi teknologi kustom dari Codifi.',
+    images: ['/og-image.png'],
   },
   verification: {
-    google: 'google-site-verification-id', // Ganti dengan ID dari Google Search Console
+    google: 'google-site-verification-id',
   },
 };
 
@@ -75,6 +88,30 @@ export default function RootLayout({
   return (
     <html lang="id">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "Codifi - Cipta Inovasi Digital",
+              "url": "https://codifi.id",
+              "logo": "https://codifi.id/icon.png",
+              "description": "Jasa pembuatan website professional dan aplikasi web kustom di Indonesia.",
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Palembang",
+                "addressRegion": "Sumatera Selatan",
+                "addressCountry": "ID"
+              },
+              "contactPoint": {
+                "@type": "ContactPoint",
+                "telephone": "+6281234567890",
+                "contactType": "customer service"
+              }
+            })
+          }}
+        />
         <VisitorTracker />
         <LanguageProvider>
           {children}

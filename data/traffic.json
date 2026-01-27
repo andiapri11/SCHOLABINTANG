@@ -1,6 +1,11 @@
 {
-  "totalSessions": 4,
-  "sessionsToday": 4,
-  "lastUpdated": "2026-01-26",
-  "history": []
+  "totalSessions": 6,
+  "sessionsToday": 2,
+  "lastUpdated": "2026-01-27",
+  "history": [
+    {
+      "date": "2026-01-26",
+      "sessions": 4
+    }
+  ]
 }

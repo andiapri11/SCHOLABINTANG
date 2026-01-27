@@ -10,9 +10,9 @@ export default function Portfolio() {
     const { t } = useLanguage();
 
     return (
-        <section id="portfolio" style={{ background: '#f8fafc' }}>
+        <section id="portfolio" style={{ padding: '40px 0 60px', background: '#f8fafc' }}>
             <div className="container">
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: '5rem', flexWrap: 'wrap', gap: '2rem' }}>
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: '2.5rem', flexWrap: 'wrap', gap: '1rem' }}>
                     <motion.div
                         initial={{ opacity: 0, y: 30 }}
                         whileInView={{ opacity: 1, y: 0 }}
@@ -21,17 +21,17 @@ export default function Portfolio() {
                     >
                         <span style={{
                             color: 'var(--primary)',
-                            fontWeight: 700,
-                            fontSize: '0.85rem',
+                            fontWeight: 800,
+                            fontSize: '0.75rem',
                             textTransform: 'uppercase',
-                            letterSpacing: '0.1em',
-                            marginBottom: '1rem',
+                            letterSpacing: '0.2em',
+                            marginBottom: '0.25rem',
                             display: 'block'
                         }}>
-                            Success Stories
+                            {t.portfolio.badge}
                         </span>
-                        <h2 style={{ fontSize: '2.25rem', marginBottom: '0.75rem' }}>{t.portfolio.title}</h2>
-                        <p style={{ color: 'var(--secondary)', fontSize: '1.05rem' }}>{t.portfolio.desc}</p>
+                        <h2 style={{ fontSize: '2rem', fontWeight: 800, color: '#0f172a', marginBottom: '0.5rem' }}>{t.portfolio.title}</h2>
+                        <p style={{ color: 'var(--secondary)', fontSize: '0.95rem' }}>{t.portfolio.desc}</p>
                     </motion.div>
                     <motion.button
                         initial={{ opacity: 0, scale: 0.9 }}

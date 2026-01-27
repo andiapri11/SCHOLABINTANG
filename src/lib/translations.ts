@@ -26,93 +26,125 @@ export const translations = {
             mobile: "Akses dari Mana Saja"
         },
         services: {
+            badge: "Layanan Utama",
             subtitle: "Solusi Teknologi Strategis",
-            desc: "Kami menghadirkan ekosistem digital yang dirancang khusus untuk meningkatkan efisiensi operasional dan memperluas jangkauan pasar bisnis serta institusi Anda.",
+            desc: "Kami menghadirkan ekosistem digital yang dirancang khusus untuk meningkatkan efisiensi operasional dan memperluas jangkauan pasar bisnis Anda.",
             items: [
                 {
                     title: "Website & Landing Page",
-                    description: "Representasi digital profesional dengan fokus pada konversi, performa tinggi, dan optimasi mesin pencari (SEO) untuk kredibilitas maksimal."
+                    description: "Hadirkan wajah digital bisnis Anda dengan website yang cepat, rapi, dan dirancang khusus untuk menarik calon pelanggan."
                 },
                 {
-                    title: "Sistem Manajemen Retail",
-                    description: "Solusi Point of Sale (POS) dan inventaris terintegrasi untuk memantau transaksi, stok, dan laporan keuangan secara real-time dari perangkat apapun."
+                    title: "Aplikasi Kasir & Retail",
+                    description: "Pantau stok, penjualan, dan laporan keuangan dari mana saja secara real-time untuk kemudahan kontrol bisnis Anda."
                 },
                 {
-                    title: "Sistem Informasi Sekolah",
-                    description: "Digitalisasi administrasi pendidikan untuk pengelolaan data siswa, kurikulum, absensi, hingga laporan capaian hasil belajar secara efisien."
+                    title: "Sistem Sekolah Digital",
+                    description: "Modernisasi administrasi pendidikan mulai dari data siswa hingga laporan nilai dalam satu sistem yang terpusat."
                 },
                 {
-                    title: "Pengembangan App Custom",
-                    description: "Transformasikan ide sistem unik Anda menjadi solusi perangkat lunak yang skalabel, aman, dan disesuaikan secara presisi dengan alur kerja organisasi."
+                    title: "Aplikasi Custom (Kustom)",
+                    description: "Wujudkan sistem atau aplikasi khusus yang dirancang mengikuti alur kerja tim Anda tanpa batasan fitur."
                 }
             ]
         },
         products: {
-            title: "Katalog",
-            desc: "Pilih dari koleksi aplikasi siap pakai kami agar Anda bisa langsung fokus berjualan dan mengelola bisnis dengan harga yang sangat terjangkau.",
-            items: [
+            title: "Solusi Digital Kami",
+            readyTitle: "Produk Unggulan",
+            readyDesc: "Aplikasi siap pakai yang dirancang khusus untuk mempercepat pertumbuhan bisnis dan institusi Anda.",
+            readyItems: [
                 {
-                    name: "Smart Retail (POS)",
+                    name: "VORA (Multi-branch POS)",
                     price: "1.49jt-an",
                     originalPrice: "2.5jt",
                     discount: "40%",
-                    desc: "Sistem kasir lengkap untuk toko. Kelola stok, cetak struk, dan pantau laba-rugi secara real-time.",
+                    desc: "Solusi kasir dan accounting multiguna yang pas untuk semua jenis usaha. Kelola banyak cabang jadi lebih simpel dengan fitur yang bisa kami sesuaikan total buat Anda.",
                     isPromo: true,
                     features: [
-                        "Full Source Code & Database",
-                        "Manajemen Stok & Inventori",
-                        "Laporan Laba Rugi Otomatis",
-                        "Support Cetak Struk Bluetooth",
-                        "Gratis Instalasi & Training",
-                        "Update Fitur Selamanya"
+                        "Fitur Custom Sesuai Jenis Usaha",
+                        "Manajemen Multi-Cabang/Outlet",
+                        "Sistem Kasir & Accounting Terpadu",
+                        "Inventori Stok Real-time",
+                        "Laporan Keuangan Otomatis"
                     ]
                 },
                 {
-                    name: "Company Profile Modern",
-                    price: "850rb-an",
-                    originalPrice: "1.8jt",
-                    discount: "50%",
-                    desc: "Tingkatkan kredibilitas bisnis dengan website profil elegan, cepat, dan SEO friendly.",
-                    isPromo: true,
-                    features: [
-                        "Desain Premium & Responsive",
-                        "Integrasi WhatsApp Chat",
-                        "Optimasi SEO Google",
-                        "Akses Cepat (High Performance)",
-                        "Gratis Hosting 1 Tahun",
-                        "Email Bisnis Profesional"
-                    ]
-                },
-                {
-                    name: "Sistem Sekolah Digital",
-                    price: "450rb-an",
-                    originalPrice: "1.5jt",
-                    discount: "70%",
-                    desc: "Digitalisasi sekolah tanpa mahal. Kelola absensi, nilai, dan administrasi dalam satu sistem.",
-                    isPromo: true,
-                    features: [
-                        "Panel Admin, Guru & Siswa",
-                        "Manajemen Nilai & Raport",
-                        "Sistem Absensi Digital",
-                        "Modul Keuangan & SPP",
-                        "Backup Data Rutin",
-                        "Pelatihan Administrator Sekolah"
-                    ]
-                },
-                {
-                    name: "Aplikasi CBT Ujian",
+                    name: "Schola CBT (Exam App)",
                     price: "350rb-an",
                     originalPrice: "1.2jt",
                     discount: "70%",
-                    desc: "Sistem ujian online praktis & anti-curang. Cocok untuk ulangan harian atau ujian semester.",
+                    desc: "Platform ujian digital serbaguna yang aman dari kecurangan. Cocok untuk sekolah, lembaga kursus, hingga seleksi karyawan dengan performa yang tetap stabil meski ribuan peserta masuk bersamaan.",
                     isPromo: true,
                     features: [
-                        "Bank Soal Terintegrasi",
-                        "Acak Soal & Jawaban",
-                        "Pembatasan Browser (Anti-Cheat)",
-                        "Laporan Nilai Real-time",
-                        "Analisis Butir Soal",
-                        "Support Import Excel"
+                        "Bank Soal & Acak Urutan",
+                        "Gratis Apps Pengaman Ujian",
+                        "Koreksi Otomatis Real-time",
+                        "Analisis Hasil & Butir Soal",
+                        "Support Skala Ribuan Peserta"
+                    ]
+                },
+                {
+                    name: "Schola Portal",
+                    price: "950rb-an",
+                    originalPrice: "1.5jt",
+                    discount: "35%",
+                    desc: "Modernisasi manajemen sekolah Anda dalam satu platform. Mulai dari administrasi siswa, data guru, hingga rekap laporan nilai, semuanya jadi lebih rapi dan otomatis.",
+                    isPromo: true,
+                    features: [
+                        "Data Umum & Kependidikan",
+                        "Manajemen Pembelajaran",
+                        "Manajemen Sekolah & Akademik",
+                        "Manajemen Keuangan & SPP",
+                        "Backup Database & User Management"
+                    ]
+                }
+            ],
+            customTitle: "Layanan Kustom",
+            customDesc: "Transformasikan ide unik Anda menjadi solusi perangkat lunak yang skalabel dan tepat sasaran.",
+            customItems: [
+                {
+                    name: "Mobile App Development",
+                    price: "Mulai dari 1.5jt-an",
+                    originalPrice: "5jt",
+                    discount: "30%",
+                    desc: "Permudah akses bagi pelanggan Anda melalui aplikasi Android dan iOS yang lancar, stabil, dan mudah digunakan kapan saja.",
+                    isPromo: false,
+                    features: [
+                        "Dukungan Android & iOS",
+                        "Performa Lancar & Stabil",
+                        "Desain Antarmuka Modern",
+                        "Integrasi Notifikasi Real-time",
+                        "Bantuan Publish ke App Store & Playstore"
+                    ]
+                },
+                {
+                    name: "Web Company Profile",
+                    price: "Mulai dari 500rb-an",
+                    originalPrice: "1.8jt",
+                    discount: "50%",
+                    desc: "Tingkatkan rasa percaya pelanggan dengan website profil yang rapi, cepat, dan mencerminkan identitas bisnis profesional Anda.",
+                    isPromo: true,
+                    features: [
+                        "Desain Modern & Profesional",
+                        "Mobile Friendly (Responsive)",
+                        "Optimasi SEO Google",
+                        "Gratis Hosting & Domain .com",
+                        "Email Bisnis & Keamanan SSL"
+                    ]
+                },
+                {
+                    name: "Custom System Development",
+                    price: "Mulai dari 900rb-an",
+                    originalPrice: "3.5jt",
+                    discount: "Variatif",
+                    desc: "Wujudkan sistem yang dirancang khusus mengikuti alur kerja tim Anda agar operasional lebih tertata dan efektif.",
+                    isPromo: false,
+                    features: [
+                        "Alur Kerja (Workflow) Kustom",
+                        "Akses Mobile & Multi-Perangkat",
+                        "Source Code Jadi Milik Anda",
+                        "Sistem Skalabel & Aman",
+                        "Dukungan Maintenance Teknis"
                     ]
                 }
             ],
@@ -120,24 +152,25 @@ export const translations = {
             customBtn: "Mulai Diskusi Projek"
         },
         portfolio: {
-            title: "Mitra Sukses Bisnis Baru",
-            desc: "Simak bagaimana kami membantu berbagai unit usaha beralih dari manual ke sistem digital yang terintegrasi.",
-            all: "Lihat Semua Cerita Sukses",
+            badge: "Kisah Sukses",
+            title: "Tumbuh Bersama Mitra Kami",
+            desc: "Lihat hasil nyata kolaborasi kami dalam membantu berbagai lini bisnis bertransformasi ke ekosistem digital.",
+            all: "Lihat Semua Projek",
             items: [
                 {
-                    title: "Smart POS System",
-                    category: "Retail Management",
+                    title: "Sistem Kasir Multi-Cabang",
+                    category: "Retail & POS",
                     client: "Nian Komputer",
                     image: "/pos_system_mockup_1769335969501.png"
                 },
                 {
-                    title: "Portal Akademik",
-                    category: "Education Tech",
+                    title: "Portal Pembelajaran Terpadu",
+                    category: "EdTech Solution",
                     client: "LPT Nurul Ilmi",
                     image: "/school_system_dashboard_1769335986514.png"
                 },
                 {
-                    title: "Corporate Website Premium",
+                    title: "Website Company Profile",
                     category: "Web Development",
                     client: "TechScale Solutions",
                     image: "/corporate_website_showcase_1769336002791.png"
@@ -202,93 +235,125 @@ export const translations = {
             mobile: "Mobile Access"
         },
         services: {
+            badge: "Primary Services",
             subtitle: "Strategic Technology Solutions",
-            desc: "We provide a digital ecosystem specifically designed to improve operational efficiency and expand the market reach of your business and institution.",
+            desc: "We provide a digital ecosystem specifically designed to improve operational efficiency and expand your business market reach.",
             items: [
                 {
                     title: "Website & Landing Pages",
-                    description: "Professional digital representation focusing on conversion, high performance, and search engine optimization (SEO) for maximum credibility."
+                    description: "Present your business digitally with a fast, clean website designed specifically to attract potential customers."
                 },
                 {
-                    title: "Retail Management Systems",
-                    description: "Integrated Point of Sale (POS) and inventory solutions to monitor transactions, stock, and financial reports in real-time from any device."
+                    title: "POS & Retail Solutions",
+                    description: "Monitor stock, sales, and financial reports from anywhere in real-time for easier business control."
                 },
                 {
-                    title: "School Information Systems",
-                    description: "Digitalization of educational administration for efficient management of student data, curriculum, attendance, and learning achievement reports."
+                    title: "Digital School Systems",
+                    description: "Modernize educational administration from student data to grade reports in one centralized system."
                 },
                 {
-                    title: "Custom App Development",
-                    description: "Transform your unique system ideas into scalable, secure software solutions precisely tailored to your organization's workflow."
+                    title: "Custom Applications",
+                    description: "Create specialized systems or apps designed specifically to follow your team's unique workflow."
                 }
             ]
         },
         products: {
-            title: "Catalog",
-            desc: "Choose from our ready-made apps so you can focus on selling and managing your growth at an affordable price.",
-            items: [
+            title: "Digital Solutions",
+            readyTitle: "Our Products",
+            readyDesc: "Ready-to-use applications specifically designed to accelerate the growth of your business and institution.",
+            readyItems: [
                 {
-                    name: "Smart Retail (POS)",
+                    name: "VORA (Multi-branch POS)",
                     price: "Starting 1.49M+",
                     originalPrice: "2.5M",
                     discount: "40%",
-                    desc: "Full cashier system for shops. Manage stock, print receipts, and monitor profit-loss in real-time.",
+                    desc: "A multi-purpose cashier and accounting solution for all types of business. Simplify multi-branch management with features fully customizable for your needs.",
                     isPromo: true,
                     features: [
-                        "Full Source Code & Database",
-                        "Stock & Inventory Management",
-                        "Automatic Profit/Loss Report",
-                        "Bluetooth Receipt Support",
-                        "Free Installation & Training",
-                        "Lifetime Feature Updates"
+                        "Business-Specific Custom Features",
+                        "Multi-Branch/Outlet Management",
+                        "Unified Cashier & Accounting",
+                        "Real-time Inventory",
+                        "Automated Financial Reports"
                     ]
                 },
                 {
-                    name: "Modern Company Profile",
-                    price: "Starting 850k+",
-                    originalPrice: "1.8M",
-                    discount: "50%",
-                    desc: "Boost business credibility with an elegant, fast, and SEO-friendly profile website.",
-                    isPromo: true,
-                    features: [
-                        "Premium & Responsive Design",
-                        "WhatsApp Chat Integration",
-                        "Google SEO Optimization",
-                        "High Performance (Fast Load)",
-                        "1 Year Free Hosting",
-                        "Professional Business Email"
-                    ]
-                },
-                {
-                    name: "Digital School System",
-                    price: "Starting 450k+",
-                    originalPrice: "1.5M",
-                    discount: "70%",
-                    desc: "Digitalize schools affordably. Manage attendance, grades, and admin in one system.",
-                    isPromo: true,
-                    features: [
-                        "Admin, Teacher & Student Panels",
-                        "Grades & Report Card Management",
-                        "Digital Attendance System",
-                        "Financial & Tuition Module",
-                        "Routine Data Backup",
-                        "School Administrator Training"
-                    ]
-                },
-                {
-                    name: "Online Exam App (CBT)",
+                    name: "Schola CBT (Exam App)",
                     price: "Starting 350k+",
                     originalPrice: "1.2M",
                     discount: "70%",
-                    desc: "Practical & anti-cheat online exam system. Perfect for tests or semester exams.",
+                    desc: "A versatile digital exam platform secure from cheating. Suitable for schools, training centers, and recruitment tests with stable performance even with thousands of concurrent participants.",
                     isPromo: true,
                     features: [
-                        "Integrated Question Bank",
-                        "Shuffle Questions & Answers",
-                        "Browser Lock (Anti-Cheat)",
-                        "Real-time Grade Reports",
-                        "Item Analysis Feature",
-                        "Excel Import Support"
+                        "Question Bank & Shuffling",
+                        "Free Exam Security Apps",
+                        "Real-time Auto-grading",
+                        "Result & Item Analysis",
+                        "Support for Thousands of Users"
+                    ]
+                },
+                {
+                    name: "Schola Portal",
+                    price: "Starting 950k+",
+                    originalPrice: "1.5M",
+                    discount: "35%",
+                    desc: "Modernize your school management in one platform. From student administration and teacher data to grading reports, everything is organized and automated.",
+                    isPromo: true,
+                    features: [
+                        "General & Educational Data",
+                        "Learning Management System",
+                        "School & Academic Management",
+                        "Financial & Fee Management",
+                        "Database Backup & User Management"
+                    ]
+                }
+            ],
+            customTitle: "Custom Services",
+            customDesc: "Transform your unique ideas into scalable and effective software solutions.",
+            customItems: [
+                {
+                    name: "Mobile App Development",
+                    price: "Starting from 1.5M+",
+                    originalPrice: "5M",
+                    discount: "30%",
+                    desc: "Make it easier for your customers to reach you through smooth, stable, and user-friendly Android and iOS apps.",
+                    isPromo: false,
+                    features: [
+                        "Android & iOS Support",
+                        "Smooth & Stable Performance",
+                        "Modern Interface Design",
+                        "Real-time Notification Setup",
+                        "App Store & Playstore Publishing Help"
+                    ]
+                },
+                {
+                    name: "Web Company Profile",
+                    price: "Starting from 500k+",
+                    originalPrice: "1.8M",
+                    discount: "50%",
+                    desc: "Build customer trust with a clean, fast website that truly reflects your professional business identity.",
+                    isPromo: true,
+                    features: [
+                        "Modern & Professional Design",
+                        "Mobile Friendly (Responsive)",
+                        "Google SEO Optimization",
+                        "Free Hosting & .com Domain",
+                        "Business Email & SSL Security"
+                    ]
+                },
+                {
+                    name: "Custom System Development",
+                    price: "Starting from 900k+",
+                    originalPrice: "3.5M",
+                    discount: "Varies",
+                    desc: "Create systems designed specifically to follow your team's workflow for more organized and effective operations.",
+                    isPromo: false,
+                    features: [
+                        "Custom Workflow Design",
+                        "Mobile & Multi-Device Access",
+                        "Full Source Code Ownership",
+                        "Scalable & Secure System",
+                        "Technical Maintenance Support"
                     ]
                 }
             ],
@@ -296,24 +361,25 @@ export const translations = {
             customBtn: "Start Project Discussion"
         },
         portfolio: {
-            title: "Startup & SME Partners",
-            desc: "See how we help businesses transition from manual processes to integrated digital systems.",
-            all: "See All Success Stories",
+            badge: "Success Stories",
+            title: "Growing with Our Partners",
+            desc: "Explore the real results of our collaboration in helping various business sectors transform into digital ecosystems.",
+            all: "View All Projects",
             items: [
                 {
-                    title: "Smart POS System",
-                    category: "Retail Management",
+                    title: "Multi-branch POS System",
+                    category: "Retail & POS",
                     client: "Nian Komputer",
                     image: "/pos_system_mockup_1769335969501.png"
                 },
                 {
-                    title: "Academic Portal",
-                    category: "Education Tech",
+                    title: "Integrated Learning Portal",
+                    category: "EdTech Solution",
                     client: "LPT Nurul Ilmi",
                     image: "/school_system_dashboard_1769335986514.png"
                 },
                 {
-                    title: "Premium Corporate Website",
+                    title: "Company Profile Website",
                     category: "Web Development",
                     client: "TechScale Solutions",
                     image: "/corporate_website_showcase_1769336002791.png"

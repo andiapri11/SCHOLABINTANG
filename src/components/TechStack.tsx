@@ -6,12 +6,13 @@ import { useLanguage } from "@/lib/LanguageContext";
 const technologies = [
     { name: "Next.js", logo: "https://www.vectorlogo.zone/logos/nextjs/nextjs-icon.svg" },
     { name: "React", logo: "https://www.vectorlogo.zone/logos/reactjs/reactjs-icon.svg" },
-    { name: "Android", logo: "https://www.vectorlogo.zone/logos/android/android-icon.svg" },
+    { name: "Flutter", logo: "https://www.vectorlogo.zone/logos/flutterio/flutterio-icon.svg" },
+    { name: "React Native", logo: "https://www.vectorlogo.zone/logos/reactjs/reactjs-icon.svg" },
     { name: "Laravel", logo: "https://www.vectorlogo.zone/logos/laravel/laravel-icon.svg" },
     { name: "PHP", logo: "https://www.vectorlogo.zone/logos/php/php-icon.svg" },
     { name: "MySQL", logo: "https://www.vectorlogo.zone/logos/mysql/mysql-icon.svg" },
     { name: "TypeScript", logo: "https://www.vectorlogo.zone/logos/typescriptlang/typescriptlang-icon.svg" },
-    { name: "Tailwind CSS", logo: "https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg" },
+    { name: "Tailwind", logo: "https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg" },
     { name: "Node.js", logo: "https://www.vectorlogo.zone/logos/nodejs/nodejs-icon.svg" },
     { name: "PostgreSQL", logo: "https://www.vectorlogo.zone/logos/postgresql/postgresql-icon.svg" }
 ];
@@ -19,20 +20,38 @@ const technologies = [
 export default function TechStack() {
     const { language } = useLanguage();
 
-    const title = language === 'id' ? "Teknologi Modern yang Kami Gunakan" : "Modern Technologies We Use";
+    const badge = language === 'id' ? "Instrumen Kami" : "Our Instruments";
+    const title = language === 'id' ? "Teknologi Modern" : "Modern Technologies";
     const subtitle = language === 'id'
-        ? "Kami menggunakan instrumen teknologi terkini untuk memastikan performa maksimal dan skalabilitas."
-        : "We use the latest technology stacks to ensure maximum performance and scalability.";
+        ? "Kami menggunakan instrumen teknologi terkini untuk memastikan performa maksimal."
+        : "We use the latest technology stacks to ensure maximum performance.";
 
     return (
-        <section style={{ padding: '60px 0', backgroundColor: '#ffffff' }}>
+        <section style={{ padding: '40px 0 60px', backgroundColor: '#ffffff' }}>
             <div className="container">
-                <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
+                <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
+                    <motion.span
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.6 }}
+                        style={{
+                            color: 'var(--primary)',
+                            fontWeight: 800,
+                            fontSize: '0.75rem',
+                            textTransform: 'uppercase',
+                            letterSpacing: '0.2em',
+                            marginBottom: '0.25rem',
+                            display: 'block'
+                        }}
+                    >
+                        {badge}
+                    </motion.span>
                     <motion.h2
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        style={{ fontSize: '2rem', fontWeight: 800, color: '#0f172a', marginBottom: '1rem' }}
+                        style={{ fontSize: '2rem', fontWeight: 800, color: '#0f172a', marginBottom: '0.5rem' }}
                     >
                         {title}
                     </motion.h2>
@@ -41,7 +60,7 @@ export default function TechStack() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: 0.1 }}
-                        style={{ color: 'var(--secondary)', maxWidth: '600px', margin: '0 auto' }}
+                        style={{ color: 'var(--secondary)', maxWidth: '600px', margin: '0 auto', fontSize: '0.95rem' }}
                     >
                         {subtitle}
                     </motion.p>

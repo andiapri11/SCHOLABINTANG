@@ -29,18 +29,18 @@ export default function Services() {
                             fontSize: '0.75rem',
                             textTransform: 'uppercase',
                             letterSpacing: '0.2em',
-                            marginBottom: '1.25rem',
+                            marginBottom: '0.25rem',
                             display: 'block'
                         }}
                     >
-                        Pilihan Layanan
+                        {t.services.badge}
                     </motion.span>
                     <motion.h2
                         initial={{ opacity: 0, y: 30 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true, margin: "-100px" }}
                         transition={{ duration: 0.6, delay: 0.1 }}
-                        style={{ fontSize: 'clamp(2rem, 4vw, 2.75rem)', marginBottom: '1.5rem', color: '#0f172a', fontWeight: 800, letterSpacing: '-0.04em' }}
+                        style={{ fontSize: 'clamp(2rem, 4vw, 2.75rem)', marginBottom: '0.75rem', color: '#0f172a', fontWeight: 800, letterSpacing: '-0.04em' }}
                     >
                         {t.services.subtitle}
                     </motion.h2>
@@ -134,37 +134,13 @@ export default function Services() {
                                 color: 'var(--secondary)',
                                 lineHeight: 1.7,
                                 fontSize: '0.95rem',
-                                marginBottom: '2rem',
+                                marginBottom: '0.5rem',
                                 flexGrow: 1,
                                 position: 'relative',
                                 zIndex: 1
                             }}>
                                 {service.description}
                             </p>
-
-                            <div style={{
-                                marginTop: 'auto',
-                                paddingTop: '1.5rem',
-                                borderTop: '1px solid #f1f5f9',
-                                width: '100%',
-                                display: 'flex',
-                                alignItems: 'center',
-                                justifyContent: 'center',
-                                position: 'relative',
-                                zIndex: 1
-                            }}>
-                                <a href="#contact" className="service-link" style={{
-                                    display: 'inline-flex',
-                                    alignItems: 'center',
-                                    gap: '0.5rem',
-                                    fontSize: '0.9rem',
-                                    fontWeight: 700,
-                                    color: 'var(--primary)',
-                                    transition: 'all 0.3s ease'
-                                }}>
-                                    Detail <ArrowRight size={14} />
-                                </a>
-                            </div>
                         </motion.div>
                     ))}
                 </motion.div>
@@ -183,9 +159,6 @@ export default function Services() {
                 }
                 .service-card:hover .icon-container {
                     transform: scale(1.1) rotate(5deg);
-                }
-                .service-link:hover {
-                    gap: 0.875rem !important;
                 }
             `}</style>
         </section >
