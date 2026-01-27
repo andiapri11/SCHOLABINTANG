@@ -26,7 +26,7 @@ export default function Footer() {
               </div>
               <div style={{ display: 'flex', flexDirection: 'column', lineHeight: 1.1 }}>
                 <span style={{ color: '#0f172a', letterSpacing: '-0.02em', fontWeight: 800, fontSize: '1.45rem' }}>Codifi</span>
-                <span style={{ color: '#64748b', fontSize: '0.6rem', fontWeight: 600, textTransform: 'uppercase' }}>Cipta Digital Indonesia</span>
+                <span style={{ color: '#64748b', fontSize: '0.6rem', fontWeight: 600, textTransform: 'uppercase' }}>Cipta Inovasi Digital</span>
               </div>
             </Link>
             <p style={{ color: 'var(--secondary)', lineHeight: 1.7, fontSize: '0.925rem', maxWidth: '300px' }}>

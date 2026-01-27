@@ -142,7 +142,7 @@ export default function SubmissionsDashboard() {
                     </div>
                     <div className="logo-text">
                         <h3 style={{ fontSize: '1.4rem' }}>Codifi</h3>
-                        <span style={{ fontSize: '0.6rem', opacity: 0.8 }}>Cipta Digital Indonesia</span>
+                        <span style={{ fontSize: '0.6rem', opacity: 0.8 }}>Cipta Inovasi Digital</span>
                     </div>
                 </div>
 

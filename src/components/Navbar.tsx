@@ -27,7 +27,7 @@ export default function Navbar() {
                     </div>
                     <div style={{ display: 'flex', flexDirection: 'column', lineHeight: 1.1 }}>
                         <span style={{ color: 'var(--foreground)', letterSpacing: '-0.02em', fontWeight: 800, fontSize: '1.65rem' }}>Codifi</span>
-                        <span style={{ color: '#64748b', fontSize: '0.65rem', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em' }}>Cipta Digital Indonesia</span>
+                        <span style={{ color: '#64748b', fontSize: '0.65rem', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em' }}>Cipta Inovasi Digital</span>
                     </div>
                 </Link>
 
@@ -88,7 +88,7 @@ export default function Navbar() {
                             <img src="/images/logo.png" alt="Logo" style={{ width: '38px', height: '38px' }} />
                             <div style={{ display: 'flex', flexDirection: 'column', lineHeight: 1.1 }}>
                                 <span style={{ fontWeight: 800, color: 'var(--secondary)', fontSize: '1.4rem' }}>Codifi</span>
-                                <span style={{ color: '#94a3b8', fontSize: '0.6rem', fontWeight: 600 }}>Cipta Digital Indonesia</span>
+                                <span style={{ color: '#94a3b8', fontSize: '0.6rem', fontWeight: 600 }}>Cipta Inovasi Digital</span>
                             </div>
                         </div>
                         <div onClick={() => setIsMenuOpen(false)} style={{ color: '#64748b' }}>

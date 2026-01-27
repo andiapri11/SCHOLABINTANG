@@ -46,7 +46,7 @@ export default function LoginPage() {
 
                 <div className="header-text">
                     <h1 style={{ marginBottom: '0.25rem' }}>Codifi</h1>
-                    <span style={{ color: '#64748b', fontSize: '0.75rem', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.1em', display: 'block', marginBottom: '2rem' }}>Cipta Digital Indonesia</span>
+                    <span style={{ color: '#64748b', fontSize: '0.75rem', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.1em', display: 'block', marginBottom: '2rem' }}>Cipta Inovasi Digital</span>
                     <p>Masukkan kunci akses untuk masuk ke panel manajemen sistem.</p>
                 </div>
 
