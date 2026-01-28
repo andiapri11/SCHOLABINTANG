@@ -17,9 +17,9 @@ export default function LoginPage() {
         setLoading(true);
         setError("");
 
-        const storedPassword = localStorage.getItem("admin_password") || "Codifi#123!";
+        const ACCESS_KEY = "Codifi#123!";
 
-        if (password === storedPassword) {
+        if (password === ACCESS_KEY) {
             localStorage.setItem("isAdmin", "true");
             setTimeout(() => {
                 router.push("/dashboard/submissions");

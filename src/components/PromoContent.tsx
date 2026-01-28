@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { useLanguage } from "@/lib/LanguageContext";
+import { submitDemoRequest } from "@/app/actions/contact";
 import { CheckCircle2, Shield, Zap, BarChart3, Users, ArrowRight, Laptop, MessageCircle, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -192,7 +193,7 @@ export default function PromoContent() {
                                                 <p style={{ color: '#64748b' }}>Isi formulir di bawah, tim kami akan segera menghubungi Anda untuk jadwal presentasi online.</p>
                                             </div>
 
-                                            <form onSubmit={(e) => {
+                                            <form onSubmit={async (e) => {
                                                 e.preventDefault();
                                                 const form = e.target as HTMLFormElement;
                                                 const name = (form[0] as HTMLInputElement).value;
@@ -205,20 +206,13 @@ export default function PromoContent() {
                                                 if (sanitizedWa.startsWith("0")) sanitizedWa = "62" + sanitizedWa.substring(1);
                                                 if (sanitizedWa.startsWith("8")) sanitizedWa = "62" + sanitizedWa;
 
-                                                const newSubmission = {
-                                                    id: Date.now(),
+                                                await submitDemoRequest({
                                                     name,
                                                     school,
                                                     whatsapp: sanitizedWa,
                                                     jabatan,
-                                                    date: new Date().toISOString(),
                                                     product: "Schola CBT"
-                                                };
-
-                                                const existing = localStorage.getItem("demo_submissions");
-                                                const submissions = existing ? JSON.parse(existing) : [];
-                                                submissions.push(newSubmission);
-                                                localStorage.setItem("demo_submissions", JSON.stringify(submissions));
+                                                });
 
                                                 setShowDemoForm(false);
                                                 setShowSuccess(true);

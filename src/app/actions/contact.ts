@@ -33,3 +33,28 @@ export async function submitConsultation(formData: FormData) {
         return { error: "Terjadi kesalahan saat menyimpan data. Silakan coba lagi nanti." };
     }
 }
+
+export async function submitDemoRequest(data: any) {
+    const { name, school, whatsapp, jabatan, product } = data;
+
+    if (!name || !school || !whatsapp || !jabatan) {
+        return { error: "Semua field harus diisi." };
+    }
+
+    try {
+        await saveSubmission({
+            type: 'demo',
+            name,
+            school,
+            whatsapp,
+            jabatan, // Map to position in dashboard
+            position: jabatan,
+            service: `Demo: ${product}`,
+            message: `Permintaan Demo untuk ${product} oleh ${jabatan} dari ${school}`
+        });
+        return { success: true };
+    } catch (error) {
+        console.error("DB Demo Error:", error);
+        return { error: "Gagal menyimpan data." };
+    }
+}
