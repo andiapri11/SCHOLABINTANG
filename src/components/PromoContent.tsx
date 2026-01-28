@@ -408,6 +408,9 @@ export default function PromoContent() {
                         .btn {
                             width: 100% !important;
                         }
+                        .intro-text {
+                            display: none !important;
+                        }
                     }
                 `}</style>
             </section>
@@ -418,7 +421,7 @@ export default function PromoContent() {
 
                     {/* Left Column: Detailed Content */}
                     <div className="product-details-col">
-                        <div style={{ marginBottom: '3rem' }}>
+                        <div className="intro-text" style={{ marginBottom: '3rem' }}>
                             <h2 style={{ fontSize: '1.75rem', fontWeight: 800, color: '#0f172a', marginBottom: '1.5rem' }}>
                                 Kenapa Memilih Schola CBT?
                             </h2>
