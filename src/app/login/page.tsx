@@ -17,7 +17,7 @@ export default function LoginPage() {
         setLoading(true);
         setError("");
 
-        const ACCESS_KEY = "Codifi#123!";
+        const ACCESS_KEY = "andiapri123";
 
         if (password === ACCESS_KEY) {
             localStorage.setItem("isAdmin", "true");

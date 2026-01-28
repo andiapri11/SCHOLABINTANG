@@ -124,7 +124,7 @@ export default function SubmissionsDashboard() {
     };
 
     const handleUpdatePassword = () => {
-        const storedPassword = localStorage.getItem("admin_password") || "Codifi#123!";
+        const storedPassword = localStorage.getItem("admin_password") || "andiapri123";
 
         if (!passwords.current || !passwords.new || !passwords.confirm) {
             setShowToast({ message: "Semua kolom password harus diisi.", type: 'error' });
