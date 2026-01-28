@@ -408,15 +408,7 @@ export default function PromoContent() {
                         .btn {
                             width: 100% !important;
                         }
-                        .intro-text-wrapper {
-                            display: none !important;
-                            height: 0 !important;
-                            opacity: 0 !important;
-                            visibility: hidden !important;
-                            margin: 0 !important;
-                            padding: 0 !important;
-                            overflow: hidden !important;
-                        }
+
                     }
                 `}</style>
             </section>
@@ -427,14 +419,7 @@ export default function PromoContent() {
 
                     {/* Left Column: Detailed Content */}
                     <div className="product-details-col">
-                        <div className="intro-text-wrapper" style={{ marginBottom: '3rem' }}>
-                            <h2 style={{ fontSize: '1.75rem', fontWeight: 800, color: '#0f172a', marginBottom: '1.5rem' }}>
-                                Kenapa Memilih Schola CBT?
-                            </h2>
-                            <p style={{ color: '#64748b', lineHeight: 1.7, fontSize: '1.05rem', marginBottom: '2rem' }}>
-                                Schola CBT bukan sekadar aplikasi ujian biasa. Kami membangunnya dengan fokus pada pengalaman pengguna (guru & siswa) serta ketahanan infrastruktur. Tidak perlu lagi server sekolah yang mahal dan ribet perawatannya.
-                            </p>
-                        </div>
+
 
                         <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
                             {detailedFeatures.map((feat, index) => (
