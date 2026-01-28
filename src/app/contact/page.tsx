@@ -125,14 +125,20 @@ export default function Contact() {
                                         <input type="email" name="email" required placeholder="john@example.com" />
                                     </div>
                                 </div>
-                                <div className="form-group">
-                                    <label>{cp.form.service}</label>
-                                    <select name="service" required>
-                                        <option value="Website & Landing Page">Website & Landing Page</option>
-                                        <option value="Smart Retail (POS)">Smart Retail (POS)</option>
-                                        <option value="Sistem Sekolah">Sistem Sekolah</option>
-                                        <option value="Custom App Development">Custom App Development</option>
-                                    </select>
+                                <div className="form-row">
+                                    <div className="form-group">
+                                        <label>{cp.form.whatsapp}</label>
+                                        <input type="tel" name="whatsapp" required placeholder="+62..." />
+                                    </div>
+                                    <div className="form-group">
+                                        <label>{cp.form.service}</label>
+                                        <select name="service" required>
+                                            <option value="Website & Landing Page">Website & Landing Page</option>
+                                            <option value="Smart Retail (POS)">Smart Retail (POS)</option>
+                                            <option value="Sistem Sekolah">Sistem Sekolah</option>
+                                            <option value="Custom App Development">Custom App Development</option>
+                                        </select>
+                                    </div>
                                 </div>
                                 <div className="form-group">
                                     <label>{cp.form.message}</label>

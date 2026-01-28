@@ -6,9 +6,10 @@ export async function submitConsultation(formData: FormData) {
     const name = formData.get("name") as string;
     const email = formData.get("email") as string;
     const service = formData.get("service") as string;
+    const whatsapp = formData.get("whatsapp") as string;
     const message = formData.get("message") as string;
 
-    if (!name || !email || !service || !message) {
+    if (!name || !email || !whatsapp || !service || !message) {
         return { error: "Semua field harus diisi." };
     }
 
@@ -17,6 +18,7 @@ export async function submitConsultation(formData: FormData) {
             type: 'consultation',
             name,
             email,
+            whatsapp,
             service,
             message
         });

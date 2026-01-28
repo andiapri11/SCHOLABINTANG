@@ -197,6 +197,7 @@ export const translations = {
             form: {
                 name: "Nama Lengkap",
                 email: "Alamat Email",
+                whatsapp: "Nomor WhatsApp",
                 service: "Layanan yang Dibutuhkan",
                 message: "Ceritakan Projek Anda",
                 placeholder: "Contoh: Saya ingin membangun sistem inventaris toko...",
@@ -406,6 +407,7 @@ export const translations = {
             form: {
                 name: "Full Name",
                 email: "Email Address",
+                whatsapp: "WhatsApp Number",
                 service: "Interested Service",
                 message: "Tell Us About Your Project",
                 placeholder: "Example: I want to build a retail inventory system...",
