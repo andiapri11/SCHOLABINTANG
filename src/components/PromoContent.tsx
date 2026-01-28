@@ -414,7 +414,7 @@ export default function PromoContent() {
             </section>
 
             {/* 2. Main Layout: Features & Pricing */}
-            <div className="container main-content-container" style={{ marginTop: '-40px' }}>
+            <div className="container main-content-container" style={{ marginTop: '-5px' }}>
                 <div className="product-layout">
 
                     {/* Left Column: Detailed Content */}
