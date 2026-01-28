@@ -335,7 +335,7 @@ export default function PromoContent() {
                         }
 
                         .main-content-container {
-                            margin-top: 0 !important;
+                            margin-top: 4rem !important;
                             padding: 0 !important;
                             position: relative;
                             z-index: 30;
