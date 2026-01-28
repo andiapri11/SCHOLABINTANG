@@ -408,8 +408,14 @@ export default function PromoContent() {
                         .btn {
                             width: 100% !important;
                         }
-                        .intro-text {
+                        .intro-text-wrapper {
                             display: none !important;
+                            height: 0 !important;
+                            opacity: 0 !important;
+                            visibility: hidden !important;
+                            margin: 0 !important;
+                            padding: 0 !important;
+                            overflow: hidden !important;
                         }
                     }
                 `}</style>
@@ -421,7 +427,7 @@ export default function PromoContent() {
 
                     {/* Left Column: Detailed Content */}
                     <div className="product-details-col">
-                        <div className="intro-text" style={{ marginBottom: '3rem' }}>
+                        <div className="intro-text-wrapper" style={{ marginBottom: '3rem' }}>
                             <h2 style={{ fontSize: '1.75rem', fontWeight: 800, color: '#0f172a', marginBottom: '1.5rem' }}>
                                 Kenapa Memilih Schola CBT?
                             </h2>
