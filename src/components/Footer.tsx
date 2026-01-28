@@ -33,9 +33,9 @@ export default function Footer() {
               {t.footer.tagline}
             </p>
             <div style={{ display: 'flex', gap: '0.875rem' }}>
-              <Link href="#" className="footer-social-link"><Instagram size={19} /></Link>
+              <Link href="https://www.instagram.com/codifi.id?igsh=MXJvczY1dmVqNjVzZw%3D%3D&utm_source=qr" target="_blank" className="footer-social-link"><Instagram size={19} /></Link>
               <Link href="#" className="footer-social-link"><Linkedin size={19} /></Link>
-              <Link href="#" className="footer-social-link"><Globe size={19} /></Link>
+              <Link href="https://codifi.id" target="_blank" className="footer-social-link"><Globe size={19} /></Link>
             </div>
           </div>
 
@@ -66,7 +66,16 @@ export default function Footer() {
               </li>
               <li style={{ display: 'flex', alignItems: 'center', gap: '0.875rem', color: 'var(--secondary)', fontSize: '0.9rem' }}>
                 <Phone size={17} style={{ color: 'var(--primary)', flexShrink: 0 }} />
-                <span>+62 812 3456 7890</span>
+                <a
+                  href="https://wa.me/6285768441485?text=Halo%20Codifi,%20saya%20ingin%20berdiskusi%20tentang%20projek%20digital%20saya."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ color: 'inherit', textDecoration: 'none', transition: 'color 0.2s' }}
+                  onMouseOver={(e) => e.currentTarget.style.color = 'var(--primary)'}
+                  onMouseOut={(e) => e.currentTarget.style.color = 'inherit'}
+                >
+                  +62 857 6844 1485
+                </a>
               </li>
               <li style={{ display: 'flex', alignItems: 'flex-start', gap: '0.875rem', color: 'var(--secondary)', fontSize: '0.9rem' }}>
                 <MapPin size={17} style={{ color: 'var(--primary)', flexShrink: 0, marginTop: '2px' }} />

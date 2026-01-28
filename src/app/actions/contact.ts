@@ -13,16 +13,21 @@ export async function submitConsultation(formData: FormData) {
         return { error: "Semua field harus diisi." };
     }
 
+    // Sanitize WhatsApp
+    let sanitizedWa = whatsapp.replace(/\D/g, "");
+    if (sanitizedWa.startsWith("0")) sanitizedWa = "62" + sanitizedWa.substring(1);
+    else if (sanitizedWa.startsWith("8")) sanitizedWa = "62" + sanitizedWa;
+
     try {
         await saveSubmission({
             type: 'consultation',
             name,
             email,
-            whatsapp,
+            whatsapp: sanitizedWa,
             service,
             message
         });
-        return { success: "Pesan Anda telah terkirim! Tim kami akan menghubungi Anda segera." };
+        return { success: "Terima kasih, pesan Anda telah terkirim. Tim Codifi akan menghubungi Anda secepatnya." };
     } catch (error) {
         console.error("DB Error:", error);
         return { error: "Terjadi kesalahan saat menyimpan data. Silakan coba lagi nanti." };

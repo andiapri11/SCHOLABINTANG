@@ -17,7 +17,9 @@ export default function LoginPage() {
         setLoading(true);
         setError("");
 
-        if (password === "Codifi#123!") {
+        const storedPassword = localStorage.getItem("admin_password") || "Codifi#123!";
+
+        if (password === storedPassword) {
             localStorage.setItem("isAdmin", "true");
             setTimeout(() => {
                 router.push("/dashboard/submissions");

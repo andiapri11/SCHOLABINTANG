@@ -142,7 +142,7 @@ export default function Products() {
                                             textTransform: 'uppercase',
                                             letterSpacing: '0.1em',
                                         }}>
-                                            {product.isPromo ? 'Penawaran Spesial' : 'Standard Plan'}
+                                            {product.isPromo ? 'Promo Tahun Ajaran Baru' : 'Standard Plan'}
                                         </span>
                                     </div>
 
@@ -221,16 +221,44 @@ export default function Products() {
                                         </div>
                                     </div>
 
-                                    <button className="btn btn-primary" style={{
-                                        width: '100%',
-                                        borderRadius: '1rem',
-                                        padding: '0.9rem',
-                                        fontWeight: 700,
-                                        fontSize: '0.95rem',
-                                        boxShadow: '0 8px 12px -3px rgba(37, 99, 235, 0.2)'
-                                    }}>
-                                        {product.isPromo ? 'Ambil Promo Sekarang' : 'Konsultasi Sekarang'} <ArrowRight size={16} />
-                                    </button>
+                                    {index === 1 ? (
+                                        <a href="/scholacbt" style={{ textDecoration: 'none', width: '100%' }}>
+                                            <button className="btn btn-primary" style={{
+                                                width: '100%',
+                                                borderRadius: '1rem',
+                                                padding: '0.9rem',
+                                                fontWeight: 700,
+                                                fontSize: '0.95rem',
+                                                boxShadow: '0 8px 12px -3px rgba(37, 99, 235, 0.2)'
+                                            }}>
+                                                {product.isPromo ? 'Ambil Promo Sekarang' : 'Konsultasi Sekarang'} <ArrowRight size={16} />
+                                            </button>
+                                        </a>
+                                    ) : index === 2 ? (
+                                        <a href="/scholaportal" style={{ textDecoration: 'none', width: '100%' }}>
+                                            <button className="btn btn-primary" style={{
+                                                width: '100%',
+                                                borderRadius: '1rem',
+                                                padding: '0.9rem',
+                                                fontWeight: 700,
+                                                fontSize: '0.95rem',
+                                                boxShadow: '0 8px 12px -3px rgba(37, 99, 235, 0.2)'
+                                            }}>
+                                                {product.isPromo ? 'Ambil Promo Sekarang' : 'Konsultasi Sekarang'} <ArrowRight size={16} />
+                                            </button>
+                                        </a>
+                                    ) : (
+                                        <button className="btn btn-primary" style={{
+                                            width: '100%',
+                                            borderRadius: '1rem',
+                                            padding: '0.9rem',
+                                            fontWeight: 700,
+                                            fontSize: '0.95rem',
+                                            boxShadow: '0 8px 12px -3px rgba(37, 99, 235, 0.2)'
+                                        }}>
+                                            {product.isPromo ? 'Ambil Promo Sekarang' : 'Konsultasi Sekarang'} <ArrowRight size={16} />
+                                        </button>
+                                    )}
                                 </div>
                             </motion.div>
                         ))}
@@ -355,7 +383,7 @@ export default function Products() {
                                                     letterSpacing: '0.1em',
                                                     border: '1px solid #e2e8f0'
                                                 }}>
-                                                    {product.isPromo ? 'Penawaran Spesial' : 'Layanan Kustom'}
+                                                    {product.isPromo ? 'Promo Tahun Ajaran Baru' : 'Layanan Kustom'}
                                                 </span>
                                             </div>
 

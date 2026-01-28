@@ -1,11 +1,15 @@
 {
-  "totalSessions": 6,
+  "totalSessions": 8,
   "sessionsToday": 2,
-  "lastUpdated": "2026-01-27",
+  "lastUpdated": "2026-01-28",
   "history": [
     {
       "date": "2026-01-26",
       "sessions": 4
+    },
+    {
+      "date": "2026-01-27",
+      "sessions": 2
     }
   ]
 }

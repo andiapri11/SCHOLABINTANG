@@ -9,7 +9,7 @@ import Portfolio from "@/components/Portfolio";
 import Footer from "@/components/Footer";
 import { motion, useScroll, useSpring } from "framer-motion";
 import { useLanguage } from "@/lib/LanguageContext";
-import { Star } from "lucide-react";
+import { Star, ArrowRight } from "lucide-react";
 
 export default function Home() {
   const { t } = useLanguage();
@@ -117,6 +117,26 @@ export default function Home() {
             <p style={{ color: 'var(--secondary)', marginBottom: '2.5rem', fontSize: '1.1rem', maxWidth: '600px', margin: '0 auto 2.5rem' }}>
               {t.ctaSection.desc}
             </p>
+
+            <a
+              href="https://wa.me/6285768441485?text=Halo%20Codifi,%20saya%20ingin%20konsultasi%20tentang%20strategi%20digital%20bisnis%20saya."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-primary"
+              style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '0.75rem',
+                padding: '1rem 2.5rem',
+                fontSize: '1.1rem',
+                fontWeight: 700,
+                borderRadius: '6.25rem',
+                textDecoration: 'none',
+                boxShadow: '0 10px 25px -5px rgba(37, 99, 235, 0.4)'
+              }}
+            >
+              {t.ctaSection.whatsapp} <ArrowRight size={20} />
+            </a>
 
           </motion.div>
         </div>

@@ -7,5 +7,55 @@
     "service": "Custom App Development",
     "message": "saya ingin membuat data",
     "createdAt": "2026-01-26T04:10:51.404Z"
+  },
+  {
+    "id": 1769577685921,
+    "type": "consultation",
+    "name": "as",
+    "email": "as@gmail.com",
+    "whatsapp": "as",
+    "service": "Smart Retail (POS)",
+    "message": "as",
+    "createdAt": "2026-01-28T05:21:25.921Z"
+  },
+  {
+    "id": 1769577854404,
+    "type": "consultation",
+    "name": "s",
+    "email": "andiapri1111@gmail.com",
+    "whatsapp": "082112813540",
+    "service": "Smart Retail (POS)",
+    "message": "s",
+    "createdAt": "2026-01-28T05:24:14.404Z"
+  },
+  {
+    "id": 1769577874404,
+    "type": "consultation",
+    "name": "asd",
+    "email": "andiapri1111@gmail.com",
+    "whatsapp": "ghjf",
+    "service": "Website & Landing Page",
+    "message": "asd",
+    "createdAt": "2026-01-28T05:24:34.404Z"
+  },
+  {
+    "id": 1769590872432,
+    "type": "consultation",
+    "name": "lptniba",
+    "email": "novitasariica0@gmail.com",
+    "whatsapp": "085211677088",
+    "service": "Smart Retail (POS)",
+    "message": "asdaw",
+    "createdAt": "2026-01-28T09:01:12.433Z"
+  },
+  {
+    "id": 1769594951642,
+    "type": "consultation",
+    "name": "rahmad",
+    "email": "andi@gmail.com",
+    "whatsapp": "082182888299",
+    "service": "Smart Retail (POS)",
+    "message": "Kami siap mendengar ide Anda. Jelaskan kebutuhan digital bisnis Anda, dan tim ahli kami akan memberikan solusi teknologi terbaik.",
+    "createdAt": "2026-01-28T10:09:11.642Z"
   }
 ]

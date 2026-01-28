@@ -97,9 +97,16 @@ export default function Hero() {
                             ))}
                         </div>
                         <div className="hero-cta-group" style={{ display: 'flex', gap: '1.25rem', flexWrap: 'wrap' }}>
-                            <button className="btn btn-primary" style={{ padding: '1rem 2.5rem', fontSize: '1.05rem' }}>
-                                {t.hero.ctaPrimary} <ArrowRight size={20} />
-                            </button>
+                            <a
+                                href="https://wa.me/6285768441485?text=Halo%20Codifi,%20saya%20tertarik%20dengan%20jasa%20pembuatan%20website%20dan%20aplikasi."
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                style={{ textDecoration: 'none' }}
+                            >
+                                <button className="btn btn-primary" style={{ padding: '1rem 2.5rem', fontSize: '1.05rem', width: '100%' }}>
+                                    {t.hero.ctaPrimary} <ArrowRight size={20} />
+                                </button>
+                            </a>
                             <button className="btn btn-outline" style={{ padding: '1rem 2.5rem', fontSize: '1.05rem' }}>
                                 {t.hero.ctaSecondary}
                             </button>

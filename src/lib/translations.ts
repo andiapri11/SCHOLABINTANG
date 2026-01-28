@@ -207,7 +207,7 @@ export const translations = {
                 title: "Informasi Kontak",
                 whatsapp: "Chat WhatsApp",
                 email: "Email Kami",
-                address: "Alokasi"
+                address: "Lokasi"
             }
         }
     },

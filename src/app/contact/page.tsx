@@ -4,7 +4,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { useLanguage } from "@/lib/LanguageContext";
 import { motion } from "framer-motion";
-import { Mail, Phone, MapPin, Send, MessageCircle } from "lucide-react";
+import { Mail, Phone, MapPin, Send, MessageCircle, X, CheckCircle } from "lucide-react";
 
 import { submitConsultation } from "@/app/actions/contact";
 import { useState } from "react";
@@ -72,14 +72,23 @@ export default function Contact() {
                                     <div className="icon-box"><MessageCircle size={24} /></div>
                                     <div>
                                         <h4>{cp.info.whatsapp}</h4>
-                                        <p>+62 812 3456 7890</p>
+                                        <a
+                                            href="https://wa.me/6285768441485?text=Halo%20Codifi,%20saya%20ingin%20berdiskusi%20tentang%20projek%20digital%20saya."
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            style={{ color: 'var(--secondary)', textDecoration: 'none', transition: 'color 0.2s' }}
+                                            onMouseOver={(e) => e.currentTarget.style.color = 'var(--primary)'}
+                                            onMouseOut={(e) => e.currentTarget.style.color = 'var(--secondary)'}
+                                        >
+                                            +62 857 6844 1485
+                                        </a>
                                     </div>
                                 </div>
                                 <div className="info-item">
                                     <div className="icon-box"><Mail size={24} /></div>
                                     <div>
                                         <h4>{cp.info.email}</h4>
-                                        <p>hello@scholabintang.id</p>
+                                        <p>hello@codifi.id</p>
                                     </div>
                                 </div>
                                 <div className="info-item">
@@ -100,19 +109,7 @@ export default function Contact() {
                             transition={{ duration: 0.8 }}
                             className="form-card"
                         >
-                            {message && (
-                                <div style={{
-                                    padding: '1rem',
-                                    borderRadius: '0.75rem',
-                                    marginBottom: '1.5rem',
-                                    backgroundColor: message.type === 'success' ? '#dcfce7' : '#fef2f2',
-                                    color: message.type === 'success' ? '#15803d' : '#ef4444',
-                                    fontSize: '0.9rem',
-                                    fontWeight: 600
-                                }}>
-                                    {message.text}
-                                </div>
-                            )}
+
 
                             <form action={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
                                 <div className="form-row">
@@ -161,9 +158,11 @@ export default function Contact() {
                         </motion.div>
                     </div>
                 </div>
-            </section>
+            </section >
 
             <Footer />
+
+            {message && <SuccessPopup message={message} onClose={() => setMessage(null)} />}
 
             <style jsx>{`
                 .contact-grid {
@@ -277,6 +276,94 @@ export default function Contact() {
                     }
                 }
             `}</style>
-        </main>
+        </main >
+    );
+}
+
+function SuccessPopup({ message, onClose }: { message: { type: 'success' | 'error', text: string }, onClose: () => void }) {
+    if (!message) return null;
+
+    return (
+        <div style={{
+            position: 'fixed',
+            inset: 0,
+            backgroundColor: 'rgba(0,0,0,0.5)',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            zIndex: 9999,
+            padding: '1rem',
+            backdropFilter: 'blur(4px)'
+        }} onClick={onClose}>
+            <motion.div
+                initial={{ opacity: 0, scale: 0.95, y: 20 }}
+                animate={{ opacity: 1, scale: 1, y: 0 }}
+                exit={{ opacity: 0, scale: 0.95, y: 20 }}
+                onClick={(e) => e.stopPropagation()}
+                style={{
+                    backgroundColor: 'white',
+                    borderRadius: '1.5rem',
+                    padding: '2.5rem',
+                    maxWidth: '450px',
+                    width: '100%',
+                    textAlign: 'center',
+                    position: 'relative',
+                    boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.25)'
+                }}
+            >
+                <button
+                    onClick={onClose}
+                    style={{
+                        position: 'absolute',
+                        top: '1.25rem',
+                        right: '1.25rem',
+                        background: 'none',
+                        border: 'none',
+                        cursor: 'pointer',
+                        color: '#94a3b8',
+                        padding: '0.5rem'
+                    }}
+                >
+                    <X size={24} />
+                </button>
+
+                <div style={{
+                    width: '72px',
+                    height: '72px',
+                    borderRadius: '50%',
+                    backgroundColor: message.type === 'success' ? '#f0fdf4' : '#fef2f2',
+                    color: message.type === 'success' ? '#16a34a' : '#ef4444',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    margin: '0 auto 1.5rem',
+                    boxShadow: message.type === 'success' ? '0 0 0 8px #dcfce7' : '0 0 0 8px #fee2e2'
+                }}>
+                    {message.type === 'success' ? <CheckCircle size={36} strokeWidth={3} /> : <X size={36} strokeWidth={3} />}
+                </div>
+
+                <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '0.75rem', color: '#0f172a' }}>
+                    {message.type === 'success' ? 'Pesan Terkirim!' : 'Gagal Mengirim'}
+                </h3>
+
+                <p style={{ color: '#64748b', marginBottom: '2rem', lineHeight: 1.6, fontSize: '1rem' }}>
+                    {message.text}
+                </p>
+
+                <button
+                    onClick={onClose}
+                    className="btn btn-primary"
+                    style={{
+                        width: '100%',
+                        padding: '1rem',
+                        borderRadius: '1rem',
+                        fontSize: '1rem',
+                        fontWeight: 700
+                    }}
+                >
+                    Tutup
+                </button>
+            </motion.div>
+        </div>
     );
 }
