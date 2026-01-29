@@ -170,20 +170,6 @@ export default function PromoVoraPOS() {
                             animate={{ opacity: 1, x: 0 }}
                             transition={{ duration: 0.6 }}
                         >
-                            <div style={{
-                                display: 'inline-block',
-                                padding: '0.5rem 1.25rem',
-                                background: 'rgba(37, 99, 235, 0.1)',
-                                color: 'var(--primary)',
-                                borderRadius: '2rem',
-                                fontSize: '0.85rem',
-                                fontWeight: 800,
-                                marginBottom: '1.5rem',
-                                textTransform: 'uppercase',
-                                letterSpacing: '0.05em'
-                            }}>
-                                🛒 Solusi Kasir Modern
-                            </div>
 
                             <h1 style={{ fontSize: 'clamp(2.5rem, 5vw, 4rem)', fontWeight: 900, color: '#0f172a', lineHeight: 1.1, marginBottom: '1.5rem' }}>
                                 VORA POS <br />
@@ -243,7 +229,7 @@ export default function PromoVoraPOS() {
                                     whiteSpace: 'nowrap',
                                     border: '1px solid #fee2e2'
                                 }}>
-                                    PROMO TAHUN AJARAN BARU
+                                    PENAWARAN TERBATAS
                                 </div>
 
                                 <h2 style={{ fontSize: '2.1rem', fontWeight: 900, color: '#0f172a', marginBottom: '0.5rem' }}>
