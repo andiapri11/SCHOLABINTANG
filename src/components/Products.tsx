@@ -439,23 +439,45 @@ export default function Products() {
                                                 </div>
                                             </div>
 
-                                            <button className="btn" style={{
-                                                width: '100%',
-                                                borderRadius: '1.25rem',
-                                                padding: '1.1rem',
-                                                fontWeight: 800,
-                                                fontSize: '1rem',
-                                                background: index === 1 ? sectionAccent : 'white',
-                                                border: index === 1 ? 'none' : `2px solid #e2e8f0`,
-                                                color: index === 1 ? 'white' : '#0f172a',
-                                                display: 'flex',
-                                                alignItems: 'center',
-                                                justifyContent: 'center',
-                                                gap: '0.75rem',
-                                                transition: 'all 0.3s ease'
-                                            }}>
-                                                Konsultasi Sekarang <ArrowRight size={18} />
-                                            </button>
+                                            {product.name === "Web Company Profile" ? (
+                                                <a href="/company-profile" style={{ textDecoration: 'none', width: '100%' }}>
+                                                    <button className="btn" style={{
+                                                        width: '100%',
+                                                        borderRadius: '1.25rem',
+                                                        padding: '1.1rem',
+                                                        fontWeight: 800,
+                                                        fontSize: '1rem',
+                                                        background: index === 1 ? sectionAccent : 'white',
+                                                        border: index === 1 ? 'none' : `2px solid #e2e8f0`,
+                                                        color: index === 1 ? 'white' : '#0f172a',
+                                                        display: 'flex',
+                                                        alignItems: 'center',
+                                                        justifyContent: 'center',
+                                                        gap: '0.75rem',
+                                                        transition: 'all 0.3s ease'
+                                                    }}>
+                                                        Konsultasi Sekarang <ArrowRight size={18} />
+                                                    </button>
+                                                </a>
+                                            ) : (
+                                                <button className="btn" style={{
+                                                    width: '100%',
+                                                    borderRadius: '1.25rem',
+                                                    padding: '1.1rem',
+                                                    fontWeight: 800,
+                                                    fontSize: '1rem',
+                                                    background: index === 1 ? sectionAccent : 'white',
+                                                    border: index === 1 ? 'none' : `2px solid #e2e8f0`,
+                                                    color: index === 1 ? 'white' : '#0f172a',
+                                                    display: 'flex',
+                                                    alignItems: 'center',
+                                                    justifyContent: 'center',
+                                                    gap: '0.75rem',
+                                                    transition: 'all 0.3s ease'
+                                                }}>
+                                                    Konsultasi Sekarang <ArrowRight size={18} />
+                                                </button>
+                                            )}
                                         </div>
                                     </motion.div>
                                 );
