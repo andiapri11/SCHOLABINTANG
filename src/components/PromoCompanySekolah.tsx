@@ -26,18 +26,56 @@ export default function PromoCompanySekolah() {
     const [showDemoForm, setShowDemoForm] = useState(false);
     const [showSuccess, setShowSuccess] = useState(false);
 
-    const product = {
-        name: "Web Company Profile",
-        price: "500rb-an",
-        desc: "Tingkatkan rasa percaya pelanggan dengan website profil yang rapi, cepat, dan mencerminkan identitas bisnis profesional Anda.",
-        features: [
-            "Desain Modern & Profesional",
-            "Mobile Friendly (Responsive)",
-            "Optimasi SEO Google",
-            "Gratis Hosting & Domain .com",
-            "Email Bisnis & Keamanan SSL"
-        ]
-    };
+
+    const pricingPackages = [
+        {
+            name: "Starter",
+            price: "500rb",
+            desc: "Cocok untuk profil bisnis/sekolah baru yang ingin segera online.",
+            features: [
+                "Lending Page (1 Halaman)",
+                "Domain .com (1 Tahun)",
+                "Hosting Starter Performa Cepat",
+                "Keamanan SSL (HTTPS)",
+                "1 Akun Email Bisnis (@sekolah.com)",
+                "Waktu Kerja: 3-5 Hari"
+            ],
+            isPopular: false,
+            color: "#64748b"
+        },
+        {
+            name: "Business",
+            price: "1jt",
+            desc: "Paling populer untuk institusi pendidikan & UMKM.",
+            features: [
+                "Hingga 5 Halaman Dinamis",
+                "Domain .com/.id (1 Tahun)",
+                "Hosting Pro High Performance",
+                "SEO Basic Optimization",
+                "3 Akun Email Bisnis Profesional",
+                "Integrasi WhatsApp & Maps",
+                "Waktu Kerja: 5-7 Hari"
+            ],
+            isPopular: true,
+            color: "var(--primary)"
+        },
+        {
+            name: "Elite / Custom",
+            price: "2.5jt",
+            desc: "Solusi lengkap dengan fitur kustom & desain eksklusif.",
+            features: [
+                "Multi-Halaman (Unlimited)",
+                "Desain UI/UX Eksklusif & Modern",
+                "CMS (Bisa Update Konten Mandiri)",
+                "Advanced SEO Full Setup",
+                "Email Bisnis Unlimited",
+                "Prioritas Maintenance 3 Bulan",
+                "Waktu Kerja: 10-14 Hari"
+            ],
+            isPopular: false,
+            color: "#0f172a"
+        }
+    ];
 
     const detailedFeatures = [
         {
@@ -80,7 +118,7 @@ export default function PromoCompanySekolah() {
             school: formData.get('company'), // reuse field for company name
             whatsapp: formData.get('whatsapp'),
             jabatan: formData.get('position'),
-            product: product.name
+            product: "Web Company Profile"
         };
 
         const result = await submitDemoRequest(data);
@@ -142,29 +180,29 @@ export default function PromoCompanySekolah() {
                             </div>
 
                             <h1 style={{ fontSize: 'clamp(2.5rem, 5vw, 4rem)', fontWeight: 900, color: '#0f172a', lineHeight: 1.1, marginBottom: '1.5rem' }}>
-                                Website Profil Bisnis <br />
-                                <span className="gradient-text">Profesional & Berkelas</span>
+                                Website Profil <br />
+                                <span className="gradient-text">Sekolah & Bisnis</span>
                             </h1>
 
                             <p style={{ fontSize: '1.15rem', color: '#64748b', lineHeight: 1.6, marginBottom: '2.5rem', maxWidth: '600px' }}>
-                                {product.desc} Mulai bangun identitas online yang kuat dan tak terlupakan hari ini.
+                                Bangun kredibilitas institusi Anda dengan website yang rapi, cepat, dan mencerminkan identitas profesional. Kini hadir dengan pilihan paket ekonomis hingga premium.
                             </p>
 
                             <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
-                                <button
-                                    onClick={() => setShowDemoForm(true)}
+                                <a
+                                    href="#pricing"
                                     className="btn btn-primary"
-                                    style={{ padding: '1.25rem 2.5rem', borderRadius: '1rem', fontSize: '1.1rem' }}
+                                    style={{ padding: '1.25rem 2.5rem', borderRadius: '1rem', fontSize: '1.1rem', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '0.5rem' }}
                                 >
-                                    Konsultasi Sekarang <ArrowRight size={20} />
-                                </button>
+                                    Pilih Paket Harga <ArrowRight size={20} />
+                                </a>
                                 <a
                                     href={`https://wa.me/${settings.whatsapp}?text=Halo%20Codifi,%20saya%20ingin%20tanya%20paket%20Web%20Company%20Profile.`}
                                     target="_blank"
                                     className="btn btn-outline"
                                     style={{ padding: '1.25rem 2.5rem', borderRadius: '1rem', fontSize: '1.1rem' }}
                                 >
-                                    Lihat Portofolio
+                                    Konsultasi Gratis
                                 </a>
                             </div>
 
@@ -226,13 +264,12 @@ export default function PromoCompanySekolah() {
                                     PROMO TAHUN AJARAN BARU
                                 </div>
 
-                                <h2 style={{ fontSize: '2.4rem', fontWeight: 900, color: '#0f172a', marginBottom: '1rem' }}>
-                                    Web Company Profile
+                                <h2 style={{ fontSize: '2.1rem', fontWeight: 900, color: '#0f172a', marginBottom: '0.5rem' }}>
+                                    Paket Business
                                 </h2>
-
-                                <p style={{ fontSize: '1rem', color: '#64748b', lineHeight: 1.5, marginBottom: '2rem' }}>
-                                    Tingkatkan rasa percaya pelanggan dengan website profil yang rapi, cepat, dan mencerminkan identitas bisnis profesional Anda.
-                                </p>
+                                <div style={{ fontSize: '2.5rem', fontWeight: 900, color: 'var(--primary)', marginBottom: '1.5rem' }}>
+                                    1 Juta <small style={{ fontSize: '1rem', color: '#94a3b8', fontWeight: 600 }}>/net</small>
+                                </div>
 
                                 <div style={{
                                     display: 'flex',
@@ -242,25 +279,21 @@ export default function PromoCompanySekolah() {
                                     width: 'max-content',
                                     margin: '0 auto 2.5rem'
                                 }}>
-                                    {product.features.map((f, i) => (
-                                        <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', color: '#475569', fontSize: '0.95rem' }}>
-                                            <CheckCircle2 size={18} color="var(--primary)" />
-                                            <span>{f}</span>
-                                        </div>
-                                    ))}
-                                </div>
-
-                                <div style={{
-                                    background: '#f8fafc',
-                                    padding: '1.5rem',
-                                    borderRadius: '1.5rem',
-                                    marginBottom: '2rem'
-                                }}>
-                                    <div style={{ fontSize: '0.75rem', fontWeight: 800, color: '#94a3b8', textTransform: 'uppercase', marginBottom: '0.25rem' }}>
-                                        MULAI DARI
+                                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', color: '#475569', fontSize: '0.95rem' }}>
+                                        <CheckCircle2 size={18} color="var(--primary)" />
+                                        <span>Website Dinamis 5 Halaman</span>
                                     </div>
-                                    <div style={{ fontSize: '2.5rem', fontWeight: 900, color: '#0f172a' }}>
-                                        500rb<small style={{ fontSize: '1rem' }}>-an</small>
+                                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', color: '#475569', fontSize: '0.95rem' }}>
+                                        <CheckCircle2 size={18} color="var(--primary)" />
+                                        <span>Gratis Domain .com/.id</span>
+                                    </div>
+                                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', color: '#475569', fontSize: '0.95rem' }}>
+                                        <CheckCircle2 size={18} color="var(--primary)" />
+                                        <span>Hosting Kapasitas Besar</span>
+                                    </div>
+                                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', color: '#475569', fontSize: '0.95rem' }}>
+                                        <CheckCircle2 size={18} color="var(--primary)" />
+                                        <span>3 Email Profesional Sekolah</span>
                                     </div>
                                 </div>
 
@@ -282,7 +315,7 @@ export default function PromoCompanySekolah() {
                                         cursor: 'pointer'
                                     }}
                                 >
-                                    Konsultasi Sekarang <ArrowRight size={20} />
+                                    Ambil Paket Ini <ArrowRight size={20} />
                                 </button>
                             </div>
 
@@ -299,6 +332,93 @@ export default function PromoCompanySekolah() {
                                 opacity: 0.1
                             }}></div>
                         </motion.div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Pricing Section */}
+            <section id="pricing" style={{ padding: '100px 0', background: '#f8fafc' }}>
+                <div className="container">
+                    <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
+                        <h2 style={{ fontSize: '2.5rem', fontWeight: 900, color: '#0f172a', marginBottom: '1rem' }}>
+                            Pilihan Paket Website Profil
+                        </h2>
+                        <p style={{ color: '#64748b', maxWidth: '700px', margin: '0 auto' }}>
+                            Transparansi harga tanpa biaya tersembunyi. Semua paket sudah termasuk bantuan input data awal agar Anda terima beres.
+                        </p>
+                    </div>
+
+                    <div style={{
+                        display: 'grid',
+                        gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
+                        gap: '2rem',
+                        alignItems: 'start'
+                    }}>
+                        {pricingPackages.map((pkg, i) => (
+                            <motion.div
+                                key={i}
+                                whileHover={{ y: -10 }}
+                                style={{
+                                    padding: '3rem 2rem',
+                                    borderRadius: '2.5rem',
+                                    background: 'white',
+                                    border: pkg.isPopular ? `2px solid var(--primary)` : '1px solid #e2e8f0',
+                                    boxShadow: pkg.isPopular ? '0 30px 60px -15px rgba(37,99,235,0.15)' : '0 10px 30px rgba(0,0,0,0.03)',
+                                    position: 'relative',
+                                    textAlign: 'center'
+                                }}
+                            >
+                                {pkg.isPopular && (
+                                    <div style={{
+                                        position: 'absolute',
+                                        top: '-15px',
+                                        left: '50%',
+                                        transform: 'translateX(-50%)',
+                                        background: 'var(--primary)',
+                                        color: 'white',
+                                        padding: '0.4rem 1.25rem',
+                                        borderRadius: '2rem',
+                                        fontSize: '0.75rem',
+                                        fontWeight: 800
+                                    }}>
+                                        REKOMENDASI
+                                    </div>
+                                )}
+                                <h3 style={{ fontSize: '1.5rem', fontWeight: 900, color: '#0f172a', marginBottom: '0.5rem' }}>{pkg.name}</h3>
+                                <p style={{ color: '#64748b', fontSize: '0.9rem', marginBottom: '1.5rem', minHeight: '40px' }}>{pkg.desc}</p>
+
+                                <div style={{ fontSize: '2.5rem', fontWeight: 900, color: pkg.color, marginBottom: '2rem' }}>
+                                    {pkg.price}
+                                    <small style={{ fontSize: '0.9rem', color: '#94a3b8', fontWeight: 600, marginLeft: '0.2rem' }}>/net</small>
+                                </div>
+
+                                <div style={{ textAlign: 'left', marginBottom: '2.5rem', display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
+                                    {pkg.features.map((feat, idx) => (
+                                        <div key={idx} style={{ display: 'flex', gap: '0.75rem', fontSize: '0.9rem', color: '#475569', alignItems: 'center' }}>
+                                            <CheckCircle2 size={16} color={pkg.color} />
+                                            {feat}
+                                        </div>
+                                    ))}
+                                </div>
+
+                                <button
+                                    onClick={() => setShowDemoForm(true)}
+                                    style={{
+                                        width: '100%',
+                                        padding: '1rem',
+                                        background: pkg.isPopular ? 'var(--primary)' : 'white',
+                                        color: pkg.isPopular ? 'white' : '#0f172a',
+                                        border: pkg.isPopular ? 'none' : '1.5px solid #e2e8f0',
+                                        borderRadius: '1rem',
+                                        fontWeight: 800,
+                                        cursor: 'pointer',
+                                        transition: 'all 0.2s'
+                                    }}
+                                >
+                                    Pilih Paket {pkg.name.split(' ')[0]}
+                                </button>
+                            </motion.div>
+                        ))}
                     </div>
                 </div>
             </section>
@@ -427,8 +547,8 @@ export default function PromoCompanySekolah() {
                                     <input name="name" required style={{ width: '100%', padding: '0.85rem', borderRadius: '0.75rem', border: '1px solid #e2e8f0', background: '#f8fafc' }} placeholder="Contoh: Budi Santoso" />
                                 </div>
                                 <div>
-                                    <label style={{ display: 'block', fontSize: '0.85rem', fontWeight: 700, marginBottom: '0.5rem', color: '#475569' }}>Nama Perusahaan / Bisnis</label>
-                                    <input name="company" required style={{ width: '100%', padding: '0.85rem', borderRadius: '0.75rem', border: '1px solid #e2e8f0', background: '#f8fafc' }} placeholder="Contoh: PT Bangun Maju" />
+                                    <label style={{ display: 'block', fontSize: '0.85rem', fontWeight: 700, marginBottom: '0.5rem', color: '#475569' }}>Nama Perusahaan / Sekolah</label>
+                                    <input name="company" required style={{ width: '100%', padding: '0.85rem', borderRadius: '0.75rem', border: '1px solid #e2e8f0', background: '#f8fafc' }} placeholder="Contoh: SD Negeri 1 / PT Maju Jaya" />
                                 </div>
                                 <div>
                                     <label style={{ display: 'block', fontSize: '0.85rem', fontWeight: 700, marginBottom: '0.5rem', color: '#475569' }}>WhatsApp Aktif</label>
@@ -436,7 +556,7 @@ export default function PromoCompanySekolah() {
                                 </div>
                                 <div>
                                     <label style={{ display: 'block', fontSize: '0.85rem', fontWeight: 700, marginBottom: '0.5rem', color: '#475569' }}>Jabatan</label>
-                                    <input name="position" required style={{ width: '100%', padding: '0.85rem', borderRadius: '0.75rem', border: '1px solid #e2e8f0', background: '#f8fafc' }} placeholder="Contoh: Owner / Manager" />
+                                    <input name="position" required style={{ width: '100%', padding: '0.85rem', borderRadius: '0.75rem', border: '1px solid #e2e8f0', background: '#f8fafc' }} placeholder="Contoh: Kepala Sekolah / Owner" />
                                 </div>
                                 <button type="submit" className="btn btn-primary" style={{ padding: '1rem', marginTop: '1rem', fontSize: '1rem', borderRadius: '0.75rem' }}>
                                     Kirim Permintaan Konsultasi
