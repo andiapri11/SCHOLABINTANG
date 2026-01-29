@@ -439,8 +439,8 @@ export default function Products() {
                                                 </div>
                                             </div>
 
-                                            {product.name === "Web Company Profile" ? (
-                                                <a href="/web-company-profile-sekolah" style={{ textDecoration: 'none', width: '100%' }}>
+                                            {product.name === "Web Company Profile" || product.name === "Mobile App Development" ? (
+                                                <a href={product.name === "Web Company Profile" ? "/web-company-profile-sekolah" : "/mobile-app-development"} style={{ textDecoration: 'none', width: '100%' }}>
                                                     <button className="btn" style={{
                                                         width: '100%',
                                                         borderRadius: '1.25rem',
