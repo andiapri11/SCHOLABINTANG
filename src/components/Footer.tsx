@@ -3,9 +3,16 @@
 import Link from "next/link";
 import { Rocket, Mail, Phone, Instagram, Linkedin, Globe, MapPin } from "lucide-react";
 import { useLanguage } from "@/lib/LanguageContext";
+import { useSettings } from "@/lib/SettingsContext";
 
 export default function Footer() {
   const { t } = useLanguage();
+  const { settings } = useSettings();
+
+  // Format display number: 6285768441485 -> +62 857 6844 1485
+  const formattedPhone = settings.whatsapp.startsWith('62')
+    ? `+62 ${settings.whatsapp.substring(2, 5)} ${settings.whatsapp.substring(5, 9)} ${settings.whatsapp.substring(9)}`
+    : settings.whatsapp;
 
   return (
     <footer style={{ backgroundColor: '#ffffff', padding: '2rem 0 1rem', borderTop: '1px solid #f1f5f9' }}>
@@ -67,14 +74,14 @@ export default function Footer() {
               <li style={{ display: 'flex', alignItems: 'center', gap: '0.875rem', color: 'var(--secondary)', fontSize: '0.9rem' }}>
                 <Phone size={17} style={{ color: 'var(--primary)', flexShrink: 0 }} />
                 <a
-                  href="https://wa.me/6285768441485?text=Halo%20Codifi,%20saya%20ingin%20berdiskusi%20tentang%20projek%20digital%20saya."
+                  href={`https://wa.me/${settings.whatsapp}?text=Halo%20Codifi,%20saya%20ingin%20berdiskusi%20tentang%20projek%20digital%20saya.`}
                   target="_blank"
                   rel="noopener noreferrer"
                   style={{ color: 'inherit', textDecoration: 'none', transition: 'color 0.2s' }}
                   onMouseOver={(e) => e.currentTarget.style.color = 'var(--primary)'}
                   onMouseOut={(e) => e.currentTarget.style.color = 'inherit'}
                 >
-                  +62 857 6844 1485
+                  {formattedPhone}
                 </a>
               </li>
               <li style={{ display: 'flex', alignItems: 'flex-start', gap: '0.875rem', color: 'var(--secondary)', fontSize: '0.9rem' }}>

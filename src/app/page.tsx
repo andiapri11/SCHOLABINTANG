@@ -9,10 +9,12 @@ import Portfolio from "@/components/Portfolio";
 import Footer from "@/components/Footer";
 import { motion, useScroll, useSpring } from "framer-motion";
 import { useLanguage } from "@/lib/LanguageContext";
+import { useSettings } from "@/lib/SettingsContext";
 import { Star, ArrowRight } from "lucide-react";
 
 export default function Home() {
   const { t } = useLanguage();
+  const { settings } = useSettings();
   const { scrollYProgress } = useScroll();
   const scaleX = useSpring(scrollYProgress, {
     stiffness: 100,
@@ -119,7 +121,7 @@ export default function Home() {
             </p>
 
             <a
-              href="https://wa.me/6285768441485?text=Halo%20Codifi,%20saya%20ingin%20konsultasi%20tentang%20strategi%20digital%20bisnis%20saya."
+              href={`https://wa.me/${settings.whatsapp}?text=Halo%20Codifi,%20saya%20ingin%20konsultasi%20tentang%20strategi%20digital%20bisnis%20saya.`}
               target="_blank"
               rel="noopener noreferrer"
               className="btn btn-primary"

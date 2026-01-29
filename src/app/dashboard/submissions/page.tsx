@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { getSubmissions } from "@/app/actions/fetch";
 import { getTrafficStats } from "@/app/actions/traffic";
+import { fetchSettings, saveSettingsAction } from "@/app/actions/contact";
 import {
     Users,
     Mail,
@@ -85,6 +86,7 @@ export default function SubmissionsDashboard() {
     const [showToast, setShowToast] = useState<{ message: string, type: 'success' | 'error' } | null>(null);
     const [showNotifications, setShowNotifications] = useState(false);
     const [passwords, setPasswords] = useState({ current: "", new: "", confirm: "" });
+    const [siteSettings, setSiteSettings] = useState({ whatsapp: "6285768441485" });
     const router = useRouter();
 
     useEffect(() => {
@@ -216,10 +218,24 @@ export default function SubmissionsDashboard() {
             setSubmissions(allItems);
             const tStats = await getTrafficStats();
             setTrafficStats(tStats);
+
+            const settings = await fetchSettings();
+            setSiteSettings(settings);
         } catch (error) {
             console.error("Error fetching dashboard data:", error);
         } finally {
             setLoading(false);
+        }
+    };
+
+    const handleSaveSiteSettings = async () => {
+        const result = await saveSettingsAction(siteSettings);
+        if (result.success) {
+            setShowToast({ message: "Pengaturan berhasil diperbarui!", type: 'success' });
+            setTimeout(() => setShowToast(null), 3000);
+        } else {
+            setShowToast({ message: result.error || "Gagal menyimpan pengaturan.", type: 'error' });
+            setTimeout(() => setShowToast(null), 3000);
         }
     };
 
@@ -874,6 +890,40 @@ export default function SubmissionsDashboard() {
                                         >
                                             <Check size={18} />
                                             Simpan Profil
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div className="settings-card premium contact">
+                                    <div className="card-header-icon">
+                                        <MessageCircle size={24} />
+                                        <div>
+                                            <h3>Kontak & Chat</h3>
+                                            <p>Atur nomor WhatsApp yang akan digunakan di seluruh landing page.</p>
+                                        </div>
+                                    </div>
+
+                                    <div className="form-grid">
+                                        <div className="form-group icon-input">
+                                            <label>Nomor WhatsApp (Gunakan Kode Negara, contoh: 628xxx)</label>
+                                            <div className="input-wrapper">
+                                                <Phone size={18} className="input-icon" />
+                                                <input
+                                                    type="text"
+                                                    value={siteSettings.whatsapp}
+                                                    onChange={(e) => setSiteSettings({ ...siteSettings, whatsapp: e.target.value })}
+                                                    placeholder="Contoh: 6285768441485"
+                                                />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="card-footer-actions">
+                                        <button
+                                            className="primary-save-btn"
+                                            onClick={handleSaveSiteSettings}
+                                        >
+                                            <Check size={18} />
+                                            Simpan Nomor WA
                                         </button>
                                     </div>
                                 </div>

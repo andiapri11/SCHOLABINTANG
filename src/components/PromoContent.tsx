@@ -3,10 +3,12 @@
 import { useState } from "react";
 import { useLanguage } from "@/lib/LanguageContext";
 import { submitDemoRequest } from "@/app/actions/contact";
+import { useSettings } from "@/lib/SettingsContext";
 import { CheckCircle2, Shield, Zap, BarChart3, Users, ArrowRight, Laptop, MessageCircle, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 export default function PromoContent() {
+    const { settings } = useSettings();
     const [showDemoForm, setShowDemoForm] = useState(false);
     const [showSuccess, setShowSuccess] = useState(false);
     const product = {
@@ -517,7 +519,7 @@ export default function PromoContent() {
                                 ].map((item, idx) => (
                                     <a
                                         key={idx}
-                                        href={`https://wa.me/6285768441485?text=${item.link}`}
+                                        href={`https://wa.me/${settings.whatsapp}?text=${item.link}`}
                                         target="_blank"
                                         style={{
                                             display: 'flex',
@@ -568,7 +570,7 @@ export default function PromoContent() {
                             </div>
 
                             <a
-                                href="https://wa.me/6285768441485?text=Halo%20Codifi,%20saya%20ingin%20klaim%20promo%20Schola%20CBT%20seharga%20350rb-an."
+                                href={`https://wa.me/${settings.whatsapp}?text=Halo%20Codifi,%20saya%20ingin%20klaim%20promo%20Schola%20CBT%20seharga%20350rb-an.`}
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="btn btn-primary"

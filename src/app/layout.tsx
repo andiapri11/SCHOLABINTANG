@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { LanguageProvider } from "@/lib/LanguageContext";
+import { SettingsProvider } from "@/lib/SettingsContext";
 import VisitorTracker from "@/components/VisitorTracker";
 
 const geistSans = Geist({
@@ -84,11 +85,15 @@ export const metadata: Metadata = {
 };
 
 
-export default function RootLayout({
+import { fetchSettings } from "@/app/actions/contact";
+
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const settings = await fetchSettings();
+
   return (
     <html lang="id">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
@@ -110,16 +115,18 @@ export default function RootLayout({
               },
               "contactPoint": {
                 "@type": "ContactPoint",
-                "telephone": "+6285768441485",
+                "telephone": `+${settings.whatsapp}`,
                 "contactType": "customer service"
               }
             })
           }}
         />
         <VisitorTracker />
-        <LanguageProvider>
-          {children}
-        </LanguageProvider>
+        <SettingsProvider>
+          <LanguageProvider>
+            {children}
+          </LanguageProvider>
+        </SettingsProvider>
       </body>
     </html>
   );

@@ -3,9 +3,11 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Globe, ShoppingBag, GraduationCap, Cpu, Rocket, CheckCircle2, TrendingUp } from "lucide-react";
 import { useLanguage } from "@/lib/LanguageContext";
+import { useSettings } from "@/lib/SettingsContext";
 
 export default function Hero() {
     const { t } = useLanguage();
+    const { settings } = useSettings();
 
     const getIcon = (iconName: string) => {
         switch (iconName) {
@@ -98,7 +100,7 @@ export default function Hero() {
                         </div>
                         <div className="hero-cta-group" style={{ display: 'flex', gap: '1.25rem', flexWrap: 'wrap' }}>
                             <a
-                                href="https://wa.me/6285768441485?text=Halo%20Codifi,%20saya%20tertarik%20dengan%20jasa%20pembuatan%20website%20dan%20aplikasi."
+                                href={`https://wa.me/${settings.whatsapp}?text=Halo%20Codifi,%20saya%20tertarik%20dengan%20jasa%20pembuatan%20website%20dan%20aplikasi.`}
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 style={{ textDecoration: 'none' }}

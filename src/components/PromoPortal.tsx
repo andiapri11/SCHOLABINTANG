@@ -3,10 +3,12 @@
 import { useState } from "react";
 import { useLanguage } from "@/lib/LanguageContext";
 import { submitDemoRequest } from "@/app/actions/contact";
+import { useSettings } from "@/lib/SettingsContext";
 import { CheckCircle2, Shield, LayoutDashboard, Database, Wallet, Users, ArrowRight, MessageCircle, X, BookOpen, Building2 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 export default function PromoPortal() {
+    const { settings } = useSettings();
     const [showDemoForm, setShowDemoForm] = useState(false);
     const [showSuccess, setShowSuccess] = useState(false);
 
@@ -550,7 +552,7 @@ export default function PromoPortal() {
                             </div>
 
                             <a
-                                href="https://wa.me/6285768441485?text=Halo%20Codifi,%20saya%20tertarik%20dengan%20promo%20Schola%20Portal."
+                                href={`https://wa.me/${settings.whatsapp}?text=Halo%20Codifi,%20saya%20tertarik%20dengan%20promo%20Schola%20Portal.`}
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="btn btn-primary"

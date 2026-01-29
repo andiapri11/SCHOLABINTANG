@@ -1,6 +1,6 @@
 "use server";
 
-import { saveSubmission } from "@/lib/db";
+import { saveSubmission, getSettings, updateSettings } from "@/lib/db";
 
 export async function submitConsultation(formData: FormData) {
     const name = formData.get("name") as string;
@@ -56,5 +56,24 @@ export async function submitDemoRequest(data: any) {
     } catch (error) {
         console.error("DB Demo Error:", error);
         return { error: "Gagal menyimpan data." };
+    }
+}
+
+export async function fetchSettings() {
+    try {
+        return await getSettings();
+    } catch (error) {
+        console.error("Fetch Settings Error:", error);
+        return { whatsapp: "6285768441485" };
+    }
+}
+
+export async function saveSettingsAction(data: any) {
+    try {
+        await updateSettings(data);
+        return { success: true };
+    } catch (error) {
+        console.error("Save Settings Error:", error);
+        return { error: "Gagal menyimpan pengaturan." };
     }
 }

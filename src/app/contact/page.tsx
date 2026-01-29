@@ -3,6 +3,7 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { useLanguage } from "@/lib/LanguageContext";
+import { useSettings } from "@/lib/SettingsContext";
 import { motion } from "framer-motion";
 import { Mail, Phone, MapPin, Send, MessageCircle, X, CheckCircle } from "lucide-react";
 
@@ -11,9 +12,15 @@ import { useState } from "react";
 
 export default function Contact() {
     const { t } = useLanguage();
+    const { settings } = useSettings();
     const cp = (t as any).contactPage;
     const [pending, setPending] = useState(false);
     const [message, setMessage] = useState<{ type: 'success' | 'error', text: string } | null>(null);
+
+    // Format display number: 6285768441485 -> +62 857 6844 1485
+    const formattedPhone = settings.whatsapp.startsWith('62')
+        ? `+62 ${settings.whatsapp.substring(2, 5)} ${settings.whatsapp.substring(5, 9)} ${settings.whatsapp.substring(9)}`
+        : settings.whatsapp;
 
     const handleSubmit = async (formData: FormData) => {
         setPending(true);
@@ -73,14 +80,14 @@ export default function Contact() {
                                     <div>
                                         <h4>{cp.info.whatsapp}</h4>
                                         <a
-                                            href="https://wa.me/6285768441485?text=Halo%20Codifi,%20saya%20ingin%20berdiskusi%20tentang%20projek%20digital%20saya."
+                                            href={`https://wa.me/${settings.whatsapp}?text=Halo%20Codifi,%20saya%20ingin%20berdiskusi%20tentang%20projek%20digital%20saya.`}
                                             target="_blank"
                                             rel="noopener noreferrer"
                                             style={{ color: 'var(--secondary)', textDecoration: 'none', transition: 'color 0.2s' }}
                                             onMouseOver={(e) => e.currentTarget.style.color = 'var(--primary)'}
                                             onMouseOut={(e) => e.currentTarget.style.color = 'var(--secondary)'}
                                         >
-                                            +62 857 6844 1485
+                                            {formattedPhone}
                                         </a>
                                     </div>
                                 </div>
