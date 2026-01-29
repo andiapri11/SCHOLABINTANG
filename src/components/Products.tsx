@@ -221,44 +221,32 @@ export default function Products() {
                                         </div>
                                     </div>
 
-                                    {index === 1 ? (
-                                        <a href="/scholacbt" style={{ textDecoration: 'none', width: '100%' }}>
-                                            <button className="btn btn-primary" style={{
-                                                width: '100%',
-                                                borderRadius: '1rem',
-                                                padding: '0.9rem',
-                                                fontWeight: 700,
-                                                fontSize: '0.95rem',
-                                                boxShadow: '0 8px 12px -3px rgba(37, 99, 235, 0.2)'
-                                            }}>
-                                                {product.isPromo ? 'Ambil Promo Sekarang' : 'Konsultasi Sekarang'} <ArrowRight size={16} />
-                                            </button>
-                                        </a>
-                                    ) : index === 2 ? (
-                                        <a href="/scholaportal" style={{ textDecoration: 'none', width: '100%' }}>
-                                            <button className="btn btn-primary" style={{
-                                                width: '100%',
-                                                borderRadius: '1rem',
-                                                padding: '0.9rem',
-                                                fontWeight: 700,
-                                                fontSize: '0.95rem',
-                                                boxShadow: '0 8px 12px -3px rgba(37, 99, 235, 0.2)'
-                                            }}>
-                                                {product.isPromo ? 'Ambil Promo Sekarang' : 'Konsultasi Sekarang'} <ArrowRight size={16} />
-                                            </button>
-                                        </a>
-                                    ) : (
-                                        <button className="btn btn-primary" style={{
-                                            width: '100%',
-                                            borderRadius: '1rem',
-                                            padding: '0.9rem',
-                                            fontWeight: 700,
-                                            fontSize: '0.95rem',
-                                            boxShadow: '0 8px 12px -3px rgba(37, 99, 235, 0.2)'
-                                        }}>
-                                            {product.isPromo ? 'Ambil Promo Sekarang' : 'Konsultasi Sekarang'} <ArrowRight size={16} />
-                                        </button>
-                                    )}
+                                    {(() => {
+                                        const productLinks: Record<string, string> = {
+                                            "Web Company Profile": "/web-company-profile-sekolah",
+                                            "Mobile App Development": "/mobile-app-development",
+                                            "Custom System Development": "/custom-system-development",
+                                            "VORA (Multi-branch POS)": "/vorapos",
+                                            "Schola CBT (Exam App)": "/scholacbt",
+                                            "Schola Portal": "/scholaportal"
+                                        };
+                                        const link = productLinks[product.name];
+
+                                        return (
+                                            <a href={link || "#"} style={{ textDecoration: 'none', width: '100%' }}>
+                                                <button className="btn btn-primary" style={{
+                                                    width: '100%',
+                                                    borderRadius: '1rem',
+                                                    padding: '0.9rem',
+                                                    fontWeight: 700,
+                                                    fontSize: '0.95rem',
+                                                    boxShadow: '0 8px 12px -3px rgba(37, 99, 235, 0.2)'
+                                                }}>
+                                                    {product.isPromo ? 'Ambil Promo Sekarang' : 'Konsultasi Sekarang'} <ArrowRight size={16} />
+                                                </button>
+                                            </a>
+                                        );
+                                    })()}
                                 </div>
                             </motion.div>
                         ))}
@@ -450,47 +438,26 @@ export default function Products() {
                                                 };
                                                 const link = productLinks[product.name];
 
-                                                if (link) {
-                                                    return (
-                                                        <a href={link} style={{ textDecoration: 'none', width: '100%' }}>
-                                                            <button className="btn" style={{
-                                                                width: '100%',
-                                                                borderRadius: '1.25rem',
-                                                                padding: '1.1rem',
-                                                                fontWeight: 800,
-                                                                fontSize: '1rem',
-                                                                background: index === 1 ? sectionAccent : 'white',
-                                                                border: index === 1 ? 'none' : `2px solid #e2e8f0`,
-                                                                color: index === 1 ? 'white' : '#0f172a',
-                                                                display: 'flex',
-                                                                alignItems: 'center',
-                                                                justifyContent: 'center',
-                                                                gap: '0.75rem',
-                                                                transition: 'all 0.3s ease'
-                                                            }}>
-                                                                Konsultasi Sekarang <ArrowRight size={18} />
-                                                            </button>
-                                                        </a>
-                                                    );
-                                                }
                                                 return (
-                                                    <button className="btn" style={{
-                                                        width: '100%',
-                                                        borderRadius: '1.25rem',
-                                                        padding: '1.1rem',
-                                                        fontWeight: 800,
-                                                        fontSize: '1rem',
-                                                        background: index === 1 ? sectionAccent : 'white',
-                                                        border: index === 1 ? 'none' : `2px solid #e2e8f0`,
-                                                        color: index === 1 ? 'white' : '#0f172a',
-                                                        display: 'flex',
-                                                        alignItems: 'center',
-                                                        justifyContent: 'center',
-                                                        gap: '0.75rem',
-                                                        transition: 'all 0.3s ease'
-                                                    }}>
-                                                        Konsultasi Sekarang <ArrowRight size={18} />
-                                                    </button>
+                                                    <a href={link || "#"} style={{ textDecoration: 'none', width: '100%' }}>
+                                                        <button className="btn" style={{
+                                                            width: '100%',
+                                                            borderRadius: '1.25rem',
+                                                            padding: '1.1rem',
+                                                            fontWeight: 800,
+                                                            fontSize: '1rem',
+                                                            background: index === 1 ? sectionAccent : 'white',
+                                                            border: index === 1 ? 'none' : `2px solid #e2e8f0`,
+                                                            color: index === 1 ? 'white' : '#0f172a',
+                                                            display: 'flex',
+                                                            alignItems: 'center',
+                                                            justifyContent: 'center',
+                                                            gap: '0.75rem',
+                                                            transition: 'all 0.3s ease'
+                                                        }}>
+                                                            Konsultasi Sekarang <ArrowRight size={18} />
+                                                        </button>
+                                                    </a>
                                                 );
                                             })()}
                                         </div>
