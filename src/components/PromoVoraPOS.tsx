@@ -492,7 +492,7 @@ export default function PromoVoraPOS() {
                 }
                 @media (max-width: 992px) {
                     .hero-section {
-                        padding: 60px 0 40px !important;
+                        padding: 100px 0 60px !important;
                         min-height: auto !important;
                     }
                     .hero-grid {
@@ -501,39 +501,93 @@ export default function PromoVoraPOS() {
                         gap: 3rem !important;
                     }
                     .hero-grid h1 {
-                        font-size: 2.2rem !important;
+                        font-size: 2.5rem !important;
                         margin-bottom: 1rem !important;
+                        line-height: 1.2 !important;
                     }
                     .hero-grid p { 
-                        margin: 0 auto 2rem !important; 
-                        font-size: 1rem !important;
+                        margin: 0 auto 2.5rem !important; 
+                        font-size: 1.1rem !important;
+                        max-width: 100% !important;
                     }
-                    .hero-grid div { align-items: center !important; }
+                    .hero-grid > div:first-child {
+                        order: 2 !important;
+                        display: flex !important;
+                        flex-direction: column !important;
+                        align-items: center !important;
+                    }
+                    .hero-grid > div:last-child {
+                        order: 1 !important;
+                        max-width: 500px !important;
+                        margin: 0 auto !important;
+                    }
                     
                     .btn {
-                        width: 100%;
-                        justify-content: center;
+                        width: 100% !important;
+                        justify-content: center !important;
+                        padding: 1.25rem !important;
+                    }
+
+                    .hero-card {
+                        padding: 2.5rem 1.5rem !important;
+                        border-radius: 2.5rem !important;
+                    }
+                    .hero-card h2 {
+                        font-size: 1.8rem !important;
+                    }
+                    /* Target the features list container (4th child) */
+                    .hero-card > div:nth-child(4) {
+                        width: 100% !important;
+                        margin: 1.5rem 0 !important;
+                        padding-left: 0.5rem !important;
+                    }
+
+                    section {
+                        padding: 60px 0 !important;
+                    }
+                    .section-title {
+                        font-size: 2rem !important;
+                        margin-bottom: 0.75rem !important;
+                    }
+                }
+
+                @media (max-width: 640px) {
+                    .hero-section {
+                        padding: 80px 0 40px !important;
+                    }
+                    .hero-grid h1 {
+                        font-size: 2rem !important;
                     }
                     .hero-card {
-                        padding: 2rem !important;
+                        padding: 2rem 1rem !important;
                         border-radius: 2rem !important;
                     }
-                    .modal-content {
-                        padding: 1.5rem !important;
+                    .hero-card h2 {
+                        font-size: 1.5rem !important;
+                    }
+                    .hero-card p {
+                        font-size: 0.85rem !important;
+                    }
+                    .hero-card div[style*="fontSize: '0.95rem'"] {
+                        font-size: 0.85rem !important;
+                    }
+                    .hero-card div[style*="fontSize: '2.5rem'"] {
+                        font-size: 2rem !important;
+                    }
+                }
+
+                @media (max-width: 480px) {
+                    .hero-section {
+                        padding: 80px 0 30px !important;
+                    }
+                    .hero-grid h1 {
+                        font-size: 1.75rem !important;
+                    }
+                    .hero-grid p {
+                        font-size: 0.95rem !important;
                     }
                     .section-title {
                         font-size: 1.75rem !important;
-                    }
-                }
-                @media (max-width: 480px) {
-                    .hero-section {
-                        padding: 40px 0 !important;
-                    }
-                    .hero-grid h1 {
-                        font-size: 1.8rem !important;
-                    }
-                    section {
-                        padding: 60px 0 !important;
                     }
                 }
             `}</style>

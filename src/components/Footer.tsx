@@ -19,10 +19,10 @@ export default function Footer() {
       <div className="container">
         <div style={{
           display: 'grid',
-          gridTemplateColumns: '1.3fr 0.7fr 1.3fr 0.7fr 1fr',
-          gap: '2.5rem',
+          gridTemplateColumns: '1.4fr 0.8fr 0.8fr 1fr',
+          gap: '3rem',
           marginBottom: '1.5rem',
-          maxWidth: '1200px',
+          maxWidth: '1000px',
           margin: '0 auto 1.5rem'
         }} className="footer-grid">
 
@@ -49,21 +49,9 @@ export default function Footer() {
           <div>
             <h4 style={{ fontSize: '1rem', fontWeight: 700, marginBottom: '1.75rem', color: '#0f172a' }}>{t.footer.links}</h4>
             <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-              <li><Link href="/#services" className="footer-link">{t.nav.services}</Link></li>
-              <li><Link href="/#products" className="footer-link">{(t as any).products.title}</Link></li>
-              <li><Link href="/#process" className="footer-link">Cara Kerja</Link></li>
-            </ul>
-          </div>
-
-          <div>
-            <h4 style={{ fontSize: '1rem', fontWeight: 700, marginBottom: '1.75rem', color: '#0f172a' }}>Layanan & Produk</h4>
-            <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '0.8rem' }}>
-              <li><Link href="/web-company-profile-sekolah" className="footer-link">Web Profile & Sekolah</Link></li>
-              <li><Link href="/mobile-app-development" className="footer-link">Mobile App Dev</Link></li>
-              <li><Link href="/custom-system-development" className="footer-link">Custom System (ERP/CRM)</Link></li>
-              <li><Link href="/vorapos" className="footer-link">VORA POS (Kasir)</Link></li>
-              <li><Link href="/scholacbt" className="footer-link">Schola CBT (Ujian)</Link></li>
-              <li><Link href="/scholaportal" className="footer-link">Schola Portal</Link></li>
+              <li><Link href="#services" className="footer-link">{t.nav.services}</Link></li>
+              <li><Link href="#products" className="footer-link">{(t as any).products.title}</Link></li>
+              <li><Link href="#process" className="footer-link">Cara Kerja</Link></li>
             </ul>
           </div>
 
@@ -98,7 +86,7 @@ export default function Footer() {
               </li>
               <li style={{ display: 'flex', alignItems: 'flex-start', gap: '0.875rem', color: 'var(--secondary)', fontSize: '0.9rem' }}>
                 <MapPin size={17} style={{ color: 'var(--primary)', flexShrink: 0, marginTop: '2px' }} />
-                <span style={{ lineHeight: 1.4 }}>Palembang, Sumatera Selatan, Indonesia</span>
+                <span>Palembang, Sumatera Selatan, Indonesia</span>
               </li>
             </ul>
           </div>
