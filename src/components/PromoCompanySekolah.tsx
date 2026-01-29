@@ -346,7 +346,7 @@ export default function PromoCompanySekolah() {
             <section id="pricing" style={{ padding: '100px 0', background: '#f8fafc' }}>
                 <div className="container">
                     <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
-                        <h2 style={{ fontSize: '2.5rem', fontWeight: 900, color: '#0f172a', marginBottom: '1rem' }}>
+                        <h2 className="section-title" style={{ fontSize: '2.5rem', fontWeight: 900, color: '#0f172a', marginBottom: '1rem' }}>
                             Pilihan Paket Website Profil
                         </h2>
                         <p style={{ color: '#64748b', maxWidth: '700px', margin: '0 auto' }}>
@@ -440,7 +440,7 @@ export default function PromoCompanySekolah() {
             <section style={{ padding: '100px 0', background: 'white' }}>
                 <div className="container">
                     <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
-                        <h2 style={{ fontSize: '2.5rem', fontWeight: 900, color: '#0f172a', marginBottom: '1rem' }}>
+                        <h2 className="section-title" style={{ fontSize: '2.5rem', fontWeight: 900, color: '#0f172a', marginBottom: '1rem' }}>
                             Mengapa Anda Membutuhkannya?
                         </h2>
                         <p style={{ color: '#64748b', maxWidth: '700px', margin: '0 auto' }}>
@@ -530,6 +530,9 @@ export default function PromoCompanySekolah() {
                     }
                     .modal-content {
                         padding: 1.5rem !important;
+                    }
+                    .section-title {
+                        font-size: 1.75rem !important;
                     }
                 }
                 @media (max-width: 480px) {
