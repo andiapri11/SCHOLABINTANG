@@ -34,10 +34,10 @@ export default function PromoCompanySekolah() {
             desc: "Cocok untuk profil bisnis/sekolah baru yang ingin segera online.",
             features: [
                 "Lending Page (1 Halaman)",
-                "Domain .com (1 Tahun)",
-                "Hosting Starter Performa Cepat",
+                "Desain Responsive & Cepat",
                 "Keamanan SSL (HTTPS)",
-                "1 Akun Email Bisnis (@sekolah.com)",
+                "1 Akun Email Bisnis",
+                "Biaya Domain & Hosting Terpisah",
                 "Waktu Kerja: 3-5 Hari"
             ],
             isPopular: false,
@@ -95,8 +95,8 @@ export default function PromoCompanySekolah() {
         },
         {
             icon: <Globe size={32} color="var(--primary)" />,
-            title: "Gratis Hosting & Domain",
-            desc: "Paket lengkap sudah termasuk domain .com/.id dan hosting performa tinggi selama 1 tahun pertama."
+            title: "Hosting & Domain",
+            desc: "Kami bantu pengurusan domain .com/.id dan hosting. Gratis 1 tahun pertama khusus untuk Paket Business & Elite."
         },
         {
             icon: <Mail size={32} color="var(--primary)" />,
@@ -344,7 +344,7 @@ export default function PromoCompanySekolah() {
                             Pilihan Paket Website Profil
                         </h2>
                         <p style={{ color: '#64748b', maxWidth: '700px', margin: '0 auto' }}>
-                            Transparansi harga tanpa biaya tersembunyi. Semua paket sudah termasuk bantuan input data awal agar Anda terima beres.
+                            Transparansi harga tanpa biaya tersembunyi. Khusus Paket Business & Elite sudah termasuk Domain & Hosting 1 tahun.
                         </p>
                     </div>
 
