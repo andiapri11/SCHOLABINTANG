@@ -31,6 +31,7 @@ export default function PromoCompanySekolah() {
         {
             name: "Starter",
             price: "500rb",
+            oldPrice: "1jt",
             desc: "Cocok untuk profil bisnis/sekolah baru yang ingin segera online.",
             features: [
                 "Lending Page (1 Halaman)",
@@ -45,7 +46,8 @@ export default function PromoCompanySekolah() {
         },
         {
             name: "Business",
-            price: "1jt",
+            price: "1.2jt",
+            oldPrice: "2.5jt",
             desc: "Paling populer untuk institusi pendidikan & UMKM.",
             features: [
                 "Hingga 5 Halaman Dinamis",
@@ -62,6 +64,7 @@ export default function PromoCompanySekolah() {
         {
             name: "Elite / Custom",
             price: "2.5jt",
+            oldPrice: "5jt",
             desc: "Solusi lengkap dengan fitur kustom & desain eksklusif.",
             features: [
                 "Multi-Halaman (Unlimited)",
@@ -267,8 +270,11 @@ export default function PromoCompanySekolah() {
                                 <h2 style={{ fontSize: '2.1rem', fontWeight: 900, color: '#0f172a', marginBottom: '0.5rem' }}>
                                     Paket Business
                                 </h2>
-                                <div style={{ fontSize: '2.5rem', fontWeight: 900, color: 'var(--primary)', marginBottom: '1.5rem' }}>
-                                    1 Juta <small style={{ fontSize: '1rem', color: '#94a3b8', fontWeight: 600 }}>/net</small>
+                                <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginBottom: '1.5rem' }}>
+                                    <span style={{ fontSize: '1rem', color: '#94a3b8', textDecoration: 'line-through', fontWeight: 600 }}>Rp 2.5 Juta</span>
+                                    <div style={{ fontSize: '2.5rem', fontWeight: 900, color: 'var(--primary)', lineHeight: 1 }}>
+                                        1.2 Juta <small style={{ fontSize: '1rem', color: '#94a3b8', fontWeight: 600 }}>/net</small>
+                                    </div>
                                 </div>
 
                                 <div style={{
@@ -387,9 +393,16 @@ export default function PromoCompanySekolah() {
                                 <h3 style={{ fontSize: '1.5rem', fontWeight: 900, color: '#0f172a', marginBottom: '0.5rem' }}>{pkg.name}</h3>
                                 <p style={{ color: '#64748b', fontSize: '0.9rem', marginBottom: '1.5rem', minHeight: '40px' }}>{pkg.desc}</p>
 
-                                <div style={{ fontSize: '2.5rem', fontWeight: 900, color: pkg.color, marginBottom: '2rem' }}>
-                                    {pkg.price}
-                                    <small style={{ fontSize: '0.9rem', color: '#94a3b8', fontWeight: 600, marginLeft: '0.2rem' }}>/net</small>
+                                <div style={{ marginBottom: '2rem' }}>
+                                    {pkg.oldPrice && (
+                                        <div style={{ fontSize: '0.9rem', color: '#94a3b8', textDecoration: 'line-through', fontWeight: 600, marginBottom: '0.25rem' }}>
+                                            Rp {pkg.oldPrice}
+                                        </div>
+                                    )}
+                                    <div style={{ fontSize: '2.5rem', fontWeight: 900, color: pkg.color, lineHeight: 1 }}>
+                                        {pkg.price}
+                                        <small style={{ fontSize: '0.9rem', color: '#94a3b8', fontWeight: 600, marginLeft: '0.2rem' }}>/net</small>
+                                    </div>
                                 </div>
 
                                 <div style={{ textAlign: 'left', marginBottom: '2.5rem', display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
