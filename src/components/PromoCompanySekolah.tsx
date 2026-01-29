@@ -226,7 +226,7 @@ export default function PromoCompanySekolah() {
                             style={{ position: 'relative' }}
                         >
                             {/* Card UI from Image */}
-                            <div style={{
+                            <div className="hero-card" style={{
                                 background: 'white',
                                 borderRadius: '3rem',
                                 padding: '3rem',
@@ -350,7 +350,7 @@ export default function PromoCompanySekolah() {
 
                     <div style={{
                         display: 'grid',
-                        gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
+                        gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
                         gap: '2rem',
                         alignItems: 'start'
                     }}>
@@ -437,7 +437,7 @@ export default function PromoCompanySekolah() {
 
                     <div style={{
                         display: 'grid',
-                        gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+                        gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
                         gap: '2rem'
                     }}>
                         {detailedFeatures.map((f, i) => (
@@ -488,13 +488,50 @@ export default function PromoCompanySekolah() {
                     min-height: 90vh !important;
                 }
                 @media (max-width: 992px) {
+                    .hero-section {
+                        padding: 60px 0 40px !important;
+                        min-height: auto !important;
+                    }
                     .hero-grid {
                         grid-template-columns: 1fr !important;
                         text-align: center !important;
                         gap: 3rem !important;
                     }
-                    .hero-grid p { margin: 0 auto 2rem !important; }
+                    .hero-grid h1 {
+                        font-size: 2.2rem !important;
+                        margin-bottom: 1rem !important;
+                    }
+                    .hero-grid p { 
+                        margin: 0 auto 2rem !important; 
+                        font-size: 1rem !important;
+                    }
                     .hero-grid div { align-items: center !important; }
+                    
+                    .btn {
+                        width: 100%;
+                        justify-content: center;
+                    }
+                    .hero-card {
+                        padding: 2rem !important;
+                        border-radius: 2rem !important;
+                    }
+                    .modal-content {
+                        padding: 1.5rem !important;
+                    }
+                }
+                @media (max-width: 480px) {
+                    .hero-section {
+                        padding: 40px 0 !important;
+                    }
+                    .hero-grid h1 {
+                        font-size: 1.8rem !important;
+                    }
+                    .pricing-grid {
+                        grid-template-columns: 1fr !important;
+                    }
+                    section {
+                        padding: 60px 0 !important;
+                    }
                 }
             `}</style>
 
@@ -517,6 +554,7 @@ export default function PromoCompanySekolah() {
                             animate={{ opacity: 1, scale: 1, y: 0 }}
                             exit={{ opacity: 0, scale: 0.95, y: 20 }}
                             onClick={(e) => e.stopPropagation()}
+                            className="modal-content"
                             style={{
                                 background: 'white',
                                 borderRadius: '2rem',
