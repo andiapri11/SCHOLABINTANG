@@ -439,14 +439,41 @@ export default function Products() {
                                                 </div>
                                             </div>
 
-                                            {product.name === "Web Company Profile" || product.name === "Mobile App Development" || product.name === "Custom System Development" ? (
-                                                <a href={
-                                                    product.name === "Web Company Profile"
-                                                        ? "/web-company-profile-sekolah"
-                                                        : product.name === "Mobile App Development"
-                                                            ? "/mobile-app-development"
-                                                            : "/custom-system-development"
-                                                } style={{ textDecoration: 'none', width: '100%' }}>
+                                            {(() => {
+                                                const productLinks: Record<string, string> = {
+                                                    "Web Company Profile": "/web-company-profile-sekolah",
+                                                    "Mobile App Development": "/mobile-app-development",
+                                                    "Custom System Development": "/custom-system-development",
+                                                    "VORA (Multi-branch POS)": "/vorapos",
+                                                    "Schola CBT (Exam App)": "/scholacbt",
+                                                    "Schola Portal": "/scholaportal"
+                                                };
+                                                const link = productLinks[product.name];
+
+                                                if (link) {
+                                                    return (
+                                                        <a href={link} style={{ textDecoration: 'none', width: '100%' }}>
+                                                            <button className="btn" style={{
+                                                                width: '100%',
+                                                                borderRadius: '1.25rem',
+                                                                padding: '1.1rem',
+                                                                fontWeight: 800,
+                                                                fontSize: '1rem',
+                                                                background: index === 1 ? sectionAccent : 'white',
+                                                                border: index === 1 ? 'none' : `2px solid #e2e8f0`,
+                                                                color: index === 1 ? 'white' : '#0f172a',
+                                                                display: 'flex',
+                                                                alignItems: 'center',
+                                                                justifyContent: 'center',
+                                                                gap: '0.75rem',
+                                                                transition: 'all 0.3s ease'
+                                                            }}>
+                                                                Konsultasi Sekarang <ArrowRight size={18} />
+                                                            </button>
+                                                        </a>
+                                                    );
+                                                }
+                                                return (
                                                     <button className="btn" style={{
                                                         width: '100%',
                                                         borderRadius: '1.25rem',
@@ -464,26 +491,8 @@ export default function Products() {
                                                     }}>
                                                         Konsultasi Sekarang <ArrowRight size={18} />
                                                     </button>
-                                                </a>
-                                            ) : (
-                                                <button className="btn" style={{
-                                                    width: '100%',
-                                                    borderRadius: '1.25rem',
-                                                    padding: '1.1rem',
-                                                    fontWeight: 800,
-                                                    fontSize: '1rem',
-                                                    background: index === 1 ? sectionAccent : 'white',
-                                                    border: index === 1 ? 'none' : `2px solid #e2e8f0`,
-                                                    color: index === 1 ? 'white' : '#0f172a',
-                                                    display: 'flex',
-                                                    alignItems: 'center',
-                                                    justifyContent: 'center',
-                                                    gap: '0.75rem',
-                                                    transition: 'all 0.3s ease'
-                                                }}>
-                                                    Konsultasi Sekarang <ArrowRight size={18} />
-                                                </button>
-                                            )}
+                                                );
+                                            })()}
                                         </div>
                                     </motion.div>
                                 );
