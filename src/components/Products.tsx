@@ -3,9 +3,11 @@
 import { motion } from "framer-motion";
 import { useLanguage } from "@/lib/LanguageContext";
 import { ShoppingBag, ArrowRight, CheckCircle2, Zap, LayoutGrid, ShieldCheck, Globe, Code } from "lucide-react";
+import { useSettings } from "@/lib/SettingsContext";
 
 export default function Products() {
     const { t } = useLanguage();
+    const { settings } = useSettings();
     const products = (t as any).products;
 
     if (!products) return null;
@@ -584,27 +586,35 @@ export default function Products() {
                             {(t as any).ctaSection?.desc}
                         </p>
 
-                        <motion.button
-                            whileHover={{ scale: 1.03, y: -2 }}
-                            whileTap={{ scale: 0.98 }}
-                            className="btn btn-primary cta-btn"
-                            style={{
-                                background: 'white',
-                                color: '#0f172a',
-                                border: 'none',
-                                padding: '1rem 2.5rem',
-                                fontSize: '1.05rem',
-                                fontWeight: 800,
-                                borderRadius: '0.85rem',
-                                boxShadow: '0 10px 30px -5px rgba(255, 255, 255, 0.25)',
-                                display: 'inline-flex',
-                                alignItems: 'center',
-                                justifyContent: 'center',
-                                gap: '0.75rem'
-                            }}
+                        <a
+                            href={`https://wa.me/${settings.whatsapp}?text=Halo%20Codifi,%20saya%20ingin%20berdiskusi%20tentang%20ide%20aplikasi%20saya.`}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            style={{ textDecoration: 'none' }}
                         >
-                            {products.customBtn} <ArrowRight size={20} />
-                        </motion.button>
+                            <motion.button
+                                whileHover={{ scale: 1.03, y: -2 }}
+                                whileTap={{ scale: 0.98 }}
+                                className="btn btn-primary cta-btn"
+                                style={{
+                                    background: 'white',
+                                    color: '#0f172a',
+                                    border: 'none',
+                                    padding: '1rem 2.5rem',
+                                    fontSize: '1.05rem',
+                                    fontWeight: 800,
+                                    borderRadius: '0.85rem',
+                                    boxShadow: '0 10px 30px -5px rgba(255, 255, 255, 0.25)',
+                                    display: 'inline-flex',
+                                    alignItems: 'center',
+                                    justifyContent: 'center',
+                                    gap: '0.75rem',
+                                    cursor: 'pointer'
+                                }}
+                            >
+                                {products.customBtn} <ArrowRight size={20} />
+                            </motion.button>
+                        </a>
                     </div>
                 </motion.div>
             </div>
