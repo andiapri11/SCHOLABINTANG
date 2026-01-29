@@ -226,7 +226,7 @@ export default function SubmissionsDashboard() {
     useEffect(() => {
         const isAdmin = localStorage.getItem("isAdmin");
         if (!isAdmin) {
-            router.push("/login");
+            router.push("/codifi-access-panel");
             return;
         }
         fetchItems();
@@ -234,7 +234,7 @@ export default function SubmissionsDashboard() {
 
     const handleLogout = () => {
         localStorage.removeItem("isAdmin");
-        router.push("/login");
+        router.push("/codifi-access-panel");
     };
 
     const uniqueServices = ["All", ...new Set(submissions.map((s: Submission) => s.service))];
