@@ -52,6 +52,10 @@ export const metadata: Metadata = {
   alternates: {
     canonical: '/',
   },
+  icons: {
+    icon: '/icon.png',
+    apple: '/icon.png',
+  },
   openGraph: {
     title: "Codifi | Solusi Digital Strategis untuk Bisnis Anda",
     description: "Transformasi bisnis Anda ke ranah digital dengan website dan aplikasi kustom yang cepat, aman, dan berorientasi hasil.",
