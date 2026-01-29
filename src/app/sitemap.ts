@@ -27,7 +27,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
             priority: 0.9,
         },
         {
-            url: 'https://codifi.id/company-profile',
+            url: 'https://codifi.id/web-company-profile-sekolah',
             lastModified: new Date(),
             changeFrequency: 'weekly',
             priority: 0.9,

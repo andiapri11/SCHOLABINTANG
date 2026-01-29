@@ -21,7 +21,7 @@ import {
 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
-export default function PromoCompany() {
+export default function PromoCompanySekolah() {
     const { settings } = useSettings();
     const [showDemoForm, setShowDemoForm] = useState(false);
     const [showSuccess, setShowSuccess] = useState(false);
