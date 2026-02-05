@@ -131,13 +131,11 @@ export default function Hero() {
                             }}
                         />
 
-                        {/* 2. Main Photo Card - Editorial Style */}
                         <div
                             className="main-photo-card"
                             style={{
                                 width: '100%',
                                 maxWidth: '460px',
-                                aspectRatio: '0.85',
                                 position: 'relative',
                                 zIndex: 5,
                                 borderRadius: '2rem',
@@ -278,8 +276,16 @@ export default function Hero() {
             display: none !important;
           }
           .main-photo-card {
+            aspect-ratio: 0.85; /* Standard for Desktop */
             border-radius: 1.5rem !important;
             box-shadow: 0 20px 40px -10px rgba(15, 23, 42, 0.1) !important;
+          }
+          @media (max-width: 768px) {
+            .main-photo-card {
+              aspect-ratio: auto !important;
+              height: 400px !important; /* Force height on mobile */
+              width: 100% !important;
+            }
           }
           h1 { font-size: 2.25rem !important; }
           .hero-cta-group { 
@@ -289,6 +295,6 @@ export default function Hero() {
           .btn { width: 100%; }
         }
       `}</style>
-        </section>
+        </section >
     );
 }
