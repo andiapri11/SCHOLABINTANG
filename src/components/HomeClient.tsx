@@ -3,10 +3,22 @@
 import dynamic from "next/dynamic";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
-const TechStack = dynamic(() => import("@/components/TechStack"), { ssr: true });
-const Services = dynamic(() => import("@/components/Services"), { ssr: true });
-const Products = dynamic(() => import("@/components/Products"), { ssr: true });
-const Portfolio = dynamic(() => import("@/components/Portfolio"), { ssr: true });
+const TechStack = dynamic(() => import("@/components/TechStack"), {
+    ssr: true,
+    loading: () => <div style={{ height: '200px', background: '#f8fafc' }} />
+});
+const Services = dynamic(() => import("@/components/Services"), {
+    ssr: true,
+    loading: () => <div style={{ height: '600px', background: '#f8fafc' }} />
+});
+const Products = dynamic(() => import("@/components/Products"), {
+    ssr: true,
+    loading: () => <div style={{ height: '800px', background: '#ffffff' }} />
+});
+const Portfolio = dynamic(() => import("@/components/Portfolio"), {
+    ssr: true,
+    loading: () => <div style={{ height: '700px', background: '#ffffff' }} />
+});
 import Footer from "@/components/Footer";
 import { motion, useScroll, useSpring } from "framer-motion";
 import { useLanguage } from "@/lib/LanguageContext";

@@ -139,7 +139,7 @@ export default function Hero() {
                         />
 
                         {/* 2. Main Photo Card - Editorial Style */}
-                        <motion.div
+                        <div
                             className="main-photo-card"
                             style={{
                                 width: '100%',
@@ -153,9 +153,6 @@ export default function Hero() {
                                 boxShadow: '0 30px 60px -12px rgba(15, 23, 42, 0.12)',
                                 border: '1px solid #f1f5f9'
                             }}
-                            initial={{ y: 20 }}
-                            animate={{ y: 0 }}
-                            transition={{ duration: 0.8, ease: "easeOut" }}
                         >
                             <div style={{ width: '100%', height: '100%', borderRadius: '1.5rem', overflow: 'hidden', position: 'relative' }}>
                                 <Image
@@ -216,7 +213,7 @@ export default function Hero() {
                                     </div>
                                 </div>
                             </motion.div>
-                        </motion.div>
+                        </div>
 
                         {/* 4. Floating UI Fragment - Technical Snippet (Repositioned Inside) */}
                         <motion.div
