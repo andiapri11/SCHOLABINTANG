@@ -7,7 +7,10 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
     title: "Schola Portal - Sistem Informasi Manajemen Sekolah Terintegrasi",
     description: "Kelola data siswa, keuangan sekolah, absensi, dan nilai dalam satu platform. Solusi digitalisasi administrasi sekolah yang modern dan mudah digunakan.",
-    keywords: ["Schola Portal", "sistem informasi sekolah", "manajemen sekolah digital", "aplikasi administrasi sekolah", "software sekolah"]
+    keywords: ["Schola Portal", "sistem informasi sekolah", "manajemen sekolah digital", "aplikasi administrasi sekolah", "software sekolah"],
+    alternates: {
+        canonical: 'https://codifi.id/scholaportal',
+    }
 };
 
 export default function Page() {

@@ -19,6 +19,9 @@ export const metadata: Metadata = {
         title: "Jasa Pembuatan Aplikasi Mobile Android & iOS | Codifi",
         description: "Transformasi bisnis Anda ke perangkat mobile dengan aplikasi kustom yang cepat dan stabil mulai dari 1.5 Juta.",
         url: 'https://codifi.id/mobile-app-development',
+    },
+    alternates: {
+        canonical: 'https://codifi.id/mobile-app-development',
     }
 };
 

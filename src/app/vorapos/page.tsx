@@ -19,6 +19,9 @@ export const metadata: Metadata = {
         title: "VORA POS | Sistem Kasir & Inventori Cerdas | Codifi",
         description: "Kelola banyak cabang dalam satu genggaman. Dapatkan promo hemat 40% untuk paket VORA Starter.",
         url: 'https://codifi.id/vorapos',
+    },
+    alternates: {
+        canonical: 'https://codifi.id/vorapos',
     }
 };
 

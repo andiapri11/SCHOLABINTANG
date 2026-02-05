@@ -19,6 +19,9 @@ export const metadata: Metadata = {
         title: "Jasa Pembuatan Sistem Informasi Kustom | Codifi",
         description: "Optimalkan operasional bisnis Anda dengan sistem yang dirancang khusus mengikuti workflow tim Anda.",
         url: 'https://codifi.id/custom-system-development',
+    },
+    alternates: {
+        canonical: 'https://codifi.id/custom-system-development',
     }
 };
 
