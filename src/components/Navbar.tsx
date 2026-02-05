@@ -49,6 +49,7 @@ export default function Navbar() {
                         <Languages size={16} color="var(--primary)" />
                         <button
                             onClick={() => setLanguage('id')}
+                            aria-label="Switch to Indonesian"
                             style={{ background: 'none', border: 'none', color: language === 'id' ? 'var(--primary)' : '#64748b', cursor: 'pointer', fontWeight: language === 'id' ? 800 : 500, fontSize: '0.85rem' }}
                         >
                             ID
@@ -56,6 +57,7 @@ export default function Navbar() {
                         <span style={{ color: '#cbd5e1', fontSize: '0.85rem' }}>|</span>
                         <button
                             onClick={() => setLanguage('en')}
+                            aria-label="Switch to English"
                             style={{ background: 'none', border: 'none', color: language === 'en' ? 'var(--primary)' : '#64748b', cursor: 'pointer', fontWeight: language === 'en' ? 800 : 500, fontSize: '0.85rem' }}
                         >
                             EN
@@ -67,8 +69,7 @@ export default function Navbar() {
                     </Link>
                 </div>
 
-                {/* Mobile Toggle */}
-                <div className="mobile-toggle" style={{ display: 'none', color: 'var(--foreground)' }} onClick={() => setIsMenuOpen(!isMenuOpen)}>
+                <div className="mobile-toggle" style={{ display: 'none', color: 'var(--foreground)' }} onClick={() => setIsMenuOpen(!isMenuOpen)} aria-label="Toggle Menu" role="button">
                     {isMenuOpen ? <X /> : <Menu />}
                 </div>
             </div>

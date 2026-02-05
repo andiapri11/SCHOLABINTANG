@@ -40,10 +40,8 @@ export default function Hero() {
 
             <div className="container" style={{ position: 'relative', zIndex: 1 }}>
                 <div style={{ display: 'grid', gridTemplateColumns: '1.2fr 0.8fr', gap: '4rem', alignItems: 'center' }} className="hero-grid">
-                    <motion.div
-                        initial={{ opacity: 0, x: -30 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.8, ease: "easeOut" }}
+                    <div
+                        className="hero-text-content"
                     >
                         <div style={{
                             display: 'inline-flex',
@@ -101,12 +99,7 @@ export default function Hero() {
                             ))}
                         </div>
                         <div className="hero-cta-group" style={{ display: 'flex', gap: '1.25rem', flexWrap: 'wrap' }}>
-                            <a
-                                href={`https://wa.me/${settings.whatsapp}?text=Halo%20Codifi,%20saya%20tertarik%20dengan%20jasa%20pembuatan%20website%20dan%20aplikasi.`}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                style={{ textDecoration: 'none' }}
-                            >
+                            <a href={`https://wa.me/${settings.whatsapp}?text=Halo%20Codifi,%20saya%20ingin%20berdiskusi%20tentang%20projek%20saya.`} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }} aria-label="Konsultasi via WhatsApp">
                                 <button className="btn btn-primary" style={{ padding: '1rem 2.5rem', fontSize: '1.05rem', width: '100%' }}>
                                     {t.hero.ctaPrimary} <ArrowRight size={20} />
                                 </button>
@@ -115,7 +108,7 @@ export default function Hero() {
                                 {t.hero.ctaSecondary}
                             </button>
                         </div>
-                    </motion.div>
+                    </div>
 
                     <div
                         className="hero-graphic"
@@ -154,14 +147,21 @@ export default function Hero() {
                                 border: '1px solid #f1f5f9'
                             }}
                         >
-                            <div style={{ width: '100%', height: '100%', borderRadius: '1.5rem', overflow: 'hidden', position: 'relative' }}>
+                            <div style={{
+                                width: '100%',
+                                height: '100%',
+                                borderRadius: '1.5rem',
+                                overflow: 'hidden',
+                                position: 'relative',
+                                background: '#f1f5f9' // Placeholder color
+                            }}>
                                 <Image
                                     src="/images/team.png"
                                     alt="Codifi Team"
                                     fill
                                     sizes="(max-width: 768px) 100vw, 50vw"
                                     style={{ objectFit: 'cover' }}
-                                    priority
+                                    priority={true}
                                 />
                             </div>
 
@@ -272,19 +272,14 @@ export default function Hero() {
             padding: 0 1.5rem 0.5rem 1.5rem !important;
           }
           .performance-badge {
-            top: 1rem !important;
-            left: 1rem !important;
-            padding: 0.5rem 0.75rem !important;
-            transform: scale(0.85);
+            display: none !important;
           }
           .code-fragment { 
-            right: 0.5rem !important; 
-            bottom: 1rem !important;
-            width: 160px !important;
-            transform: scale(0.85);
+            display: none !important;
           }
           .main-photo-card {
             border-radius: 1.5rem !important;
+            box-shadow: 0 20px 40px -10px rgba(15, 23, 42, 0.1) !important;
           }
           h1 { font-size: 2.25rem !important; }
           .hero-cta-group { 
