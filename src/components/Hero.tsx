@@ -136,6 +136,7 @@ export default function Hero() {
                             style={{
                                 width: '100%',
                                 maxWidth: '460px',
+                                minHeight: '350px', // Robust fallback for mobile
                                 position: 'relative',
                                 zIndex: 5,
                                 borderRadius: '2rem',
@@ -148,10 +149,11 @@ export default function Hero() {
                             <div style={{
                                 width: '100%',
                                 height: '100%',
+                                minHeight: '330px', // Inner container height
                                 borderRadius: '1.5rem',
                                 overflow: 'hidden',
                                 position: 'relative',
-                                background: '#f1f5f9' // Placeholder color
+                                background: '#f1f5f9'
                             }}>
                                 <Image
                                     src="/images/team.png"
@@ -266,24 +268,24 @@ export default function Hero() {
           .hero-graphic { order: -1; max-width: 480px; margin: 0 auto; height: auto; }
           .hero-grid p { margin-left: auto; margin-right: auto; }
           .hero-grid > div { justify-content: center !important; }
+          /* Hide decorative elements on all medium/small devices for speed */
+          .performance-badge, .code-fragment {
+            display: none !important;
+          }
         }
 
         @media (max-width: 768px) {
           .main-photo-card {
-            aspect-ratio: auto !important;
-            height: 400px !important;
+            min-height: 400px !important;
           }
         }
 
         @media (max-width: 576px) {
           .hero-graphic { height: auto; max-width: 100%; }
-          .main-photo-card { height: 350px !important; }
+          .main-photo-card { min-height: 350px !important; }
           .service-highlights-row {
             margin: 0 -1.5rem 2rem -1.5rem;
             padding: 0 1.5rem 0.5rem 1.5rem !important;
-          }
-          .performance-badge, .code-fragment {
-            display: none !important;
           }
           h1 { font-size: 2.25rem !important; }
           .hero-cta-group { 
