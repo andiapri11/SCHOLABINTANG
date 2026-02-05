@@ -253,39 +253,37 @@ export default function Hero() {
         .service-highlights-row::-webkit-scrollbar {
           display: none; /* Hide scrollbar Chrome/Safari */
         }
-        .hero-graphic {
-          height: 600px;
+        .main-photo-card {
+          aspect-ratio: 0.85;
+          width: 100%;
+          border-radius: 2rem;
+          overflow: hidden;
         }
+
         @media (max-width: 992px) {
           .hero-grid { grid-template-columns: 1fr !important; gap: 4rem !important; text-align: center; }
           .hero-grid > div { margin: 0 auto; }
-          .hero-graphic { order: -1; max-width: 480px; margin: 0 auto; min-height: 400px; }
+          .hero-graphic { order: -1; max-width: 480px; margin: 0 auto; height: auto; }
           .hero-grid p { margin-left: auto; margin-right: auto; }
           .hero-grid > div { justify-content: center !important; }
         }
+
+        @media (max-width: 768px) {
+          .main-photo-card {
+            aspect-ratio: auto !important;
+            height: 400px !important;
+          }
+        }
+
         @media (max-width: 576px) {
-          .hero-graphic { height: 380px; max-width: 100%; }
+          .hero-graphic { height: auto; max-width: 100%; }
+          .main-photo-card { height: 350px !important; }
           .service-highlights-row {
             margin: 0 -1.5rem 2rem -1.5rem;
             padding: 0 1.5rem 0.5rem 1.5rem !important;
           }
-          .performance-badge {
+          .performance-badge, .code-fragment {
             display: none !important;
-          }
-          .code-fragment { 
-            display: none !important;
-          }
-          .main-photo-card {
-            aspect-ratio: 0.85; /* Standard for Desktop */
-            border-radius: 1.5rem !important;
-            box-shadow: 0 20px 40px -10px rgba(15, 23, 42, 0.1) !important;
-          }
-          @media (max-width: 768px) {
-            .main-photo-card {
-              aspect-ratio: auto !important;
-              height: 400px !important; /* Force height on mobile */
-              width: 100% !important;
-            }
           }
           h1 { font-size: 2.25rem !important; }
           .hero-cta-group { 
