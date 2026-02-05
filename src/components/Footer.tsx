@@ -4,6 +4,7 @@ import Link from "next/link";
 import { Rocket, Mail, Phone, Instagram, Linkedin, Globe, MapPin } from "lucide-react";
 import { useLanguage } from "@/lib/LanguageContext";
 import { useSettings } from "@/lib/SettingsContext";
+import Image from "next/image";
 
 export default function Footer() {
   const { t } = useLanguage();
@@ -28,8 +29,8 @@ export default function Footer() {
 
           <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
             <Link href="/" className="brand-link" style={{ display: 'flex', alignItems: 'center', gap: '0.85rem' }}>
-              <div style={{ width: '38px', height: '38px', display: 'flex', alignItems: 'center', justifyContent: 'center', overflow: 'hidden' }}>
-                <img src="/images/logo.png" alt="Logo" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+              <div style={{ width: '38px', height: '38px', display: 'flex', alignItems: 'center', justifyContent: 'center', overflow: 'hidden', position: 'relative' }}>
+                <Image src="/images/logo.png" alt="Codifi Logo" width={38} height={38} style={{ objectFit: 'contain' }} />
               </div>
               <div style={{ display: 'flex', flexDirection: 'column', lineHeight: 1.1 }}>
                 <span style={{ color: '#0f172a', letterSpacing: '-0.02em', fontWeight: 800, fontSize: '1.45rem' }}>Codifi</span>

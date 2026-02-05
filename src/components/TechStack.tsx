@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { useLanguage } from "@/lib/LanguageContext";
+import Image from "next/image";
 
 const technologies = [
     { name: "Next.js", logo: "https://www.vectorlogo.zone/logos/nextjs/nextjs-icon.svg" },
@@ -91,12 +92,12 @@ export default function TechStack() {
                             }}
                             className="tech-item"
                         >
-                            <img
+                            <Image
                                 src={tech.logo}
                                 alt={tech.name}
+                                width={48}
+                                height={48}
                                 style={{
-                                    width: '48px',
-                                    height: '48px',
                                     objectFit: 'contain',
                                     filter: 'grayscale(100%) brightness(0.5)'
                                 }}

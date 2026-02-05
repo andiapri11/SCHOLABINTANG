@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { useLanguage } from "@/lib/LanguageContext";
 import { ExternalLink, ArrowRight } from "lucide-react";
+import Image from "next/image";
 
 
 
@@ -76,10 +77,12 @@ export default function Portfolio() {
                                 boxShadow: 'var(--shadow-md)',
                                 backgroundColor: 'white'
                             }} className="portfolio-card">
-                                <img
+                                <Image
                                     src={project.image}
                                     alt={project.title}
-                                    style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1)' }}
+                                    fill
+                                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                    style={{ objectFit: 'cover', transition: 'transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1)' }}
                                     className="portfolio-img"
                                 />
                                 <div style={{

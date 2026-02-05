@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { useLanguage } from "@/lib/LanguageContext";
 import { useSettings } from "@/lib/SettingsContext";
 import { ShoppingBag, ArrowRight, CheckCircle2, Zap, LayoutGrid, ShieldCheck, Globe, Code } from "lucide-react";
+import Image from "next/image";
 
 export default function Products() {
     const { t } = useLanguage();
@@ -527,16 +528,15 @@ export default function Products() {
                             zIndex: -1
                         }}></div>
 
-                        <img
+                        <Image
                             src="/consultant_woman.png"
                             alt="Professional Expert"
+                            fill
                             className="cta-consultant-img"
                             style={{
-                                height: '110%',
-                                width: 'auto',
                                 objectFit: 'contain',
                                 filter: 'drop-shadow(0 20px 30px rgba(0,0,0,0.5))',
-                                position: 'absolute',
+                                top: 'auto',
                                 bottom: '-20px',
                                 // Smooth transparent fade at bottom
                                 maskImage: 'linear-gradient(to top, transparent 0%, black 15%, black 100%)',

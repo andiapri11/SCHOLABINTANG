@@ -1,11 +1,12 @@
 "use client";
 
+import dynamic from "next/dynamic";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
-import TechStack from "@/components/TechStack";
-import Services from "@/components/Services";
-import Products from "@/components/Products";
-import Portfolio from "@/components/Portfolio";
+const TechStack = dynamic(() => import("@/components/TechStack"), { ssr: true });
+const Services = dynamic(() => import("@/components/Services"), { ssr: true });
+const Products = dynamic(() => import("@/components/Products"), { ssr: true });
+const Portfolio = dynamic(() => import("@/components/Portfolio"), { ssr: true });
 import Footer from "@/components/Footer";
 import { motion, useScroll, useSpring } from "framer-motion";
 import { useLanguage } from "@/lib/LanguageContext";

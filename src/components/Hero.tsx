@@ -5,6 +5,8 @@ import { ArrowRight, Globe, ShoppingBag, GraduationCap, Cpu, Rocket, CheckCircle
 import { useLanguage } from "@/lib/LanguageContext";
 import { useSettings } from "@/lib/SettingsContext";
 
+import Image from "next/image";
+
 export default function Hero() {
     const { t } = useLanguage();
     const { settings } = useSettings();
@@ -158,11 +160,13 @@ export default function Hero() {
                             animate={{ y: 0, rotate: 0 }}
                             transition={{ duration: 1.2, ease: "easeOut" }}
                         >
-                            <div style={{ width: '100%', height: '100%', borderRadius: '1.5rem', overflow: 'hidden' }}>
-                                <img
+                            <div style={{ width: '100%', height: '100%', borderRadius: '1.5rem', overflow: 'hidden', position: 'relative' }}>
+                                <Image
                                     src="/images/team.png"
                                     alt="Codifi Team"
-                                    style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                                    fill
+                                    style={{ objectFit: 'cover' }}
+                                    priority
                                 />
                             </div>
 
