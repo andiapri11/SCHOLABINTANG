@@ -250,8 +250,7 @@ export default function Hero() {
                                 {'}'}
                             </p>
                         </motion.div>
-
-                    </motion.div>
+                    </div>
                 </div>
             </div>
 
