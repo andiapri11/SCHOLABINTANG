@@ -5,19 +5,19 @@ import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 const TechStack = dynamic(() => import("@/components/TechStack"), {
     ssr: true,
-    loading: () => <div style={{ minHeight: '300px', background: '#ffffff' }} />
+    loading: () => <div style={{ minHeight: '350px', background: '#ffffff' }} />
 });
 const Services = dynamic(() => import("@/components/Services"), {
     ssr: true,
-    loading: () => <div style={{ minHeight: '800px', background: '#f8fafc' }} />
+    loading: () => <div style={{ minHeight: '750px', background: '#f8fafc' }} />
 });
 const Products = dynamic(() => import("@/components/Products"), {
     ssr: true,
-    loading: () => <div style={{ minHeight: '1200px', background: '#ffffff' }} />
+    loading: () => <div style={{ minHeight: '1300px', background: '#ffffff' }} />
 });
 const Portfolio = dynamic(() => import("@/components/Portfolio"), {
     ssr: true,
-    loading: () => <div style={{ minHeight: '1000px', background: '#f8fafc' }} />
+    loading: () => <div style={{ minHeight: '1100px', background: '#f8fafc' }} />
 });
 import Footer from "@/components/Footer";
 import { motion, useScroll, useSpring } from "framer-motion";
