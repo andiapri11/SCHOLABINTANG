@@ -117,11 +117,8 @@ export default function Hero() {
                         </div>
                     </motion.div>
 
-                    <motion.div
+                    <div
                         className="hero-graphic"
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        transition={{ duration: 1 }}
                         style={{ position: 'relative', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
                     >
                         {/* 1. Large Dynamic Background (The Glow) */}
@@ -156,15 +153,16 @@ export default function Hero() {
                                 boxShadow: '0 30px 60px -12px rgba(15, 23, 42, 0.12)',
                                 border: '1px solid #f1f5f9'
                             }}
-                            initial={{ y: 40, rotate: 2 }}
-                            animate={{ y: 0, rotate: 0 }}
-                            transition={{ duration: 1.2, ease: "easeOut" }}
+                            initial={{ y: 20 }}
+                            animate={{ y: 0 }}
+                            transition={{ duration: 0.8, ease: "easeOut" }}
                         >
                             <div style={{ width: '100%', height: '100%', borderRadius: '1.5rem', overflow: 'hidden', position: 'relative' }}>
                                 <Image
                                     src="/images/team.png"
                                     alt="Codifi Team"
                                     fill
+                                    sizes="(max-width: 768px) 100vw, 50vw"
                                     style={{ objectFit: 'cover' }}
                                     priority
                                 />
