@@ -260,10 +260,10 @@ export default function Hero() {
         }
         @media (max-width: 992px) {
           .hero-grid { grid-template-columns: 1fr !important; gap: 4rem !important; text-align: center; }
-          .hero-grid div { margin: 0 auto; }
-          .hero-graphic { order: -1; max-width: 480px; margin: 0 auto; height: 500px; }
+          .hero-grid > div { margin: 0 auto; }
+          .hero-graphic { order: -1; max-width: 480px; margin: 0 auto; min-height: 400px; }
           .hero-grid p { margin-left: auto; margin-right: auto; }
-          .hero-grid div { justify-content: center !important; }
+          .hero-grid > div { justify-content: center !important; }
         }
         @media (max-width: 576px) {
           .hero-graphic { height: 380px; max-width: 100%; }
