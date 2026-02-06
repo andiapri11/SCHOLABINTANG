@@ -131,12 +131,15 @@ export default function Hero() {
                             }}
                         />
 
-                        <div
+                        <motion.div
+                            initial={{ opacity: 0, y: 30 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.6, delay: 0.4 }}
                             className="main-photo-card"
                             style={{
                                 width: '100%',
                                 maxWidth: '460px',
-                                minHeight: '350px', // Robust fallback for mobile
+                                minHeight: '350px',
                                 position: 'relative',
                                 zIndex: 5,
                                 borderRadius: '2rem',
@@ -149,7 +152,7 @@ export default function Hero() {
                             <div style={{
                                 width: '100%',
                                 height: '100%',
-                                minHeight: '330px', // Inner container height
+                                minHeight: '330px',
                                 borderRadius: '1.5rem',
                                 overflow: 'hidden',
                                 position: 'relative',
@@ -165,12 +168,9 @@ export default function Hero() {
                                 />
                             </div>
 
-                            {/* 3. Professional Performance Badge (Top Left - Repositioned Inside) */}
-                            <motion.div
-                                className="performance-badge"
-                                animate={typeof window !== 'undefined' && window.innerWidth > 992 ? { y: [0, -8, 0] } : {}}
-                                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                                /* ... (style remains same) ... */
+                            {/* 3. Professional Performance Badge */}
+                            <div
+                                className="performance-badge floating-element"
                                 style={{
                                     position: 'absolute',
                                     top: '1.5rem',
@@ -213,14 +213,12 @@ export default function Hero() {
                                         </div>
                                     </div>
                                 </div>
-                            </motion.div>
-                        </div>
+                            </div>
+                        </motion.div>
 
-                        {/* 4. Floating UI Fragment - Technical Snippet (Repositioned Inside) */}
-                        <motion.div
-                            className="floating-ui code-fragment"
-                            animate={typeof window !== 'undefined' && window.innerWidth > 992 ? { y: [0, 10, 0] } : {}}
-                            transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+                        {/* 4. Floating UI Fragment */}
+                        <div
+                            className="floating-ui code-fragment floating-element-delayed"
                             style={{
                                 position: 'absolute',
                                 bottom: '1.5rem',
@@ -247,12 +245,28 @@ export default function Hero() {
                                 &nbsp;&nbsp;await <span style={{ color: '#fb7185' }}>scale</span>(id); <br />
                                 {'}'}
                             </p>
-                        </motion.div>
+                        </div>
                     </div>
                 </div>
             </div>
 
             <style jsx>{`
+        @keyframes float {
+          0% { transform: translateY(0px); }
+          50% { transform: translateY(-10px); }
+          100% { transform: translateY(0px); }
+        }
+        .floating-element {
+          animation: float 4s ease-easeInOut infinite;
+        }
+        .floating-element-delayed {
+          animation: float 5s ease-easeInOut infinite 1s;
+        }
+        @media (max-width: 992px) {
+          .floating-element, .floating-element-delayed {
+             animation-duration: 6s; /* Slower on mobile to be even lighter */
+          }
+        }
         .service-highlights-row::-webkit-scrollbar {
           display: none; /* Hide scrollbar Chrome/Safari */
         }
