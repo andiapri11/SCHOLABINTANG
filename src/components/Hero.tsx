@@ -116,10 +116,10 @@ export default function Hero() {
                     >
                         {/* 1. Large Dynamic Background (The Glow) */}
                         <motion.div
-                            animate={typeof window !== 'undefined' && window.innerWidth > 992 ? {
+                            animate={{
                                 scale: [1, 1.2, 1],
                                 rotate: [0, 90, 0]
-                            } : {}}
+                            }}
                             transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
                             style={{
                                 position: 'absolute',
@@ -255,15 +255,13 @@ export default function Hero() {
         }
         .floating-element {
           animation: float 4s ease-in-out infinite;
-          will-change: transform;
         }
         .floating-element-delayed {
           animation: float 5s ease-in-out infinite 1s;
-          will-change: transform;
         }
         @media (max-width: 992px) {
           .floating-element, .floating-element-delayed {
-             animation-duration: 6s;
+             animation-duration: 6s; /* Slower on mobile to be even lighter */
           }
         }
         .service-highlights-row::-webkit-scrollbar {
@@ -282,9 +280,9 @@ export default function Hero() {
           .hero-graphic { order: -1; max-width: 480px; margin: 0 auto; height: auto; }
           .hero-grid p { margin-left: auto; margin-right: auto; }
           .hero-grid > div { justify-content: center !important; }
-          /* Hide decorative elements on all medium/small devices for speed */
           .performance-badge, .code-fragment {
-            display: none !important;
+            transform: scale(0.85); /* Slightly smaller on mobile to be more elegant */
+            display: flex !important; /* Ensure they are visible */
           }
         }
 
