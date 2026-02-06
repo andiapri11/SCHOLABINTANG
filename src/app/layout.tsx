@@ -113,25 +113,63 @@ export default async function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Organization",
-              "name": "Codifi - Cipta Inovasi Digital",
-              "url": "https://codifi.id",
-              "logo": "https://codifi.id/icon.png",
-              "description": "Jasa pembuatan website professional dan aplikasi web kustom di Indonesia.",
-              "address": {
-                "@type": "PostalAddress",
-                "addressLocality": "Palembang",
-                "addressRegion": "Sumatera Selatan",
-                "addressCountry": "ID"
+            __html: JSON.stringify([
+              {
+                "@context": "https://schema.org",
+                "@type": "Organization",
+                "name": "Codifi - Cipta Inovasi Digital",
+                "url": "https://codifi.id",
+                "logo": "https://codifi.id/icon.png",
+                "description": "Jasa pembuatan website professional dan aplikasi web kustom di Indonesia.",
+                "address": {
+                  "@type": "PostalAddress",
+                  "addressLocality": "Palembang",
+                  "addressRegion": "Sumatera Selatan",
+                  "addressCountry": "ID"
+                },
+                "contactPoint": {
+                  "@type": "ContactPoint",
+                  "telephone": `+${settings.whatsapp}`,
+                  "contactType": "customer service"
+                }
               },
-              "contactPoint": {
-                "@type": "ContactPoint",
-                "telephone": `+${settings.whatsapp}`,
-                "contactType": "customer service"
+              {
+                "@context": "https://schema.org",
+                "@type": "ItemList",
+                "itemListElement": [
+                  {
+                    "@type": "SiteNavigationElement",
+                    "position": 1,
+                    "name": "Jasa Pembuatan Mobile Apps",
+                    "url": "https://codifi.id/mobile-app-development"
+                  },
+                  {
+                    "@type": "SiteNavigationElement",
+                    "position": 2,
+                    "name": "Website Sekolah & Profile",
+                    "url": "https://codifi.id/web-company-profile-sekolah"
+                  },
+                  {
+                    "@type": "SiteNavigationElement",
+                    "position": 3,
+                    "name": "Aplikasi Kasir VORA POS",
+                    "url": "https://codifi.id/vorapos"
+                  },
+                  {
+                    "@type": "SiteNavigationElement",
+                    "position": 4,
+                    "name": "Custom System ERP/CRM",
+                    "url": "https://codifi.id/custom-system-development"
+                  },
+                  {
+                    "@type": "SiteNavigationElement",
+                    "position": 5,
+                    "name": "Schola CBT Online",
+                    "url": "https://codifi.id/scholacbt"
+                  }
+                ]
               }
-            })
+            ])
           }}
         />
         <VisitorTracker />
