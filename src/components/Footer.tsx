@@ -30,7 +30,7 @@ export default function Footer() {
           <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
             <Link href="/" className="brand-link" style={{ display: 'flex', alignItems: 'center', gap: '0.85rem' }}>
               <div style={{ width: '38px', height: '38px', display: 'flex', alignItems: 'center', justifyContent: 'center', overflow: 'hidden', position: 'relative' }}>
-                <Image src="/images/logo.png" alt="Codifi Logo" width={38} height={38} style={{ objectFit: 'contain' }} />
+                <Image src="/images/logo-new.png" alt="Codifi Logo" width={38} height={38} style={{ objectFit: 'contain' }} />
               </div>
               <div style={{ display: 'flex', flexDirection: 'column', lineHeight: 1.1 }}>
                 <span style={{ color: '#0f172a', letterSpacing: '-0.02em', fontWeight: 800, fontSize: '1.45rem' }}>Codifi</span>

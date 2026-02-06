@@ -322,7 +322,7 @@ export default function SubmissionsDashboard() {
             <aside className="sidebar">
                 <div className="sidebar-header">
                     <div className="logo-box">
-                        <img src="/images/logo.png" alt="Logo" style={{ width: '80%', height: '80%', objectFit: 'contain' }} />
+                        <img src="/images/logo-new.png" alt="Logo" style={{ width: '80%', height: '80%', objectFit: 'contain' }} />
                     </div>
                     <div className="logo-text">
                         <h3 style={{ fontSize: '1.4rem' }}>Codifi</h3>

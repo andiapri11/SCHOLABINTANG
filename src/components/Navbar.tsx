@@ -24,7 +24,7 @@ export default function Navbar() {
             <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '100%' }}>
                 <Link href="/" style={{ display: 'flex', alignItems: 'center', gap: '0.85rem' }}>
                     <div style={{ width: '45px', height: '45px', display: 'flex', alignItems: 'center', justifyContent: 'center', overflow: 'hidden', position: 'relative' }}>
-                        <Image src="/images/logo.png" alt="Codifi Logo" width={45} height={45} style={{ objectFit: 'contain' }} />
+                        <Image src="/images/logo-new.png" alt="Codifi Logo" width={45} height={45} style={{ objectFit: 'contain' }} />
                     </div>
                     <div style={{ display: 'flex', flexDirection: 'column', lineHeight: 1.1 }}>
                         <span style={{ color: 'var(--foreground)', letterSpacing: '-0.02em', fontWeight: 800, fontSize: '1.65rem' }}>Codifi</span>
@@ -87,7 +87,7 @@ export default function Navbar() {
                 }}>
                     <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '3rem' }}>
                         <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
-                            <Image src="/images/logo.png" alt="Codifi Logo" width={38} height={38} />
+                            <Image src="/images/logo-new.png" alt="Codifi Logo" width={38} height={38} />
                             <div style={{ display: 'flex', flexDirection: 'column', lineHeight: 1.1 }}>
                                 <span style={{ fontWeight: 800, color: 'var(--secondary)', fontSize: '1.4rem' }}>Codifi</span>
                                 <span style={{ color: '#94a3b8', fontSize: '0.6rem', fontWeight: 600 }}>Cipta Inovasi Digital</span>

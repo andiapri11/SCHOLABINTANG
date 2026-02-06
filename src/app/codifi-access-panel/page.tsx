@@ -43,7 +43,7 @@ export default function LoginPage() {
                 className="login-container"
             >
                 <div className="brand-logo" style={{ overflow: 'hidden' }}>
-                    <img src="/images/logo.png" alt="Codifi" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+                    <img src="/images/logo-new.png" alt="Codifi" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
                 </div>
 
                 <div className="header-text">
