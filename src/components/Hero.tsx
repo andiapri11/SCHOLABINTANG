@@ -168,8 +168,9 @@ export default function Hero() {
                             {/* 3. Professional Performance Badge (Top Left - Repositioned Inside) */}
                             <motion.div
                                 className="performance-badge"
-                                animate={{ y: [0, -8, 0] }}
+                                animate={typeof window !== 'undefined' && window.innerWidth > 992 ? { y: [0, -8, 0] } : {}}
                                 transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+                                /* ... (style remains same) ... */
                                 style={{
                                     position: 'absolute',
                                     top: '1.5rem',
@@ -218,7 +219,7 @@ export default function Hero() {
                         {/* 4. Floating UI Fragment - Technical Snippet (Repositioned Inside) */}
                         <motion.div
                             className="floating-ui code-fragment"
-                            animate={{ y: [0, 10, 0] }}
+                            animate={typeof window !== 'undefined' && window.innerWidth > 992 ? { y: [0, 10, 0] } : {}}
                             transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
                             style={{
                                 position: 'absolute',
