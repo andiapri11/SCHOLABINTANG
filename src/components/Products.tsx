@@ -43,14 +43,14 @@ export default function Products() {
                         >
                             Katalog Produk
                         </motion.span>
-                        <motion.h3
+                        <motion.h2
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             style={{ fontSize: '1.5rem', fontWeight: 800, color: '#1e293b', marginBottom: '0.5rem' }}
                         >
                             {products.readyTitle}
-                        </motion.h3>
+                        </motion.h2>
                         <motion.p
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
@@ -270,14 +270,14 @@ export default function Products() {
                 }}>
                     <div className="container">
                         <div style={{ textAlign: 'center', marginBottom: '3.5rem' }}>
-                            <motion.h3
+                            <motion.h2
                                 initial={{ opacity: 0, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 style={{ fontSize: '1.75rem', fontWeight: 800, color: '#0f172a', marginBottom: '0.75rem' }}
                             >
                                 {products.customTitle}
-                            </motion.h3>
+                            </motion.h2>
                             <motion.p
                                 initial={{ opacity: 0, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}

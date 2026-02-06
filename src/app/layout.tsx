@@ -17,7 +17,14 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://codifi.id'), // Ganti dengan domain Anda nanti
+  metadataBase: new URL('https://codifi.id'),
+  alternates: {
+    canonical: 'https://codifi.id',
+    languages: {
+      'id-ID': 'https://codifi.id',
+      'en-US': 'https://codifi.id/en', // Reserved for future EN path
+    },
+  },
   title: {
     default: "Codifi - Jasa Pembuatan Website & Aplikasi Web Professional",
     template: "%s | Codifi - Cipta Inovasi Digital"
@@ -26,7 +33,7 @@ export const metadata: Metadata = {
   keywords: [
     "Codifi",
     "Cipta Inovasi Digital",
-    "jasa pembuatan website",
+    "jasa pembuatan website palembang",
     "jasa pembuatan aplikasi web",
     "web development agency indonesia",
     "jasa landing page",
@@ -116,22 +123,59 @@ export default async function RootLayout({
             __html: JSON.stringify([
               {
                 "@context": "https://schema.org",
-                "@type": "Organization",
+                "@type": "LocalBusiness",
                 "name": "Codifi - Cipta Inovasi Digital",
+                "image": "https://codifi.id/og-image.png",
+                "@id": "https://codifi.id",
                 "url": "https://codifi.id",
-                "logo": "https://codifi.id/icon.png",
-                "description": "Jasa pembuatan website professional dan aplikasi web kustom di Indonesia.",
+                "telephone": `+${settings.whatsapp}`,
+                "priceRange": "$$",
                 "address": {
                   "@type": "PostalAddress",
+                  "streetAddress": "Palembang",
                   "addressLocality": "Palembang",
                   "addressRegion": "Sumatera Selatan",
+                  "postalCode": "30128",
                   "addressCountry": "ID"
                 },
-                "contactPoint": {
-                  "@type": "ContactPoint",
-                  "telephone": `+${settings.whatsapp}`,
-                  "contactType": "customer service"
-                }
+                "geo": {
+                  "@type": "GeoCoordinates",
+                  "latitude": -2.976073,
+                  "longitude": 104.775431
+                },
+                "openingHoursSpecification": {
+                  "@type": "OpeningHoursSpecification",
+                  "dayOfWeek": [
+                    "Monday",
+                    "Tuesday",
+                    "Wednesday",
+                    "Thursday",
+                    "Friday"
+                  ],
+                  "opens": "09:00",
+                  "closes": "17:00"
+                },
+                "sameAs": [
+                  "https://www.instagram.com/codifi.id"
+                ]
+              },
+              {
+                "@context": "https://schema.org",
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                  {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "Home",
+                    "item": "https://codifi.id"
+                  },
+                  {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "name": "Layanan",
+                    "item": "https://codifi.id/#services"
+                  }
+                ]
               },
               {
                 "@context": "https://schema.org",
