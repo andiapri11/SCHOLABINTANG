@@ -116,10 +116,10 @@ export default function Hero() {
                     >
                         {/* 1. Large Dynamic Background (The Glow) */}
                         <motion.div
-                            animate={{
+                            animate={typeof window !== 'undefined' && window.innerWidth > 992 ? {
                                 scale: [1, 1.2, 1],
                                 rotate: [0, 90, 0]
-                            }}
+                            } : {}}
                             transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
                             style={{
                                 position: 'absolute',
@@ -131,10 +131,7 @@ export default function Hero() {
                             }}
                         />
 
-                        <motion.div
-                            initial={{ opacity: 0, y: 30 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.6, delay: 0.4 }}
+                        <div
                             className="main-photo-card"
                             style={{
                                 width: '100%',
@@ -214,7 +211,7 @@ export default function Hero() {
                                     </div>
                                 </div>
                             </div>
-                        </motion.div>
+                        </div>
 
                         {/* 4. Floating UI Fragment */}
                         <div
@@ -257,14 +254,16 @@ export default function Hero() {
           100% { transform: translateY(0px); }
         }
         .floating-element {
-          animation: float 4s ease-easeInOut infinite;
+          animation: float 4s ease-in-out infinite;
+          will-change: transform;
         }
         .floating-element-delayed {
-          animation: float 5s ease-easeInOut infinite 1s;
+          animation: float 5s ease-in-out infinite 1s;
+          will-change: transform;
         }
         @media (max-width: 992px) {
           .floating-element, .floating-element-delayed {
-             animation-duration: 6s; /* Slower on mobile to be even lighter */
+             animation-duration: 6s;
           }
         }
         .service-highlights-row::-webkit-scrollbar {
