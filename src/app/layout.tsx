@@ -20,10 +20,6 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://codifi.id'),
   alternates: {
     canonical: 'https://codifi.id',
-    languages: {
-      'id-ID': 'https://codifi.id',
-      'en-US': 'https://codifi.id/en', // Reserved for future EN path
-    },
   },
   title: {
     default: "Codifi - Jasa Pembuatan Website & Aplikasi Web Professional",
@@ -124,93 +120,40 @@ export default async function RootLayout({
               {
                 "@context": "https://schema.org",
                 "@type": "LocalBusiness",
-                "name": "Codifi - Cipta Inovasi Digital",
+                "name": "Codifi",
                 "image": "https://codifi.id/og-image.png",
-                "@id": "https://codifi.id",
                 "url": "https://codifi.id",
                 "telephone": `+${settings.whatsapp}`,
-                "priceRange": "$$",
                 "address": {
                   "@type": "PostalAddress",
                   "streetAddress": "Palembang",
                   "addressLocality": "Palembang",
-                  "addressRegion": "Sumatera Selatan",
-                  "postalCode": "30128",
+                  "addressRegion": "South Sumatra",
                   "addressCountry": "ID"
                 },
                 "geo": {
                   "@type": "GeoCoordinates",
                   "latitude": -2.976073,
                   "longitude": 104.775431
-                },
-                "openingHoursSpecification": {
-                  "@type": "OpeningHoursSpecification",
-                  "dayOfWeek": [
-                    "Monday",
-                    "Tuesday",
-                    "Wednesday",
-                    "Thursday",
-                    "Friday"
-                  ],
-                  "opens": "09:00",
-                  "closes": "17:00"
-                },
-                "sameAs": [
-                  "https://www.instagram.com/codifi.id"
-                ]
+                }
               },
               {
                 "@context": "https://schema.org",
                 "@type": "BreadcrumbList",
                 "itemListElement": [
-                  {
-                    "@type": "ListItem",
-                    "position": 1,
-                    "name": "Home",
-                    "item": "https://codifi.id"
-                  },
-                  {
-                    "@type": "ListItem",
-                    "position": 2,
-                    "name": "Layanan",
-                    "item": "https://codifi.id/#services"
-                  }
+                  { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://codifi.id" },
+                  { "@type": "ListItem", "position": 2, "name": "Layanan", "item": "https://codifi.id/#services" }
                 ]
               },
               {
                 "@context": "https://schema.org",
                 "@type": "ItemList",
                 "itemListElement": [
-                  {
-                    "@type": "SiteNavigationElement",
-                    "position": 1,
-                    "name": "Jasa Pembuatan Mobile Apps",
-                    "url": "https://codifi.id/mobile-app-development"
-                  },
-                  {
-                    "@type": "SiteNavigationElement",
-                    "position": 2,
-                    "name": "Website Sekolah & Profile",
-                    "url": "https://codifi.id/web-company-profile-sekolah"
-                  },
-                  {
-                    "@type": "SiteNavigationElement",
-                    "position": 3,
-                    "name": "Aplikasi Kasir VORA POS",
-                    "url": "https://codifi.id/vorapos"
-                  },
-                  {
-                    "@type": "SiteNavigationElement",
-                    "position": 4,
-                    "name": "Custom System ERP/CRM",
-                    "url": "https://codifi.id/custom-system-development"
-                  },
-                  {
-                    "@type": "SiteNavigationElement",
-                    "position": 5,
-                    "name": "Schola CBT Online",
-                    "url": "https://codifi.id/scholacbt"
-                  }
+                  { "@type": "SiteNavigationElement", "position": 1, "name": "Mobile Apps", "url": "https://codifi.id/mobile-app-development" },
+                  { "@type": "SiteNavigationElement", "position": 2, "name": "Web Sekolah", "url": "https://codifi.id/web-company-profile-sekolah" },
+                  { "@type": "SiteNavigationElement", "position": 3, "name": "VORA POS", "url": "https://codifi.id/vorapos" },
+                  { "@type": "SiteNavigationElement", "position": 4, "name": "Custom System", "url": "https://codifi.id/custom-system-development" },
+                  { "@type": "SiteNavigationElement", "position": 5, "name": "Schola CBT", "url": "https://codifi.id/scholacbt" }
                 ]
               }
             ])
