@@ -115,7 +115,7 @@ export default function Footer() {
           gap: '1.5rem'
         }}>
           <p style={{ color: 'var(--secondary)', fontSize: '0.875rem', textAlign: 'center' }}>
-            © {new Date().getFullYear()} Codifi. {t.footer.rights}
+            © {new Date().getFullYear()} Codifi | PT. Cipta Inovasi Digital | {t.footer.rights}
           </p>
         </div>
       </div>

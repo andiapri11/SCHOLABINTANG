@@ -188,7 +188,7 @@ export const translations = {
             tagline: "Partner pengembangan digital yang berfokus membantu bisnis rintisan (startup) dan UMKM tumbuh melalui teknologi.",
             links: "Navigasi",
             contact: "Hubungi Kami",
-            rights: "Hak Cipta Dilindungi."
+            rights: "Hak Cipta Dilindungi"
         },
         contactPage: {
             title1: "Mulai Diskusi",
@@ -398,7 +398,7 @@ export const translations = {
             tagline: "Digital development partner focused on helping startups and SMEs grow through technology.",
             links: "Navigation",
             contact: "Get in Touch",
-            rights: "All Rights Reserved."
+            rights: "All Rights Reserved"
         },
         contactPage: {
             title1: "Start Your",
