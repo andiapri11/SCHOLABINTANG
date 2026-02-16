@@ -15,7 +15,7 @@ if (!fs.existsSync(DB_PATH)) {
 
 if (!fs.existsSync(SETTINGS_PATH)) {
     const defaultSettings = {
-        whatsapp: "6285768441485",
+        whatsapp: "628218144726",
         email: "hello@codifi.id"
     };
     fs.writeFileSync(SETTINGS_PATH, JSON.stringify(defaultSettings, null, 2));
@@ -34,7 +34,7 @@ export async function saveSubmission(data: any) {
 }
 
 export async function getSettings() {
-    if (!fs.existsSync(SETTINGS_PATH)) return { whatsapp: "6285768441485" };
+    if (!fs.existsSync(SETTINGS_PATH)) return { whatsapp: "628218144726" };
     return JSON.parse(fs.readFileSync(SETTINGS_PATH, 'utf-8'));
 }
 

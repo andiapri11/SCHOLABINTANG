@@ -86,7 +86,7 @@ export default function SubmissionsDashboard() {
     const [showToast, setShowToast] = useState<{ message: string, type: 'success' | 'error' } | null>(null);
     const [showNotifications, setShowNotifications] = useState(false);
     const [passwords, setPasswords] = useState({ current: "", new: "", confirm: "" });
-    const [siteSettings, setSiteSettings] = useState({ whatsapp: "6285768441485" });
+    const [siteSettings, setSiteSettings] = useState({ whatsapp: "628218144726" });
     const router = useRouter();
 
     useEffect(() => {
@@ -912,7 +912,7 @@ export default function SubmissionsDashboard() {
                                                     type="text"
                                                     value={siteSettings.whatsapp}
                                                     onChange={(e) => setSiteSettings({ ...siteSettings, whatsapp: e.target.value })}
-                                                    placeholder="Contoh: 6285768441485"
+                                                    placeholder="Contoh: 628218144726"
                                                 />
                                             </div>
                                         </div>

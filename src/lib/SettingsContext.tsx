@@ -17,7 +17,7 @@ const SettingsContext = createContext<SettingsContextType | undefined>(undefined
 
 export function SettingsProvider({ children }: { children: React.ReactNode }) {
     const [settings, setSettings] = useState<Settings>({
-        whatsapp: "6285768441485",
+        whatsapp: "628218144726",
         email: "hello@codifi.id"
     });
 

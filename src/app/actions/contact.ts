@@ -64,7 +64,7 @@ export async function fetchSettings() {
         return await getSettings();
     } catch (error) {
         console.error("Fetch Settings Error:", error);
-        return { whatsapp: "6285768441485" };
+        return { whatsapp: "628218144726" };
     }
 }
 

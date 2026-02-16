@@ -16,7 +16,7 @@ export default function ContactClient() {
     const [pending, setPending] = useState(false);
     const [message, setMessage] = useState<{ type: 'success' | 'error', text: string } | null>(null);
 
-    // Format display number: 6285768441485 -> +62 857 6844 1485
+    // Format display number: 628218144726 -> +62 821 8144 726
     const formattedPhone = settings.whatsapp.startsWith('62')
         ? `+62 ${settings.whatsapp.substring(2, 5)} ${settings.whatsapp.substring(5, 9)} ${settings.whatsapp.substring(9)}`
         : settings.whatsapp;
