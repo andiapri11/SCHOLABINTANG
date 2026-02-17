@@ -1,6 +1,8 @@
+import { TranslationSchema } from '@/types';
+
 export type Language = 'id' | 'en';
 
-export const translations = {
+export const translations: Record<Language, TranslationSchema> = {
     id: {
         nav: {
             services: "Layanan",

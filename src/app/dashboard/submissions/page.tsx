@@ -2,9 +2,9 @@
 
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
-import { getSubmissions } from "@/app/actions/fetch";
-import { getTrafficStats } from "@/app/actions/traffic";
-import { fetchSettings, saveSettingsAction } from "@/app/actions/contact";
+import { getSubmissions } from "@/actions/fetch-actions";
+import { getTrafficStats } from "@/actions/traffic-actions";
+import { fetchSettings, saveSettingsAction } from "@/actions/contact-actions";
 import {
     Users,
     Mail,

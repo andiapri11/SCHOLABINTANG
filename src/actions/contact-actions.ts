@@ -1,6 +1,6 @@
 "use server";
 
-import { saveSubmission, getSettings, updateSettings } from "@/lib/db";
+import { saveSubmission, getSettings, updateSettings } from "@/lib/database";
 
 export async function submitConsultation(formData: FormData) {
     const name = formData.get("name") as string;

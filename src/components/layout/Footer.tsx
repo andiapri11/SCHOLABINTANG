@@ -2,8 +2,8 @@
 
 import Link from "next/link";
 import { Rocket, Mail, Phone, Instagram, Linkedin, Globe, MapPin } from "lucide-react";
-import { useLanguage } from "@/lib/LanguageContext";
-import { useSettings } from "@/lib/SettingsContext";
+import { useLanguage } from "@/providers/LanguageProvider";
+import { useSettings } from "@/providers/SettingsProvider";
 import Image from "next/image";
 
 export default function Footer() {
@@ -51,7 +51,7 @@ export default function Footer() {
             <h4 style={{ fontSize: '1rem', fontWeight: 700, marginBottom: '1.75rem', color: '#0f172a' }}>{t.footer.links}</h4>
             <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
               <li><Link href="/#services" className="footer-link">{t.nav.services}</Link></li>
-              <li><Link href="/#products" className="footer-link">{(t as any).products.title}</Link></li>
+              <li><Link href="/#products" className="footer-link">{t.products.title}</Link></li>
               <li><Link href="/#process" className="footer-link">Cara Kerja</Link></li>
             </ul>
           </div>

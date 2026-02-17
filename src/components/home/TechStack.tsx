@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { useLanguage } from "@/lib/LanguageContext";
+import { useLanguage } from "@/providers/LanguageProvider";
 import Image from "next/image";
 
 const technologies = [

@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import { logVisit } from "@/app/actions/traffic";
+import { logVisit } from "@/actions/traffic-actions";
 
 export default function VisitorTracker() {
     const trackedRef = useRef(false);

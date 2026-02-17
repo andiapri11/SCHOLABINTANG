@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Globe, ShoppingBag, GraduationCap, Cpu, ArrowRight } from "lucide-react";
-import { useLanguage } from "@/lib/LanguageContext";
+import { useLanguage } from "@/providers/LanguageProvider";
 
 export default function Services() {
     const { t } = useLanguage();

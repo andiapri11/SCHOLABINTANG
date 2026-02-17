@@ -1,8 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { submitDemoRequest } from "@/app/actions/contact";
-import { useSettings } from "@/lib/SettingsContext";
+import { submitDemoRequest } from "@/actions/contact-actions";
+import { useSettings } from "@/providers/SettingsProvider";
 import {
     CheckCircle2,
     ShoppingBag,

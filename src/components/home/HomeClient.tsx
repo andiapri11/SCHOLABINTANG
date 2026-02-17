@@ -1,28 +1,28 @@
 "use client";
 
 import dynamic from "next/dynamic";
-import Navbar from "@/components/Navbar";
-import Hero from "@/components/Hero";
-const TechStack = dynamic(() => import("@/components/TechStack"), {
+import Navbar from "@/components/layout/Navbar";
+import Hero from "@/components/home/Hero";
+const TechStack = dynamic(() => import("@/components/home/TechStack"), {
     ssr: true,
     loading: () => <div style={{ minHeight: '350px', background: '#ffffff' }} />
 });
-const Services = dynamic(() => import("@/components/Services"), {
+const Services = dynamic(() => import("@/components/home/Services"), {
     ssr: true,
     loading: () => <div style={{ minHeight: '750px', background: '#f8fafc' }} />
 });
-const Products = dynamic(() => import("@/components/Products"), {
+const Products = dynamic(() => import("@/components/products/Products"), {
     ssr: true,
     loading: () => <div style={{ minHeight: '1300px', background: '#ffffff' }} />
 });
-const Portfolio = dynamic(() => import("@/components/Portfolio"), {
+const Portfolio = dynamic(() => import("@/components/home/Portfolio"), {
     ssr: true,
     loading: () => <div style={{ minHeight: '1100px', background: '#f8fafc' }} />
 });
-import Footer from "@/components/Footer";
+import Footer from "@/components/layout/Footer";
 import { motion, useScroll, useSpring } from "framer-motion";
-import { useLanguage } from "@/lib/LanguageContext";
-import { useSettings } from "@/lib/SettingsContext";
+import { useLanguage } from "@/providers/LanguageProvider";
+import { useSettings } from "@/providers/SettingsProvider";
 import { Star, ArrowRight } from "lucide-react";
 
 export default function HomeClient() {

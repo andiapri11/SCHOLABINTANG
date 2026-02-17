@@ -1,9 +1,9 @@
 "use client";
 
 import { useState } from "react";
-import { useLanguage } from "@/lib/LanguageContext";
-import { submitDemoRequest } from "@/app/actions/contact";
-import { useSettings } from "@/lib/SettingsContext";
+import { useLanguage } from "@/providers/LanguageProvider";
+import { submitDemoRequest } from "@/actions/contact-actions";
+import { useSettings } from "@/providers/SettingsProvider";
 import { CheckCircle2, Shield, LayoutDashboard, Database, Wallet, Users, ArrowRight, MessageCircle, X, BookOpen, Building2 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 

@@ -1,6 +1,6 @@
-import PromoContent from "@/components/PromoContent";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
+import PromoContent from "@/components/products/PromoContent";
+import Navbar from "@/components/layout/Navbar";
+import Footer from "@/components/layout/Footer";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {

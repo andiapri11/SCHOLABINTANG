@@ -1,7 +1,7 @@
 import { Metadata } from "next";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
-import PromoMobileApp from "@/components/PromoMobileApp";
+import Navbar from "@/components/layout/Navbar";
+import Footer from "@/components/layout/Footer";
+import PromoMobileApp from "@/components/products/PromoMobileApp";
 
 export const metadata: Metadata = {
     title: "Jasa Pembuatan Aplikasi Mobile Android & iOS Murah",

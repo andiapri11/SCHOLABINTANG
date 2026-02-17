@@ -1,18 +1,18 @@
 "use client";
 
-import { useLanguage } from "@/lib/LanguageContext";
-import { useSettings } from "@/lib/SettingsContext";
+import { useLanguage } from "@/providers/LanguageProvider";
+import { useSettings } from "@/providers/SettingsProvider";
 import { motion } from "framer-motion";
 import { Mail, Phone, MapPin, Send, MessageCircle, X, CheckCircle } from "lucide-react";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
-import { submitConsultation } from "@/app/actions/contact";
+import Navbar from "@/components/layout/Navbar";
+import Footer from "@/components/layout/Footer";
+import { submitConsultation } from "@/actions/contact-actions";
 import { useState } from "react";
 
 export default function ContactClient() {
     const { t } = useLanguage();
     const { settings } = useSettings();
-    const cp = (t as any).contactPage;
+    const cp = t.contactPage;
     const [pending, setPending] = useState(false);
     const [message, setMessage] = useState<{ type: 'success' | 'error', text: string } | null>(null);
 

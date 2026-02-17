@@ -1,7 +1,7 @@
 import { Metadata } from "next";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
-import PromoCustomSystem from "@/components/PromoCustomSystem";
+import Navbar from "@/components/layout/Navbar";
+import Footer from "@/components/layout/Footer";
+import PromoCustomSystem from "@/components/products/PromoCustomSystem";
 
 export const metadata: Metadata = {
     title: "Jasa Pembuatan Sistem Informasi Kustom (ERP, CRM, Finance)",

@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { Menu, X, Languages } from "lucide-react";
-import { useLanguage } from "@/lib/LanguageContext";
+import { useLanguage } from "@/providers/LanguageProvider";
 import Image from "next/image";
 
 export default function Navbar() {
@@ -35,7 +35,7 @@ export default function Navbar() {
                 {/* Desktop Menu */}
                 <div style={{ display: 'flex', gap: '3rem', alignItems: 'center' }} className="desktop-menu">
                     <Link href="/#services" style={{ fontSize: '0.95rem', fontWeight: 600, color: '#475569', transition: 'color 0.3s ease' }} className="nav-link">{t.nav.services}</Link>
-                    <Link href="/#products" style={{ fontSize: '0.95rem', fontWeight: 600, color: '#475569', transition: 'color 0.3s ease' }} className="nav-link">{(t as any).products.title}</Link>
+                    <Link href="/#products" style={{ fontSize: '0.95rem', fontWeight: 600, color: '#475569', transition: 'color 0.3s ease' }} className="nav-link">{t.products.title}</Link>
 
                     <div style={{
                         display: 'flex',
@@ -100,7 +100,7 @@ export default function Navbar() {
 
                     <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
                         <Link href="/#services" onClick={() => setIsMenuOpen(false)} style={{ fontSize: '1.25rem', fontWeight: 700, color: '#0f172a' }}>{t.nav.services}</Link>
-                        <Link href="/#products" onClick={() => setIsMenuOpen(false)} style={{ fontSize: '1.25rem', fontWeight: 700, color: '#0f172a' }}>{(t as any).products.title}</Link>
+                        <Link href="/#products" onClick={() => setIsMenuOpen(false)} style={{ fontSize: '1.25rem', fontWeight: 700, color: '#0f172a' }}>{t.products.title}</Link>
 
                         <div style={{
                             display: 'flex',

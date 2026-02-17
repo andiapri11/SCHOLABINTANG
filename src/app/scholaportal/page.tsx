@@ -1,7 +1,7 @@
-import PromoPortal from "@/components/PromoPortal";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
-import { LanguageProvider } from "@/lib/LanguageContext";
+import PromoPortal from "@/components/products/PromoPortal";
+import Navbar from "@/components/layout/Navbar";
+import Footer from "@/components/layout/Footer";
+import { LanguageProvider } from "@/providers/LanguageProvider";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {

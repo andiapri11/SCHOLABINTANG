@@ -1,15 +1,15 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { useLanguage } from "@/lib/LanguageContext";
-import { useSettings } from "@/lib/SettingsContext";
+import { useLanguage } from "@/providers/LanguageProvider";
+import { useSettings } from "@/providers/SettingsProvider";
 import { ShoppingBag, ArrowRight, CheckCircle2, Zap, LayoutGrid, ShieldCheck, Globe, Code } from "lucide-react";
 import Image from "next/image";
 
 export default function Products() {
     const { t } = useLanguage();
     const { settings } = useSettings();
-    const products = (t as any).products;
+    const products = t.products;
 
     if (!products) return null;
 
@@ -583,7 +583,7 @@ export default function Products() {
                             fontSize: '1.05rem',
                             lineHeight: 1.6
                         }}>
-                            {(t as any).ctaSection?.desc}
+                            {t.ctaSection?.desc}
                         </p>
 
                         <a

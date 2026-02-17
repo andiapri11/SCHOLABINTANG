@@ -2,8 +2,8 @@
 
 import { motion } from "framer-motion";
 import { ArrowRight, Globe, ShoppingBag, GraduationCap, Cpu, Rocket, CheckCircle2, TrendingUp } from "lucide-react";
-import { useLanguage } from "@/lib/LanguageContext";
-import { useSettings } from "@/lib/SettingsContext";
+import { useLanguage } from "@/providers/LanguageProvider";
+import { useSettings } from "@/providers/SettingsProvider";
 
 import Image from "next/image";
 

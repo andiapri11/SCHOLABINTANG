@@ -1,22 +1,18 @@
 "use client";
 
 import React, { createContext, useContext, useState, useEffect } from 'react';
-import { fetchSettings } from '@/app/actions/contact';
-
-type Settings = {
-    whatsapp: string;
-    email?: string;
-};
+import { fetchSettings } from '@/actions/contact-actions';
+import { WebsiteSettings } from '@/types';
 
 type SettingsContextType = {
-    settings: Settings;
+    settings: WebsiteSettings;
     refreshSettings: () => Promise<void>;
 };
 
 const SettingsContext = createContext<SettingsContextType | undefined>(undefined);
 
 export function SettingsProvider({ children }: { children: React.ReactNode }) {
-    const [settings, setSettings] = useState<Settings>({
+    const [settings, setSettings] = useState<WebsiteSettings>({
         whatsapp: "628218144726",
         email: "hello@codifi.id"
     });

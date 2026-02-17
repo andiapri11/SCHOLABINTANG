@@ -1,7 +1,7 @@
 import { Metadata } from "next";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
-import PromoVoraPOS from "@/components/PromoVoraPOS";
+import Navbar from "@/components/layout/Navbar";
+import Footer from "@/components/layout/Footer";
+import PromoVoraPOS from "@/components/products/PromoVoraPOS";
 
 export const metadata: Metadata = {
     title: "VORA POS - Aplikasi Kasir & Stok Multi-branch Terbaik",
